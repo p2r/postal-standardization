@@ -1,0 +1,43 @@
+{
+	"name": "caveance.postal",
+	"description": "Address standardization, matching, and CASS support.",
+	"version": "0.1.0",
+	"private": true,
+	"author": {
+		"name": "Caveance LLC",
+		"email": "opensource@caveance.com"
+	},
+	"copyright": {
+		"start": 2015
+	},
+	"contributors": [
+		{
+			"name": "Michael Pelikan",
+			"email": "mpelikan@caveance.com"
+		}
+	],
+	"scripts": {
+		"test": "grunt test",
+		"watch": "grunt watch",
+		"deploy": "grunt deploy"
+	},
+	"engines": {
+		"node": "~ 0.10",
+		"npm": "~ 1.4.4"
+	},
+	"dependencies": {
+		"underscore": "~1.7",
+		"mongodb": "~1.4",
+		"mongojs": "~0.18",
+		"connect-mongo": "~0.4"
+	},
+	"devDependencies": {
+		"grunt": "~0.4",
+		"grunt-cli": "~0.1",
+		"grunt-contrib-jshint": "~0.10",
+		"grunt-contrib-watch": "~0.6",
+		"grunt-mocha-test": "~0.12",
+		"mocha": "~1.21",
+		"should": "~3.3"
+	}
+}
