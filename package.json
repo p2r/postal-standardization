@@ -1,11 +1,11 @@
 {
-	"name": "caveance.postal",
-	"description": "Address standardization, matching, and CASS support.",
+	"name": "postal.standardization",
+	"description": "Address standardization, matching, and verification.",
 	"version": "0.1.0",
 	"private": true,
 	"author": {
-		"name": "Caveance LLC",
-		"email": "opensource@caveance.com"
+		"name": "Michael Pelikan",
+		"email": "mpelikan@caveance.com"
 	},
 	"copyright": {
 		"start": 2015
