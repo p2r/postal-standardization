@@ -6,7 +6,7 @@ var should = require( "should" );
 
 var Standardization = require( "../../../lib/us/Standardization" );
 
-describe( "Street Suffices:", function () {
+describe( "Street Prefixes:", function () {
 
 	var standardization = new Standardization();
 
@@ -19,7 +19,7 @@ describe( "Street Suffices:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.streetSuffix( names[ i ], true );
+			abbr = standardization.streetPrefix( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "N" );
 		}
@@ -35,7 +35,7 @@ describe( "Street Suffices:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.streetSuffix( names[ i ], true );
+			abbr = standardization.streetPrefix( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "S" );
 		}
@@ -51,7 +51,7 @@ describe( "Street Suffices:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.streetSuffix( names[ i ], true );
+			abbr = standardization.streetPrefix( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "E" );
 		}
@@ -67,7 +67,7 @@ describe( "Street Suffices:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.streetSuffix( names[ i ], true );
+			abbr = standardization.streetPrefix( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "W" );
 		}
