@@ -275,10 +275,10 @@ describe( "Street Suffices:", function () {
 
 	} );
 
-	it( "BRG", function () {
+	it( "BG", function () {
 		var names = [
 			"BURG",
-			"BRG"
+			"BG"
 		];
 		var abbr, i;
 		var numNames = names.length;
@@ -286,7 +286,7 @@ describe( "Street Suffices:", function () {
 		for ( i = 0; i < numNames; i++ ) {
 			abbr = standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
-			abbr.should.equal( "BRG" );
+			abbr.should.equal( "BG" );
 		}
 
 	} );
@@ -381,6 +381,7 @@ describe( "Street Suffices:", function () {
 		var names = [
 			"CAUSEWAY",
 			"CAUSWA",
+			"CAUSWAY",
 			"CSWY"
 		];
 		var abbr, i;
@@ -599,6 +600,7 @@ describe( "Street Suffices:", function () {
 	it( "CT", function () {
 		var names = [
 			"COURT",
+			"CRT",
 			"CT"
 		];
 		var abbr, i;
@@ -615,6 +617,7 @@ describe( "Street Suffices:", function () {
 	it( "CTS", function () {
 		var names = [
 			"COURTS",
+			"CRTS",
 			"CTS"
 		];
 		var abbr, i;
@@ -663,7 +666,9 @@ describe( "Street Suffices:", function () {
 	it( "CRK", function () {
 		var names = [
 			"CREEK",
-			"CRK"
+			"CRK",
+			"CK",
+			"CR"
 		];
 		var abbr, i;
 		var numNames = names.length;
@@ -679,8 +684,12 @@ describe( "Street Suffices:", function () {
 	it( "CRES", function () {
 		var names = [
 			"CRESCENT",
+			"CRESENT",
+			"CRECENT",
 			"CRSENT",
 			"CRSNT",
+			"CRSCNT",
+			"CRSENT",
 			"CRES"
 		];
 		var abbr, i;
@@ -714,6 +723,7 @@ describe( "Street Suffices:", function () {
 		var names = [
 			"CROSSING",
 			"CRSSNG",
+			"CRSNG",
 			"XING"
 		];
 		var abbr, i;
@@ -1172,11 +1182,11 @@ describe( "Street Suffices:", function () {
 
 	} );
 
-	it( "FRT", function () {
+	it( "FT", function () {
 		var names = [
 			"FORT",
-			"FT",
-			"FRT"
+			"FRT",
+			"FT"
 		];
 		var abbr, i;
 		var numNames = names.length;
@@ -1184,7 +1194,7 @@ describe( "Street Suffices:", function () {
 		for ( i = 0; i < numNames; i++ ) {
 			abbr = standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
-			abbr.should.equal( "FRT" );
+			abbr.should.equal( "FT" );
 		}
 
 	} );
@@ -1398,6 +1408,7 @@ describe( "Street Suffices:", function () {
 	it( "HVN", function () {
 		var names = [
 			"HAVEN",
+			"HAVN",
 			"HVN"
 		];
 		var abbr, i;
@@ -1414,6 +1425,9 @@ describe( "Street Suffices:", function () {
 	it( "HTS", function () {
 		var names = [
 			"HT",
+			"HEIGHT",
+			"HEIGHTS",
+			"HGTS",
 			"HTS"
 		];
 		var abbr, i;
@@ -1733,6 +1747,8 @@ describe( "Street Suffices:", function () {
 	it( "LN", function () {
 		var names = [
 			"LANE",
+			"LANES",
+			"LA",
 			"LN"
 		];
 		var abbr, i;
@@ -1846,9 +1862,9 @@ describe( "Street Suffices:", function () {
 
 	it( "LP", function () {
 		var names = [
-			"LOOP",
+			"LP",
 			"LOOPS",
-			"LP"
+			"LOOP"
 		];
 		var abbr, i;
 		var numNames = names.length;
@@ -1856,7 +1872,7 @@ describe( "Street Suffices:", function () {
 		for ( i = 0; i < numNames; i++ ) {
 			abbr = standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
-			abbr.should.equal( "LP" );
+			abbr.should.equal( "LOOP" );
 		}
 
 	} );
@@ -2064,6 +2080,7 @@ describe( "Street Suffices:", function () {
 	it( "MTNS", function () {
 		var names = [
 			"MOUNTAINS",
+			"MNTNS",
 			"MTNS"
 		];
 		var abbr, i;
@@ -2112,8 +2129,8 @@ describe( "Street Suffices:", function () {
 
 	it( "OVL", function () {
 		var names = [
-			"OVAL",
-			"OVL"
+			"OVL",
+			"OVAL"
 		];
 		var abbr, i;
 		var numNames = names.length;
@@ -2121,7 +2138,7 @@ describe( "Street Suffices:", function () {
 		for ( i = 0; i < numNames; i++ ) {
 			abbr = standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
-			abbr.should.equal( "OVL" );
+			abbr.should.equal( "OVAL" );
 		}
 
 	} );
@@ -2145,21 +2162,8 @@ describe( "Street Suffices:", function () {
 	it( "PRK", function () {
 		var names = [
 			"PARK",
-			"PRK"
-		];
-		var abbr, i;
-		var numNames = names.length;
-
-		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.streetSuffix( names[ i ], true );
-			should.exist( abbr );
-			abbr.should.equal( "PRK" );
-		}
-
-	} );
-
-	it( "PRKS", function () {
-		var names = [
+			"PK",
+			"PRK",
 			"PARKS",
 			"PRKS"
 		];
@@ -2169,7 +2173,7 @@ describe( "Street Suffices:", function () {
 		for ( i = 0; i < numNames; i++ ) {
 			abbr = standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
-			abbr.should.equal( "PRKS" );
+			abbr.should.equal( "PARK" );
 		}
 
 	} );
@@ -2180,6 +2184,11 @@ describe( "Street Suffices:", function () {
 			"PARKWY",
 			"PKWAY",
 			"PKY",
+			"PARKWAYS",
+			"PARKWYS",
+			"PKWAYS",
+			"PKYS",
+			"PKWYS",
 			"PKWY"
 		];
 		var abbr, i;
@@ -2189,25 +2198,6 @@ describe( "Street Suffices:", function () {
 			abbr = standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PKWY" );
-		}
-
-	} );
-
-	it( "PKWYS", function () {
-		var names = [
-			"PARKWAYS",
-			"PARKWYS",
-			"PKWAYS",
-			"PKYS",
-			"PKWYS"
-		];
-		var abbr, i;
-		var numNames = names.length;
-
-		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.streetSuffix( names[ i ], true );
-			should.exist( abbr );
-			abbr.should.equal( "PKWYS" );
 		}
 
 	} );
@@ -2342,6 +2332,7 @@ describe( "Street Suffices:", function () {
 	it( "PLNS", function () {
 		var names = [
 			"PLAINS",
+			"PLAINES",
 			"PLNS"
 		];
 		var abbr, i;
@@ -2439,6 +2430,7 @@ describe( "Street Suffices:", function () {
 	it( "PR", function () {
 		var names = [
 			"PRAIRIE",
+			"PRARIE",
 			"PRR",
 			"PR"
 		];
@@ -2762,6 +2754,23 @@ describe( "Street Suffices:", function () {
 
 	} );
 
+	it( "SKWY", function () {
+		var names = [
+			"SKYWAY",
+			"SKYWY",
+			"SKWY"
+		];
+		var abbr, i;
+		var numNames = names.length;
+
+		for ( i = 0; i < numNames; i++ ) {
+			abbr = standardization.streetSuffix( names[ i ], true );
+			should.exist( abbr );
+			abbr.should.equal( "SKWY" );
+		}
+
+	} );
+
 	it( "SPG", function () {
 		var names = [
 			"SPNG",
@@ -2801,6 +2810,8 @@ describe( "Street Suffices:", function () {
 	it( "SPUR", function () {
 		var names = [
 			"SPR",
+			"SPRS",
+			"SPURS",
 			"SPUR"
 		];
 		var abbr, i;
@@ -2810,22 +2821,6 @@ describe( "Street Suffices:", function () {
 			abbr = standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SPUR" );
-		}
-
-	} );
-
-	it( "SPURS", function () {
-		var names = [
-			"SPRS",
-			"SPURS"
-		];
-		var abbr, i;
-		var numNames = names.length;
-
-		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.streetSuffix( names[ i ], true );
-			should.exist( abbr );
-			abbr.should.equal( "SPURS" );
 		}
 
 	} );
@@ -2892,6 +2887,7 @@ describe( "Street Suffices:", function () {
 			"STRAVN",
 			"STRVN",
 			"STRVNUE",
+			"STRAVE",
 			"STRA"
 		];
 		var abbr, i;
@@ -3062,6 +3058,7 @@ describe( "Street Suffices:", function () {
 	it( "TRL", function () {
 		var names = [
 			"TRAIL",
+			"TR",
 			"TRAILS",
 			"TRLS",
 			"TRL"
@@ -3120,6 +3117,8 @@ describe( "Street Suffices:", function () {
 			"TRNPK",
 			"TURNPIKE",
 			"TURNPK",
+			"TPK",
+			"TRPK",
 			"TPKE"
 		];
 		var abbr, i;
@@ -3375,7 +3374,7 @@ describe( "Street Suffices:", function () {
 
 	} );
 
-	it( "WY", function () {
+	it( "WAY", function () {
 		var names = [
 			"WAY",
 			"WY"
@@ -3386,7 +3385,7 @@ describe( "Street Suffices:", function () {
 		for ( i = 0; i < numNames; i++ ) {
 			abbr = standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
-			abbr.should.equal( "WY" );
+			abbr.should.equal( "WAY" );
 		}
 
 	} );
@@ -3438,6 +3437,386 @@ describe( "Street Suffices:", function () {
 			abbr.should.equal( "WLS" );
 		}
 
+	} );
+
+	it( "Geo-StreetAddress-US", function () {
+		var streetTypes = {
+			allee: "aly",
+			alley: "aly",
+			ally: "aly",
+			anex: "anx",
+			annex: "anx",
+			annx: "anx",
+			arcade: "arc",
+			av: "ave",
+			aven: "ave",
+			avenu: "ave",
+			avenue: "ave",
+			avn: "ave",
+			avnue: "ave",
+			bayoo: "byu",
+			bayou: "byu",
+			beach: "bch",
+			bend: "bnd",
+			bluf: "blf",
+			bluff: "blf",
+			bluffs: "blfs",
+			bot: "btm",
+			bottm: "btm",
+			bottom: "btm",
+			boul: "blvd",
+			boulevard: "blvd",
+			boulv: "blvd",
+			branch: "br",
+			brdge: "brg",
+			bridge: "brg",
+			brnch: "br",
+			brook: "brk",
+			brooks: "brks",
+			burg: "bg",
+			burgs: "bgs",
+			bypa: "byp",
+			bypas: "byp",
+			bypass: "byp",
+			byps: "byp",
+			camp: "cp",
+			canyn: "cyn",
+			canyon: "cyn",
+			cape: "cpe",
+			causeway: "cswy",
+			causway: "cswy",
+			cen: "ctr",
+			cent: "ctr",
+			center: "ctr",
+			centers: "ctrs",
+			centr: "ctr",
+			centre: "ctr",
+			circ: "cir",
+			circl: "cir",
+			circle: "cir",
+			circles: "cirs",
+			ck: "crk",
+			cliff: "clf",
+			cliffs: "clfs",
+			club: "clb",
+			cmp: "cp",
+			cnter: "ctr",
+			cntr: "ctr",
+			cnyn: "cyn",
+			common: "cmn",
+			corner: "cor",
+			corners: "cors",
+			course: "crse",
+			court: "ct",
+			courts: "cts",
+			cove: "cv",
+			coves: "cvs",
+			cr: "crk",
+			crcl: "cir",
+			crcle: "cir",
+			crecent: "cres",
+			creek: "crk",
+			crescent: "cres",
+			cresent: "cres",
+			crest: "crst",
+			crossing: "xing",
+			crossroad: "xrd",
+			crscnt: "cres",
+			crsent: "cres",
+			crsnt: "cres",
+			crssing: "xing",
+			crssng: "xing",
+			crt: "ct",
+			curve: "curv",
+			dale: "dl",
+			dam: "dm",
+			div: "dv",
+			divide: "dv",
+			driv: "dr",
+			drive: "dr",
+			drives: "drs",
+			drv: "dr",
+			dvd: "dv",
+			estate: "est",
+			estates: "ests",
+			exp: "expy",
+			expr: "expy",
+			express: "expy",
+			expressway: "expy",
+			expw: "expy",
+			extension: "ext",
+			extensions: "exts",
+			extn: "ext",
+			extnsn: "ext",
+			falls: "fls",
+			ferry: "fry",
+			field: "fld",
+			fields: "flds",
+			flat: "flt",
+			flats: "flts",
+			ford: "frd",
+			fords: "frds",
+			forest: "frst",
+			forests: "frst",
+			forg: "frg",
+			forge: "frg",
+			forges: "frgs",
+			fork: "frk",
+			forks: "frks",
+			fort: "ft",
+			freeway: "fwy",
+			freewy: "fwy",
+			frry: "fry",
+			frt: "ft",
+			frway: "fwy",
+			frwy: "fwy",
+			garden: "gdn",
+			gardens: "gdns",
+			gardn: "gdn",
+			gateway: "gtwy",
+			gatewy: "gtwy",
+			gatway: "gtwy",
+			glen: "gln",
+			glens: "glns",
+			grden: "gdn",
+			grdn: "gdn",
+			grdns: "gdns",
+			green: "grn",
+			greens: "grns",
+			grov: "grv",
+			grove: "grv",
+			groves: "grvs",
+			gtway: "gtwy",
+			harb: "hbr",
+			harbor: "hbr",
+			harbors: "hbrs",
+			harbr: "hbr",
+			haven: "hvn",
+			havn: "hvn",
+			height: "hts",
+			heights: "hts",
+			hgts: "hts",
+			highway: "hwy",
+			highwy: "hwy",
+			hill: "hl",
+			hills: "hls",
+			hiway: "hwy",
+			hiwy: "hwy",
+			hllw: "holw",
+			hollow: "holw",
+			hollows: "holw",
+			holws: "holw",
+			hrbor: "hbr",
+			ht: "hts",
+			hway: "hwy",
+			inlet: "inlt",
+			island: "is",
+			islands: "iss",
+			isles: "isle",
+			islnd: "is",
+			islnds: "iss",
+			jction: "jct",
+			jctn: "jct",
+			jctns: "jcts",
+			junction: "jct",
+			junctions: "jcts",
+			junctn: "jct",
+			juncton: "jct",
+			key: "ky",
+			keys: "kys",
+			knol: "knl",
+			knoll: "knl",
+			knolls: "knls",
+			la: "ln",
+			lake: "lk",
+			lakes: "lks",
+			landing: "lndg",
+			lane: "ln",
+			lanes: "ln",
+			ldge: "ldg",
+			light: "lgt",
+			lights: "lgts",
+			lndng: "lndg",
+			loaf: "lf",
+			lock: "lck",
+			locks: "lcks",
+			lodg: "ldg",
+			lodge: "ldg",
+			loops: "loop",
+			manor: "mnr",
+			manors: "mnrs",
+			meadow: "mdw",
+			meadows: "mdws",
+			medows: "mdws",
+			mill: "ml",
+			mills: "mls",
+			mission: "msn",
+			missn: "msn",
+			mnt: "mt",
+			mntain: "mtn",
+			mntn: "mtn",
+			mntns: "mtns",
+			motorway: "mtwy",
+			mount: "mt",
+			mountain: "mtn",
+			mountains: "mtns",
+			mountin: "mtn",
+			mssn: "msn",
+			mtin: "mtn",
+			neck: "nck",
+			orchard: "orch",
+			orchrd: "orch",
+			overpass: "opas",
+			ovl: "oval",
+			parks: "park",
+			parkway: "pkwy",
+			parkways: "pkwy",
+			parkwy: "pkwy",
+			passage: "psge",
+			paths: "path",
+			pikes: "pike",
+			pine: "pne",
+			pines: "pnes",
+			pk: "park",
+			pkway: "pkwy",
+			pkwys: "pkwy",
+			pky: "pkwy",
+			place: "pl",
+			plain: "pln",
+			plaines: "plns",
+			plains: "plns",
+			plaza: "plz",
+			plza: "plz",
+			point: "pt",
+			points: "pts",
+			port: "prt",
+			ports: "prts",
+			prairie: "pr",
+			prarie: "pr",
+			prk: "park",
+			prr: "pr",
+			rad: "radl",
+			radial: "radl",
+			radiel: "radl",
+			ranch: "rnch",
+			ranches: "rnch",
+			rapid: "rpd",
+			rapids: "rpds",
+			rdge: "rdg",
+			rest: "rst",
+			ridge: "rdg",
+			ridges: "rdgs",
+			river: "riv",
+			rivr: "riv",
+			rnchs: "rnch",
+			road: "rd",
+			roads: "rds",
+			route: "rte",
+			rvr: "riv",
+			shoal: "shl",
+			shoals: "shls",
+			shoar: "shr",
+			shoars: "shrs",
+			shore: "shr",
+			shores: "shrs",
+			skyway: "skwy",
+			spng: "spg",
+			spngs: "spgs",
+			spring: "spg",
+			springs: "spgs",
+			sprng: "spg",
+			sprngs: "spgs",
+			spurs: "spur",
+			sqr: "sq",
+			sqre: "sq",
+			sqrs: "sqs",
+			squ: "sq",
+			square: "sq",
+			squares: "sqs",
+			station: "sta",
+			statn: "sta",
+			stn: "sta",
+			str: "st",
+			strav: "stra",
+			strave: "stra",
+			straven: "stra",
+			stravenue: "stra",
+			stravn: "stra",
+			stream: "strm",
+			street: "st",
+			streets: "sts",
+			streme: "strm",
+			strt: "st",
+			strvn: "stra",
+			strvnue: "stra",
+			sumit: "smt",
+			sumitt: "smt",
+			summit: "smt",
+			terr: "ter",
+			terrace: "ter",
+			throughway: "trwy",
+			tpk: "tpke",
+			tr: "trl",
+			trace: "trce",
+			traces: "trce",
+			track: "trak",
+			tracks: "trak",
+			trafficway: "trfy",
+			trail: "trl",
+			trails: "trl",
+			trk: "trak",
+			trks: "trak",
+			trls: "trl",
+			trnpk: "tpke",
+			trpk: "tpke",
+			tunel: "tunl",
+			tunls: "tunl",
+			tunnel: "tunl",
+			tunnels: "tunl",
+			tunnl: "tunl",
+			turnpike: "tpke",
+			turnpk: "tpke",
+			underpass: "upas",
+			union: "un",
+			unions: "uns",
+			valley: "vly",
+			valleys: "vlys",
+			vally: "vly",
+			vdct: "via",
+			viadct: "via",
+			viaduct: "via",
+			view: "vw",
+			views: "vws",
+			vill: "vlg",
+			villag: "vlg",
+			village: "vlg",
+			villages: "vlgs",
+			ville: "vl",
+			villg: "vlg",
+			villiage: "vlg",
+			vist: "vis",
+			vista: "vis",
+			vlly: "vly",
+			vst: "vis",
+			vsta: "vis",
+			walks: "walk",
+			well: "wl",
+			wells: "wls",
+			wy: "way"
+		};
+		var streetType, expected, abbr;
+		for ( streetType in streetTypes ) {
+			if ( streetTypes.hasOwnProperty( streetType ) ) {
+				expected = streetTypes[ streetType ].toUpperCase();
+				abbr = standardization.streetSuffix( streetType, true );
+				if ( !abbr ) {
+					//	Need to assist in test debugging
+					expected.should.equal( abbr );
+				}
+				should.exist( abbr );
+				abbr.should.equal( expected );
+			}
+		}
 	} );
 
 } );
