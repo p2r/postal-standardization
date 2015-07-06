@@ -26,6 +26,7 @@
 		"npm": "~ 1.4.4"
 	},
 	"dependencies": {
+		"parse-address": "~0.0.4",
 		"underscore": "~1.7",
 		"mongodb": "~1.4",
 		"mongojs": "~0.18",
@@ -38,6 +39,6 @@
 		"grunt-contrib-watch": "~0.6",
 		"grunt-mocha-test": "~0.12",
 		"mocha": "~1.21",
-		"should": "~3.3"
+		"should": "~7.0"
 	}
 }
