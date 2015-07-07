@@ -4,11 +4,11 @@
 
 var should = require( "should" );
 
-var Standardization = require( "../../../lib/us/Standardization" );
+var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Countries:", function () {
 
-	var standardization = new Standardization();
+	var postal = new Postal();
 
 	it( "AFGHANISTAN", function () {
 		var names = [
@@ -20,7 +20,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "AFGHANISTAN" );
 		}
@@ -37,7 +37,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ALBANIA" );
 		}
@@ -54,7 +54,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ALGERIA" );
 		}
@@ -71,7 +71,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ANDORRA" );
 		}
@@ -88,7 +88,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ANGOLA" );
 		}
@@ -105,7 +105,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ANGUILLA" );
 		}
@@ -122,7 +122,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ANTARCTICA" );
 		}
@@ -145,7 +145,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ANTIGUA AND BARBUDA" );
 		}
@@ -162,7 +162,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ARGENTINA" );
 		}
@@ -179,7 +179,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ARMENIA" );
 		}
@@ -196,7 +196,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ARUBA" );
 		}
@@ -213,7 +213,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "AUSTRALIA" );
 		}
@@ -230,7 +230,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "AUSTRIA" );
 		}
@@ -247,7 +247,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "AZERBAIJAN" );
 		}
@@ -266,7 +266,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BAHAMAS" );
 		}
@@ -283,7 +283,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BAHRAIN" );
 		}
@@ -300,7 +300,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BANGLADESH" );
 		}
@@ -317,7 +317,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BARBADOS" );
 		}
@@ -334,7 +334,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BELARUS" );
 		}
@@ -351,7 +351,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BELGIUM" );
 		}
@@ -368,7 +368,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BELIZE" );
 		}
@@ -385,7 +385,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BENIN" );
 		}
@@ -402,7 +402,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BERMUDA" );
 		}
@@ -419,7 +419,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BHUTAN" );
 		}
@@ -436,7 +436,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BOLIVIA" );
 		}
@@ -453,7 +453,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BONAIRE" );
 		}
@@ -474,7 +474,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BOSNIA AND HERZEGOVINA" );
 		}
@@ -491,7 +491,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BOTSWANA" );
 		}
@@ -512,7 +512,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BOUVET ISLAND" );
 		}
@@ -533,7 +533,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BRITISH INDIAN OCEAN TERRITORY" );
 		}
@@ -550,7 +550,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BRAZIL" );
 		}
@@ -570,7 +570,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BRUNEI" );
 		}
@@ -587,7 +587,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BULGARIA" );
 		}
@@ -607,7 +607,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BURKINA FASO" );
 		}
@@ -625,7 +625,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BURMA" );
 		}
@@ -642,7 +642,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BURUNDI" );
 		}
@@ -659,7 +659,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CAMBODIA" );
 		}
@@ -676,7 +676,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CAMEROON" );
 		}
@@ -693,7 +693,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CANADA" );
 		}
@@ -711,7 +711,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CAPE VERDE" );
 		}
@@ -737,7 +737,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CAYMAN ISLANDS" );
 		}
@@ -756,7 +756,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CENTRAL AFRICAN REPUBLIC" );
 		}
@@ -773,7 +773,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CHAD" );
 		}
@@ -790,7 +790,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CHILE" );
 		}
@@ -807,7 +807,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CHINA" );
 		}
@@ -829,7 +829,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CHRISTMAS ISLAND" );
 		}
@@ -855,7 +855,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "COCOS ISLANDS" );
 		}
@@ -872,7 +872,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "COLOMBIA" );
 		}
@@ -889,7 +889,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "COMOROS" );
 		}
@@ -906,7 +906,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CONGO" );
 		}
@@ -952,7 +952,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "DEMOCRATIC REPUBLIC OF THE CONGO" );
 		}
@@ -973,7 +973,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "COOK ISLANDS" );
 		}
@@ -991,7 +991,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "COSTA RICA" );
 		}
@@ -1020,7 +1020,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "COTE D'IVOIRE" );
 		}
@@ -1037,7 +1037,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CROATIA" );
 		}
@@ -1054,7 +1054,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CUBA" );
 		}
@@ -1072,7 +1072,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CURACAO" );
 		}
@@ -1091,7 +1091,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CYPRUS" );
 		}
@@ -1110,7 +1110,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CZECH REPUBLIC" );
 		}
@@ -1127,7 +1127,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "DENMARK" );
 		}
@@ -1144,7 +1144,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "DJIBOUTI" );
 		}
@@ -1161,7 +1161,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "DOMINICA" );
 		}
@@ -1187,7 +1187,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "DOMINICAN REPUBLIC" );
 		}
@@ -1205,7 +1205,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "EAST TIMOR" );
 		}
@@ -1222,7 +1222,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ECUADOR" );
 		}
@@ -1239,7 +1239,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "EGYPT" );
 		}
@@ -1257,7 +1257,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "EL SALVADOR" );
 		}
@@ -1277,7 +1277,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "EQUATORIAL GUINEA" );
 		}
@@ -1294,7 +1294,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ERITREA" );
 		}
@@ -1311,7 +1311,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ESTONIA" );
 		}
@@ -1328,7 +1328,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ETHIOPIA" );
 		}
@@ -1350,7 +1350,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "FALKLAND ISLANDS" );
 		}
@@ -1370,7 +1370,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "FAROE ISLANDS" );
 		}
@@ -1390,7 +1390,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "FIJI" );
 		}
@@ -1407,7 +1407,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "FINLAND" );
 		}
@@ -1424,7 +1424,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "FRANCE" );
 		}
@@ -1443,7 +1443,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "FRENCH GUIANA" );
 		}
@@ -1462,7 +1462,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "FRENCH POLYNESIA" );
 		}
@@ -1488,7 +1488,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "FRENCH SOUTHERN TERRITORIES" );
 		}
@@ -1505,7 +1505,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GABON" );
 		}
@@ -1524,7 +1524,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GAMBIA" );
 		}
@@ -1541,7 +1541,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GEORGIA" );
 		}
@@ -1558,7 +1558,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GERMANY" );
 		}
@@ -1575,7 +1575,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GHANA" );
 		}
@@ -1592,7 +1592,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GIBRALTAR" );
 		}
@@ -1609,7 +1609,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GREECE" );
 		}
@@ -1626,7 +1626,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GREENLAND" );
 		}
@@ -1643,7 +1643,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GRENADA" );
 		}
@@ -1660,7 +1660,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GUADELOUPE" );
 		}
@@ -1677,7 +1677,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GUAM" );
 		}
@@ -1694,7 +1694,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GUATEMALA" );
 		}
@@ -1711,7 +1711,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GUERNSEY" );
 		}
@@ -1728,7 +1728,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GUINEA" );
 		}
@@ -1748,7 +1748,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GUINEA-BISSAU" );
 		}
@@ -1765,7 +1765,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GUYANA" );
 		}
@@ -1787,7 +1787,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "HAITI" );
 		}
@@ -1832,7 +1832,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "HEARD ISLAND AND MCDONALD MCDONALD ISLANDS" );
 		}
@@ -1854,7 +1854,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "HOLY SEE" );
 		}
@@ -1871,7 +1871,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "HONDURAS" );
 		}
@@ -1889,7 +1889,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "HONG KONG" );
 		}
@@ -1906,7 +1906,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "HUNGARY" );
 		}
@@ -1923,7 +1923,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ICELAND" );
 		}
@@ -1940,7 +1940,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "INDIA" );
 		}
@@ -1957,7 +1957,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "INDONESIA" );
 		}
@@ -1981,7 +1981,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "IRAN" );
 		}
@@ -1998,7 +1998,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "IRAQ" );
 		}
@@ -2023,7 +2023,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ISLE OF MAN" );
 		}
@@ -2040,7 +2040,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "IRELAND" );
 		}
@@ -2057,7 +2057,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ISRAEL" );
 		}
@@ -2074,7 +2074,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ITALY" );
 		}
@@ -2091,7 +2091,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "JAMAICA" );
 		}
@@ -2108,7 +2108,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "JAPAN" );
 		}
@@ -2125,7 +2125,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "JERSEY" );
 		}
@@ -2142,7 +2142,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "JORDAN" );
 		}
@@ -2159,7 +2159,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "KAZAKHSTAN" );
 		}
@@ -2176,7 +2176,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "KENYA" );
 		}
@@ -2193,7 +2193,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "KIRIBATI" );
 		}
@@ -2232,7 +2232,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NORTH KOREA" );
 		}
@@ -2257,7 +2257,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SOUTH KOREA" );
 		}
@@ -2274,7 +2274,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "KOSOVO" );
 		}
@@ -2291,7 +2291,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "KUWAIT" );
 		}
@@ -2308,7 +2308,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "KYRGYZSTAN" );
 		}
@@ -2351,7 +2351,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "LAOS" );
 		}
@@ -2368,7 +2368,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "LATVIA" );
 		}
@@ -2385,7 +2385,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "LEBANON" );
 		}
@@ -2402,7 +2402,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "LESOTHO" );
 		}
@@ -2419,7 +2419,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "LIBERIA" );
 		}
@@ -2436,7 +2436,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "LIBYA" );
 		}
@@ -2453,7 +2453,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "LIECHTENSTEIN" );
 		}
@@ -2470,7 +2470,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "LITHUANIA" );
 		}
@@ -2492,7 +2492,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "LUXEMBOURG" );
 		}
@@ -2509,7 +2509,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MACAU" );
 		}
@@ -2532,7 +2532,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MACEDONIA" );
 		}
@@ -2549,7 +2549,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MADAGASCAR" );
 		}
@@ -2566,7 +2566,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MALAWI" );
 		}
@@ -2583,7 +2583,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MALAYSIA" );
 		}
@@ -2600,7 +2600,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MALDIVES" );
 		}
@@ -2617,7 +2617,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MALI" );
 		}
@@ -2634,7 +2634,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MALTA" );
 		}
@@ -2654,7 +2654,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MARSHALL ISLANDS" );
 		}
@@ -2671,7 +2671,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MARTINIQUE" );
 		}
@@ -2688,7 +2688,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MAURITANIA" );
 		}
@@ -2705,7 +2705,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MAURITIUS" );
 		}
@@ -2722,7 +2722,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MAYOTTE" );
 		}
@@ -2739,7 +2739,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MEXICO" );
 		}
@@ -2760,7 +2760,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MICRONESIA" );
 		}
@@ -2777,7 +2777,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MOLDOVA" );
 		}
@@ -2794,7 +2794,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MONACO" );
 		}
@@ -2811,7 +2811,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MONGOLIA" );
 		}
@@ -2828,7 +2828,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MONTENEGRO" );
 		}
@@ -2848,7 +2848,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MOROCCO" );
 		}
@@ -2865,7 +2865,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MYANMAR" );
 		}
@@ -2882,7 +2882,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MOZAMBIQUE" );
 		}
@@ -2899,7 +2899,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NAMIBIA" );
 		}
@@ -2917,7 +2917,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NAURU" );
 		}
@@ -2935,7 +2935,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NEPAL" );
 		}
@@ -2952,7 +2952,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NETHERLANDS" );
 		}
@@ -2970,7 +2970,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NETHERLANDS ANTILLES" );
 		}
@@ -2989,7 +2989,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NEW CALEDONIA" );
 		}
@@ -3007,7 +3007,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NEW ZEALAND" );
 		}
@@ -3024,7 +3024,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NICARAGUA" );
 		}
@@ -3041,7 +3041,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NIGER" );
 		}
@@ -3058,7 +3058,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NIGERIA" );
 		}
@@ -3076,7 +3076,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NIUE" );
 		}
@@ -3097,7 +3097,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NORFOLK ISLAND" );
 		}
@@ -3131,7 +3131,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NORTHERN MARIANA ISLANDS" );
 		}
@@ -3148,7 +3148,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NORWAY" );
 		}
@@ -3165,7 +3165,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "OMAN" );
 		}
@@ -3183,7 +3183,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PAKISTAN" );
 		}
@@ -3200,7 +3200,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PALAU" );
 		}
@@ -3236,7 +3236,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PALESTINIAN TERRITORIES" );
 		}
@@ -3253,7 +3253,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PANAMA" );
 		}
@@ -3274,7 +3274,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PAPUA NEW GUINEA" );
 		}
@@ -3291,7 +3291,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PARAGUAY" );
 		}
@@ -3308,7 +3308,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PERU" );
 		}
@@ -3332,7 +3332,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PHILIPPINES" );
 		}
@@ -3349,7 +3349,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "POLAND" );
 		}
@@ -3366,7 +3366,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PORTUGAL" );
 		}
@@ -3385,7 +3385,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PUERTO RICO" );
 		}
@@ -3402,7 +3402,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "QATAR" );
 		}
@@ -3420,7 +3420,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ROMANIA" );
 		}
@@ -3444,7 +3444,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "RUSSIA" );
 		}
@@ -3461,7 +3461,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "RWANDA" );
 		}
@@ -3477,7 +3477,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "REUNION" );
 		}
@@ -3505,7 +3505,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SAINT BARTHALEMY" );
 		}
@@ -3539,7 +3539,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SAINT HELENA" );
 		}
@@ -3561,7 +3561,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SAINT KITTS AND NEVIS" );
 		}
@@ -3581,7 +3581,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SAINT LUCIA" );
 		}
@@ -3603,7 +3603,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SAINT PIERRE AND MIQUELON" );
 		}
@@ -3635,7 +3635,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SAINT VINCENT AND THE GRENADINES" );
 		}
@@ -3655,7 +3655,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "AMERICAN SAMOA" );
 		}
@@ -3672,7 +3672,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SAMOA" );
 		}
@@ -3693,7 +3693,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SAN MARINO" );
 		}
@@ -3721,7 +3721,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SAO TOME AND PRINCIPE" );
 		}
@@ -3739,7 +3739,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SAUDI ARABIA" );
 		}
@@ -3767,7 +3767,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SENEGAL" );
 		}
@@ -3784,7 +3784,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SERBIA" );
 		}
@@ -3803,7 +3803,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SEYCHELLES" );
 		}
@@ -3821,7 +3821,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SIERRA LEONE" );
 		}
@@ -3838,7 +3838,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SINGAPORE" );
 		}
@@ -3873,7 +3873,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SINT MAARTEN" );
 		}
@@ -3916,7 +3916,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SINT MAARTEN" );
 		}
@@ -3933,7 +3933,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SLOVAKIA" );
 		}
@@ -3950,7 +3950,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SLOVENIA" );
 		}
@@ -3970,7 +3970,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SOLOMON ISLANDS" );
 		}
@@ -3987,7 +3987,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SOMALIA" );
 		}
@@ -4007,7 +4007,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SOUTH AFRICA" );
 		}
@@ -4163,7 +4163,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS" );
 		}
@@ -4183,7 +4183,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SOUTH SUDAN" );
 		}
@@ -4200,7 +4200,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SPAIN" );
 		}
@@ -4218,7 +4218,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SRI LANKA" );
 		}
@@ -4235,7 +4235,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SUDAN" );
 		}
@@ -4253,7 +4253,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SURINAME" );
 		}
@@ -4273,7 +4273,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SVALBARD AND JAN MAYEN" );
 		}
@@ -4290,7 +4290,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SWAZILAND" );
 		}
@@ -4307,7 +4307,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SWEDEN" );
 		}
@@ -4324,7 +4324,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SWITZERLAND" );
 		}
@@ -4352,7 +4352,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SYRIAN ARAB REPUBLIC" );
 		}
@@ -4373,7 +4373,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TAIWAN" );
 		}
@@ -4390,7 +4390,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TAJIKISTAN" );
 		}
@@ -4414,7 +4414,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TANZANIA" );
 		}
@@ -4431,7 +4431,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "THAILAND" );
 		}
@@ -4450,7 +4450,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TIMOR-LESTE" );
 		}
@@ -4467,7 +4467,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TOGO" );
 		}
@@ -4486,7 +4486,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TOKELAU" );
 		}
@@ -4503,7 +4503,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TONGA" );
 		}
@@ -4523,7 +4523,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TRINIDAD AND TOBAGO" );
 		}
@@ -4540,7 +4540,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TUNISIA" );
 		}
@@ -4557,7 +4557,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TURKEY" );
 		}
@@ -4574,7 +4574,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TURKMENISTAN" );
 		}
@@ -4591,7 +4591,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TUVALU" );
 		}
@@ -4608,7 +4608,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "UGANDA" );
 		}
@@ -4626,7 +4626,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "UKRAINE" );
 		}
@@ -4649,7 +4649,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "UNITED ARAB EMIRATES" );
 		}
@@ -4672,7 +4672,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "UNITED KINGDOM" );
 		}
@@ -4708,7 +4708,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "UNITED STATES" );
 		}
@@ -4736,7 +4736,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "UNITED STATES MINOR OUTLYING ISLANDS" );
 		}
@@ -4753,7 +4753,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "URUGUAY" );
 		}
@@ -4770,7 +4770,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "UZBEKISTAN" );
 		}
@@ -4787,7 +4787,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "VANUATU" );
 		}
@@ -4804,7 +4804,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "VENEZUELA" );
 		}
@@ -4822,7 +4822,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "VIETNAM" );
 		}
@@ -4842,7 +4842,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "BRITISH VIRGIN ISLANDS" );
 		}
@@ -4868,7 +4868,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "US VIRGIN ISLANDS" );
 		}
@@ -4888,7 +4888,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "WALLIS AND FUTUNA" );
 		}
@@ -4908,7 +4908,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "WESTERN SAHARA" );
 		}
@@ -4925,7 +4925,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "YEMEN" );
 		}
@@ -4942,7 +4942,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ZAMBIA" );
 		}
@@ -4959,7 +4959,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ZIMBABWE" );
 		}
@@ -4979,7 +4979,7 @@ describe( "Countries:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.country( names[ i ], true );
+			abbr = postal.standardization.country( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ALAND ISLANDS" );
 		}

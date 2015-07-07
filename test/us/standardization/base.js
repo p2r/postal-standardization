@@ -4,12 +4,13 @@
 
 var should = require( "should" );
 
-var Standardization = require( "../../../lib/us/Standardization" );
+var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Standardization Object:", function () {
 
 	it( "Constructor - No Config", function () {
-		var standardization = new Standardization();
+		var postal = new Postal();
+		var standardization = postal.standardization;
 		should.exist( standardization );
 	} );
 

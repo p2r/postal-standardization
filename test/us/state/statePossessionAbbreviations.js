@@ -4,11 +4,11 @@
 
 var should = require( "should" );
 
-var Standardization = require( "../../../lib/us/Standardization" );
+var Postal = require( "../../../lib" ).USPostal;
 
 describe( "State/Possession Abbreviations:", function () {
 
-	var standardization = new Standardization();
+	var postal = new Postal();
 
 	it( "AL", function () {
 		var names = [
@@ -26,7 +26,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "AL" );
 		}
@@ -49,7 +49,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "AK" );
 		}
@@ -76,7 +76,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "AS" );
 		}
@@ -100,7 +100,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "AZ" );
 		}
@@ -124,7 +124,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "AR" );
 		}
@@ -153,7 +153,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CA" );
 		}
@@ -179,7 +179,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CO" );
 		}
@@ -204,7 +204,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "CT" );
 		}
@@ -230,7 +230,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "DE" );
 		}
@@ -265,7 +265,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "DC" );
 		}
@@ -297,7 +297,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "FM" );
 		}
@@ -324,7 +324,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "FL" );
 		}
@@ -345,7 +345,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GA" );
 		}
@@ -365,7 +365,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "GU" );
 		}
@@ -391,7 +391,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "HI" );
 		}
@@ -413,7 +413,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ID" );
 		}
@@ -445,7 +445,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "IL" );
 		}
@@ -469,7 +469,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "IN" );
 		}
@@ -492,7 +492,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "IA" );
 		}
@@ -517,7 +517,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "KS" );
 		}
@@ -541,7 +541,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "KY" );
 		}
@@ -566,7 +566,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "LA" );
 		}
@@ -587,7 +587,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ME" );
 		}
@@ -615,7 +615,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MH" );
 		}
@@ -638,7 +638,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MD" );
 		}
@@ -662,7 +662,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MA" );
 		}
@@ -690,7 +690,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MI" );
 		}
@@ -717,7 +717,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MN" );
 		}
@@ -743,7 +743,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MS" );
 		}
@@ -770,7 +770,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MO" );
 		}
@@ -793,7 +793,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MT" );
 		}
@@ -818,7 +818,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NE" );
 		}
@@ -844,7 +844,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NV" );
 		}
@@ -874,7 +874,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NH" );
 		}
@@ -900,7 +900,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NJ" );
 		}
@@ -924,7 +924,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NM" );
 		}
@@ -948,7 +948,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NY" );
 		}
@@ -976,7 +976,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "NC" );
 		}
@@ -1015,7 +1015,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "ND" );
 		}
@@ -1070,7 +1070,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "MP" );
 		}
@@ -1093,7 +1093,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "OH" );
 		}
@@ -1114,7 +1114,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "OK" );
 		}
@@ -1140,7 +1140,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "OR" );
 		}
@@ -1158,7 +1158,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PW" );
 		}
@@ -1199,7 +1199,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PA" );
 		}
@@ -1222,7 +1222,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "PR" );
 		}
@@ -1253,7 +1253,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "RI" );
 		}
@@ -1300,7 +1300,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SC" );
 		}
@@ -1347,7 +1347,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "SD" );
 		}
@@ -1381,7 +1381,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TN" );
 		}
@@ -1403,7 +1403,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "TX" );
 		}
@@ -1421,7 +1421,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "UT" );
 		}
@@ -1444,7 +1444,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "VT" );
 		}
@@ -1478,7 +1478,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "VI" );
 		}
@@ -1508,7 +1508,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "VA" );
 		}
@@ -1537,7 +1537,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "WA" );
 		}
@@ -1602,7 +1602,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "WV" );
 		}
@@ -1633,7 +1633,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "WI" );
 		}
@@ -1655,7 +1655,7 @@ describe( "State/Possession Abbreviations:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.statePossessionAbbreviations( names[ i ], true );
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "WY" );
 		}
@@ -1728,7 +1728,7 @@ describe( "State/Possession Abbreviations:", function () {
 		for ( stateCode in stateCodes ) {
 			if ( stateCodes.hasOwnProperty( stateCode ) ) {
 				expected = stateCodes[ stateCode ].toUpperCase();
-				abbr = standardization.statePossessionAbbreviations( stateCode, true );
+				abbr = postal.standardization.statePossessionAbbreviations( stateCode, true );
 				if ( !abbr ) {
 					//	Need to assist in test debugging
 					expected.should.equal( abbr );

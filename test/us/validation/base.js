@@ -4,12 +4,13 @@
 
 var should = require( "should" );
 
-var Validation = require( "../../../lib/us/Validation" );
+var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Validation Object:", function () {
 
 	it( "Constructor - No Config", function () {
-		var validation = new Validation();
+		var postal = new Postal();
+		var validation = postal.validation;
 		should.exist( validation );
 	} );
 

@@ -4,11 +4,11 @@
 
 var should = require( "should" );
 
-var Standardization = require( "../../../lib/us/Standardization" );
+var Postal = require( "../../../lib" ).USPostal;
 
 describe( "State/Possession FIPS:", function () {
 
-	var standardization = new Standardization();
+	var postal = new Postal();
 
 	it( "Geo-StreetAddress-US FIPS to State", function () {
 		var fips = {
@@ -70,7 +70,7 @@ describe( "State/Possession FIPS:", function () {
 		for ( fip in fips ) {
 			if ( fips.hasOwnProperty( fip ) ) {
 				expected = fips[ fip ].toUpperCase();
-				abbr = standardization.fips.getStateForCode( fip, true );
+				abbr = postal.standardization.fips.getStateForCode( fip, true );
 				if ( !abbr ) {
 					//	Need to assist in test debugging
 					expected.should.equal( abbr );
@@ -141,7 +141,7 @@ it( "Geo-StreetAddress-US State to FIPS", function () {
 		for ( fip in fips ) {
 			if ( fips.hasOwnProperty( fip ) ) {
 				expected = fips[ fip ].toUpperCase();
-				abbr = standardization.fips.getCodeForState( fip, true );
+				abbr = postal.standardization.fips.getCodeForState( fip, true );
 				if ( !abbr ) {
 					//	Need to assist in test debugging
 					expected.should.equal( abbr );

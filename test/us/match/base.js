@@ -4,12 +4,14 @@
 
 var should = require( "should" );
 
-var Match = require( "../../../lib/us/Match" );
+var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Match Object:", function () {
 
 	it( "Constructor - No Config", function () {
-		var match = new Match();
+		var postal = new Postal();
+		var match = postal.match;
+
 		should.exist( match );
 	} );
 

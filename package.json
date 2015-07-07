@@ -22,11 +22,11 @@
 		"deploy": "grunt deploy"
 	},
 	"engines": {
-		"node": "~ 0.10",
-		"npm": "~ 1.4.4"
+		"node": "~0.10",
+		"npm": "~1.4.4"
 	},
 	"dependencies": {
-		"parse-address": "~0.0.4",
+		"parse-address": "~0.0",
 		"underscore": "~1.7",
 		"mongodb": "~1.4",
 		"mongojs": "~0.18",

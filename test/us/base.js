@@ -4,19 +4,22 @@
 
 var should = require( "should" );
 
-var USPostal = require( "../../lib/us" );
+var Postal = require( "../../lib" ).USPostal;
 
-describe( "US Postal Object:", function () {
+describe( "Postal Object:", function () {
 
 	it( "Constructor - No Config", function () {
-		var usPostal = new USPostal();
-		should.exist( usPostal );
+		var postal = new Postal();
+		should.exist( postal );
 
-		should.exist( usPostal.standardization );
-		should.exist( usPostal.match );
+		should( postal ).have.property( "standardization" );
+		should.exist( postal.standardization );
 
-		should.exist( usPostal.zipcode );
-		should.not.exist( usPostal.zipcode.database );
+		should( postal ).have.property( "match" );
+		should.exist( postal.match );
+
+		should( postal ).have.property( "validation" );
+		should.exist( postal.validation );
 	} );
 
 } );

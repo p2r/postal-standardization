@@ -4,11 +4,11 @@
 
 var should = require( "should" );
 
-var Standardization = require( "../../../lib/us/Standardization" );
+var Postal = require( "../../../lib" ).USPostal;
 
-describe( "Street Suffices:", function () {
+describe( "Street Suffixes:", function () {
 
-	var standardization = new Standardization();
+	var postal = new Postal();
 
 	it( "N", function () {
 		var names = [
@@ -19,9 +19,43 @@ describe( "Street Suffices:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.streetSuffix( names[ i ], true );
+			abbr = postal.standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "N" );
+		}
+
+	} );
+
+	it( "NE", function () {
+		var names = [
+			"NORTHEAST",
+			"NORTH EAST",
+			"NE"
+		];
+		var abbr, i;
+		var numNames = names.length;
+
+		for ( i = 0; i < numNames; i++ ) {
+			abbr = postal.standardization.streetSuffix( names[ i ], true );
+			should.exist( abbr );
+			abbr.should.equal( "NE" );
+		}
+
+	} );
+
+	it( "NW", function () {
+		var names = [
+			"NORTHWEST",
+			"NORTH WEST",
+			"NW"
+		];
+		var abbr, i;
+		var numNames = names.length;
+
+		for ( i = 0; i < numNames; i++ ) {
+			abbr = postal.standardization.streetSuffix( names[ i ], true );
+			should.exist( abbr );
+			abbr.should.equal( "NW" );
 		}
 
 	} );
@@ -35,9 +69,43 @@ describe( "Street Suffices:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.streetSuffix( names[ i ], true );
+			abbr = postal.standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "S" );
+		}
+
+	} );
+
+	it( "SE", function () {
+		var names = [
+			"SOUTHEAST",
+			"SOUTH EAST",
+			"SE"
+		];
+		var abbr, i;
+		var numNames = names.length;
+
+		for ( i = 0; i < numNames; i++ ) {
+			abbr = postal.standardization.streetSuffix( names[ i ], true );
+			should.exist( abbr );
+			abbr.should.equal( "SE" );
+		}
+
+	} );
+
+	it( "SW", function () {
+		var names = [
+			"SOUTHWEST",
+			"SOUTH WEST",
+			"SW"
+		];
+		var abbr, i;
+		var numNames = names.length;
+
+		for ( i = 0; i < numNames; i++ ) {
+			abbr = postal.standardization.streetSuffix( names[ i ], true );
+			should.exist( abbr );
+			abbr.should.equal( "SW" );
 		}
 
 	} );
@@ -51,7 +119,7 @@ describe( "Street Suffices:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.streetSuffix( names[ i ], true );
+			abbr = postal.standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "E" );
 		}
@@ -67,7 +135,7 @@ describe( "Street Suffices:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = standardization.streetSuffix( names[ i ], true );
+			abbr = postal.standardization.streetSuffix( names[ i ], true );
 			should.exist( abbr );
 			abbr.should.equal( "W" );
 		}

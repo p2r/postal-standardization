@@ -4,16 +4,18 @@
 
 var should = require( "should" );
 
-var Standardization = require( "../../../lib/us/Standardization" );
+var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Parse Address:", function () {
 
-	var standardization = new Standardization();
+	var postal = new Postal();
 
 	function verifyAddress( addressString, addressObject ) {
-		var parsedAddress = standardization.parse.parseLocation( addressString );
-		should.exist( parsedAddress );
-		parsedAddress.should.eql( addressObject );
+		postal.standardization.parseAddress( addressString, function ( err, result ) {
+			should.not.exist( err );
+			should.exist( result );
+			result.should.eql( addressObject );
+		} );
 	}
 
 	it( "Number Street Type Zipcode", function () {
