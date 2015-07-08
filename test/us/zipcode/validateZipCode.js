@@ -16,7 +16,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020 '", function () {
@@ -25,7 +24,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020'", function () {
@@ -34,7 +32,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "' 80020 '", function () {
@@ -43,7 +40,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020 US'", function () {
@@ -52,7 +48,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, "US", true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020 ZW'", function () {
@@ -61,7 +56,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, "ZW", true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020-6823'", function () {
@@ -70,7 +64,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020 -6823'", function () {
@@ -79,7 +72,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020- 6823'", function () {
@@ -88,7 +80,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020 - 6823'", function () {
@@ -97,7 +88,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020 6823'", function () {
@@ -106,7 +96,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020  6823'", function () {
@@ -115,7 +104,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "' 80020-6823'", function () {
@@ -124,7 +112,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "' 80020 -6823'", function () {
@@ -133,7 +120,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "' 80020- 6823'", function () {
@@ -142,7 +128,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "' 80020 - 6823'", function () {
@@ -151,7 +136,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020-6823 '", function () {
@@ -160,7 +144,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020 -6823 '", function () {
@@ -169,7 +152,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020- 6823 '", function () {
@@ -178,7 +160,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "'80020 - 6823 '", function () {
@@ -187,7 +168,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "' 80020-6823 '", function () {
@@ -196,7 +176,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "' 80020 -6823 '", function () {
@@ -205,7 +184,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "' 80020- 6823 '", function () {
@@ -214,7 +192,6 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
-
 	} );
 
 	it( "' 80020 - 6823 '", function () {
@@ -223,7 +200,12 @@ describe( "Zip Codes:", function () {
 		var zip = postal.standardization.zipcode( zipTest, null, true );
 		should.exist( zip );
 		zip.should.equal( zipExp );
+	} );
 
+	it( "'800206823'", function () {
+		var zipTest = "800206823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.not.exist( zip );
 	} );
 
 } );
