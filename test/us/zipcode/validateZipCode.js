@@ -1,26 +1,229 @@
-( function () {
-	"use strict";
+"use strict";
 
-	module.exports = function ( zipcode, matchRequired ) {
-		var cleanZipCode;
-		// var zipRegEx = "^\\d{5}([\\-]\\d{4})?$";
+/* global describe, it */
 
-		if ( !zipcode ) {
-			return null;
-		}
+var should = require( "should" );
 
-		cleanZipCode = zipcode.trim();
-		if ( cleanZipCode === "" ) {
-			return null;
-		}
+var Postal = require( "../../../lib" ).USPostal;
 
-		cleanZipCode = cleanZipCode.toUpperCase();
+describe( "Zip Codes:", function () {
 
-		if ( !cleanZipCode && matchRequired ) {
-			return null;
-		}
+	var postal = new Postal();
 
-		return cleanZipCode;
-	};
+	it( "'80020'", function () {
+		var zipTest = "80020";
+		var zipExp = zipTest;
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
 
-} ).call( this );
+	} );
+
+	it( "'80020 '", function () {
+		var zipTest = "80020 ";
+		var zipExp = "80020";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020'", function () {
+		var zipTest = " 80020";
+		var zipExp = "80020";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "' 80020 '", function () {
+		var zipTest = " 80020 ";
+		var zipExp = "80020";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020 US'", function () {
+		var zipTest = "80020";
+		var zipExp = zipTest;
+		var zip = postal.standardization.zipcode( zipTest, "US", true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020 ZW'", function () {
+		var zipTest = "80020";
+		var zipExp = zipTest;
+		var zip = postal.standardization.zipcode( zipTest, "ZW", true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020-6823'", function () {
+		var zipTest = "80020-6823";
+		var zipExp = zipTest;
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020 -6823'", function () {
+		var zipTest = "80020 -6823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020- 6823'", function () {
+		var zipTest = "80020- 6823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020 - 6823'", function () {
+		var zipTest = "80020 - 6823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020 6823'", function () {
+		var zipTest = "80020 6823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020  6823'", function () {
+		var zipTest = "80020  6823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "' 80020-6823'", function () {
+		var zipTest = " 80020-6823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "' 80020 -6823'", function () {
+		var zipTest = " 80020 -6823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "' 80020- 6823'", function () {
+		var zipTest = " 80020- 6823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "' 80020 - 6823'", function () {
+		var zipTest = " 80020 - 6823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020-6823 '", function () {
+		var zipTest = "80020-6823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020 -6823 '", function () {
+		var zipTest = "80020 -6823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020- 6823 '", function () {
+		var zipTest = "80020- 6823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "'80020 - 6823 '", function () {
+		var zipTest = "80020 - 6823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "' 80020-6823 '", function () {
+		var zipTest = " 80020-6823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "' 80020 -6823 '", function () {
+		var zipTest = " 80020 -6823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "' 80020- 6823 '", function () {
+		var zipTest = " 80020- 6823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+	it( "' 80020 - 6823 '", function () {
+		var zipTest = " 80020 - 6823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+
+	} );
+
+} );
