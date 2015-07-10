@@ -60,9 +60,9 @@ describe( "New Parse Address:", function () {
 
 	it( "Some Address 80023\\nUnited States", function () {
 
-		var addressString = "Some Address\nUnited States";
+		var addressString = "Some Address 80023\nUnited States";
 		var addressObject = {
-			// zip: "80023",
+			zip: "80023",
 			country: "UNITED STATES"
 		};
 
@@ -157,6 +157,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7\nCA";
 		var addressObject = {
+			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
 
@@ -167,6 +168,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "Montreal, QC H3Z 2Y7\nCA";
 		var addressObject = {
+			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
 
@@ -217,6 +219,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7\nCanada";
 		var addressObject = {
+			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
 
@@ -227,6 +230,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "Montreal, QC H3Z 2Y7\nCanada";
 		var addressObject = {
+			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
 
