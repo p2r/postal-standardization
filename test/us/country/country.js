@@ -1013,6 +1013,12 @@ describe( "Countries:", function () {
 			"REPUBLIC CÔTE D'IVOIRE",
 			"REP CÔTE D'IVOIRE",
 			"REP. CÔTE D'IVOIRE",
+			"REPUBLIC OF COTE D'IVOIRE",
+			"REP OF COTE D'IVOIRE",
+			"REP. OF COTE D'IVOIRE",
+			"REPUBLIC COTE D'IVOIRE",
+			"REP COTE D'IVOIRE",
+			"REP. COTE D'IVOIRE",
 			"CIV",
 			"CI"
 		];
@@ -4699,6 +4705,7 @@ describe( "Countries:", function () {
 			"US.A.",
 			"U.SA",
 			"U.S.A",
+			"U.S.A.",
 			"UNITEDSTATESAMERICA",
 			"AMERICA",
 			"USA",
