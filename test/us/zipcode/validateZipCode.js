@@ -204,8 +204,66 @@ describe( "Zip Codes:", function () {
 
 	it( "'800206823'", function () {
 		var zipTest = "800206823";
+		var zipExp = "80020-6823";
 		var zip = postal.standardization.zipcode( zipTest, null, true );
-		should.not.exist( zip );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+	} );
+
+	it( "' 800206823'", function () {
+		var zipTest = " 800206823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+	} );
+
+	it( "'800206823 '", function () {
+		var zipTest = "800206823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+	} );
+
+	it( "' 800206823 '", function () {
+		var zipTest = " 800206823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+	} );
+
+	it( "'80020 6823'", function () {
+		var zipTest = "80020 6823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+	} );
+
+	it( "' 80020 6823'", function () {
+		var zipTest = " 80020 6823";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+	} );
+
+	it( "'80020 6823 '", function () {
+		var zipTest = "80020 6823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
+	} );
+
+	it( "' 80020 6823 '", function () {
+		var zipTest = " 80020 6823 ";
+		var zipExp = "80020-6823";
+		var zip = postal.standardization.zipcode( zipTest, null, true );
+		should.exist( zip );
+		zip.should.equal( zipExp );
 	} );
 
 } );
