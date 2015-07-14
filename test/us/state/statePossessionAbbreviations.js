@@ -1739,4 +1739,75 @@ describe( "State/Possession Abbreviations:", function () {
 		}
 	} );
 
+	it( "AE", function () {
+		var names = [
+			"ARMED FORCES EUROPE, THE MIDDLE EAST AND CANADA",
+			"ARMED FORCES EUROPE, THE MIDDLE EAST, AND CANADA",
+			"ARMED FORCES EUROPE, MIDDLE EAST AND CANADA",
+			"ARMED FORCES EUROPE, MIDDLE EAST, AND CANADA",
+			"ARMED FORCES MIDDLE EAST",
+			"ARMED FORCES CANADA",
+			"ARMED FORCES EUROPE, THE MIDDLE EAST, & CANADA",
+			"ARMED FORCES EUROPE, THE MIDDLE EAST & CANADA",
+			"ARMED FORCES EUROPE, MIDDLE EAST, & CANADA",
+			"ARMED FORCES EUROPE, MIDDLE EAST & CANADA",
+			"ARMED FORCES EUROPE, THE MIDDLE EAST AND CANADA",
+			"ARMED FORCES EUROPE, THE MIDDLE EAST, AND CANADA",
+			"AF EUROPE, MIDDLE EAST AND CANADA",
+			"AF EUROPE, MIDDLE EAST, AND CANADA",
+			"AF MIDDLE EAST",
+			"AF CANADA",
+			"AF EUROPE, THE MIDDLE EAST, & CANADA",
+			"AF EUROPE, THE MIDDLE EAST & CANADA",
+			"AF EUROPE, MIDDLE EAST, & CANADA",
+			"AF EUROPE, MIDDLE EAST & CANADA",
+			"AE"
+		];
+		var abbr, i;
+		var numNames = names.length;
+
+		for ( i = 0; i < numNames; i++ ) {
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
+			should.exist( abbr );
+			abbr.should.equal( "AE" );
+		}
+
+	} );
+
+	it( "AP", function () {
+		var names = [
+			"ARMED FORCES PACIFIC",
+			"AF PACIFIC",
+			"AP"
+		];
+		var abbr, i;
+		var numNames = names.length;
+
+		for ( i = 0; i < numNames; i++ ) {
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
+			should.exist( abbr );
+			abbr.should.equal( "AP" );
+		}
+
+	} );
+
+	it( "AA", function () {
+		var names = [
+			"ARMED FORCES AMERICAS",
+			"ARMED FORCES AMERICA",
+			"AF AMERICAS",
+			"AF AMERICA",
+			"AA"
+		];
+		var abbr, i;
+		var numNames = names.length;
+
+		for ( i = 0; i < numNames; i++ ) {
+			abbr = postal.standardization.statePossessionAbbreviations( names[ i ], true );
+			should.exist( abbr );
+			abbr.should.equal( "AA" );
+		}
+
+	} );
+
 } );
