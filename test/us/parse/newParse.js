@@ -249,11 +249,6 @@ describe( "New Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-
-
-
-
-
 	it( "Number Street Type Zipcode", function () {
 
 		var addressString = "1005 Gravenstein Hwy 95472";
