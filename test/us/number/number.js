@@ -124,4 +124,50 @@ describe( "Numbers:", function () {
 		num.should.equal( numExp );
 	} );
 
+	it( "'123-10'", function () {
+		var numTest = "123-10";
+		var numExp = "123-10";
+		var num = postal.standardization.number( numTest, true );
+		should.exist( num );
+		num.should.equal( numExp );
+	} );
+
+	it( "'123 - 10'", function () {
+		var numTest = "123 - 10";
+		var numExp = "123-10";
+		var num = postal.standardization.number( numTest, true );
+		should.exist( num );
+		num.should.equal( numExp );
+	} );
+
+	it( "'123- 10'", function () {
+		var numTest = "123- 10";
+		var numExp = "123-10";
+		var num = postal.standardization.number( numTest, true );
+		should.exist( num );
+		num.should.equal( numExp );
+	} );
+
+	it( "'123 -10'", function () {
+		var numTest = "123 -10";
+		var numExp = "123-10";
+		var num = postal.standardization.number( numTest, true );
+		should.exist( num );
+		num.should.equal( numExp );
+	} );
+
+	it( "'123-10 street'", function () {
+		var numTest = "123-10 street";
+		var numExp = "123-10";
+		var num = postal.standardization.number( numTest, true );
+		should.exist( num );
+		num.should.equal( numExp );
+	} );
+
+	it( "'123-10street'", function () {
+		var numTest = "123-10street";
+		var num = postal.standardization.number( numTest, true );
+		should.not.exist( num );
+	} );
+
 } );
