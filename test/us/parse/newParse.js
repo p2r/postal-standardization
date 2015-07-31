@@ -253,7 +253,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 Gravenstein Hwy 95472";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			zip: "95472"
@@ -266,7 +266,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 Gravenstein Hwy, 95472";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			zip: "95472"
@@ -279,7 +279,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 Gravenstein Hwy N, 95472";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			// suffix: "N",
@@ -293,7 +293,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 Gravenstein Highway North, 95472";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			// suffix: "N",
@@ -307,7 +307,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 N Gravenstein Highway, Sebastopol, CA";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// prefix: "N",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
@@ -322,7 +322,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 N Gravenstein Highway, Suite 500, Sebastopol, CA";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// prefix: "N",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
@@ -339,7 +339,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 N Gravenstein Hwy Suite 500 Sebastopol, CA";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// prefix: "N",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
@@ -356,7 +356,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 N Gravenstein Highway, Sebastopol, CA, 95472";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// prefix: "N",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
@@ -372,7 +372,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 N Gravenstein Highway Sebastopol CA 95472";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// prefix: "N",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
@@ -388,7 +388,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 Gravenstein Hwy N Sebastopol CA";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			// suffix: "N",
@@ -403,7 +403,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 Gravenstein Hwy N, Sebastopol CA";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			// suffix: "N",
@@ -418,7 +418,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 Gravenstein Hwy, N Sebastopol CA";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			// city: "NORTH SEBASTOPOL",
@@ -432,7 +432,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 Gravenstein Hwy, North Sebastopol CA";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			// city: "NORTH SEBASTOPOL",
@@ -446,7 +446,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 Gravenstein Hwy Sebastopol CA";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			// city: "SEBASTOPOL",
@@ -460,7 +460,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "115 Broadway San Francisco CA";
 		var addressObject = {
-			// number: "115",
+			number: "115",
 			// street: "BROADWAY",
 			// city: "SAN FRANCISCO",
 			state: "CA"
@@ -473,7 +473,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "7800 Mill Station Rd, Sebastopol, CA 95472";
 		var addressObject = {
-			// number: "7800",
+			number: "7800",
 			// street: "MILL STATION",
 			// type: "RD",
 			// city: "SEBASTOPOL",
@@ -488,7 +488,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "7800 Mill Station Rd Sebastopol CA 95472";
 		var addressObject = {
-			// number: "7800",
+			number: "7800",
 			// street: "MILL STATION",
 			// type: "RD",
 			// city: "SEBASTOPOL",
@@ -503,7 +503,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1005 State Highway 116 Sebastopol CA 95472";
 		var addressObject = {
-			// number: "1005",
+			number: "1005",
 			// street: "STATE HIGHWAY 116",
 			// city: "SEBASTOPOL",
 			state: "CA",
@@ -517,7 +517,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1600 Pennsylvania Ave. Washington DC";
 		var addressObject = {
-			// number: "1600",
+			number: "1600",
 			// street: "PENNSYLVANIA",
 			// type: "AVE",
 			// city: "WASHINGTON",
@@ -531,7 +531,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1600 Pennsylvania Avenue Washington DC";
 		var addressObject = {
-			// number: "1600",
+			number: "1600",
 			// street: "PENNSYLVANIA",
 			// type: "AVE",
 			// city: "WASHINGTON",
@@ -560,7 +560,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "550 S 400 E #3206, Salt Lake City UT 84111";
 		var addressObject = {
-			// number: "550",
+			number: "550",
 			// prefix: "S",
 			// street: "400",
 			// suffix: "E",
@@ -578,7 +578,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "6641 N 2200 W Apt D304 Park City, UT 84098";
 		var addressObject = {
-			// number: "6641",
+			number: "6641",
 			// prefix: "N",
 			// street: "2200",
 			// suffix: "W",
@@ -596,7 +596,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "100 South St, Philadelphia, PA";
 		var addressObject = {
-			// number: "100",
+			number: "100",
 			// street: "SOUTH",
 			// type: "ST",
 			// city: "PHILADELPHIA",
@@ -610,7 +610,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "100 S.E. Washington Ave, Minneapolis, MN";
 		var addressObject = {
-			// number: "100",
+			number: "100",
 			// prefix: "SE.",
 			// street: "WASHINGTON",
 			// type: "AVE",
@@ -625,7 +625,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "3813 1/2 Some Road, Los Angeles, CA";
 		var addressObject = {
-			// number: "3813",
+			number: "3813 1/2",
 			// street: "SOME",
 			// type: "RD",
 			// city: "LOS ANGELES",
@@ -755,7 +755,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1 First St, e San Jose CA";
 		var addressObject = {
-			// number: "1",
+			number: "1",
 			// street: "FIRST",
 			// type: "ST",
 			// city: "EAST SAN JOSE",
@@ -769,7 +769,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "123 Maple Rochester, New York";
 		var addressObject = {
-			// number: "123",
+			number: "123",
 			// street: "MAPLE",
 			// city: "ROCHESTER",
 			state: "NY"
@@ -782,7 +782,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "233 S Wacker Dr 60606-6306";
 		var addressObject = {
-			// number: "233",
+			number: "233",
 			// prefix: "S",
 			// street: "WACKER",
 			// type: "DR",
@@ -796,7 +796,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "233 S Wacker Dr 606066306";
 		var addressObject = {
-			// number: "233",
+			number: "233",
 			// prefix: "S",
 			// street: "WACKER",
 			// type: "DR",
@@ -810,7 +810,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "233 S Wacker Dr lobby 60606";
 		var addressObject = {
-			// number: "233",
+			number: "233",
 			// prefix: "S",
 			// street: "WACKER",
 			// type: "DR",
@@ -825,7 +825,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "233 S Wacker Dr lobby 60606";
 		var addressObject = {
-			// number: "233",
+			number: "233",
 			// prefix: "S",
 			// street: "WACKER",
 			// type: "DR",
@@ -842,7 +842,7 @@ describe( "New Parse Address:", function () {
 		var addressObject = {
 			// sec_unit_type: "#",
 			// sec_unit_num: "42",
-			// number: "233",
+			number: "233",
 			// prefix: "S",
 			// street: "WACKER",
 			// type: "DR",
@@ -858,7 +858,7 @@ describe( "New Parse Address:", function () {
 		var addressObject = {
 			// sec_unit_type: "lt",
 			// sec_unit_num: "42",
-			// number: "99",
+			number: "99",
 			// street: "SOME",
 			// type: "RD",
 			// city: "SOME CITY",
@@ -872,7 +872,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "36401 County Road 43, Eaton, CO 80615";
 		var addressObject = {
-			// number: "36401",
+			number: "36401",
 			// street: "COUNTY ROAD 43",
 			// city: "EATON",
 			state: "CO",
@@ -886,7 +886,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "1234 COUNTY HWY 60E, Town, CO 12345";
 		var addressObject = {
-			// number: "1234",
+			number: "1234",
 			// street: "COUNTY HWY 60",
 			// suffix: "E",
 			// city: "TOWN",
@@ -901,7 +901,7 @@ describe( "New Parse Address:", function () {
 
 		var addressString = "321 S. Washington";
 		var addressObject = {
-			// number: "321",
+			number: "321",
 			// prefix: "S",
 			// street: "WASHINGTON"
 
@@ -912,7 +912,7 @@ describe( "New Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Ampersand Number Street Type, Unit UnitNumber Ampersand", function () {
+	it( "Apostrophe Number Street Type, Unit UnitNumber Apostrophe", function () {
 
 		var addressString = "\'45 Quaker Ave, Ste 105\'";
 		var addressObject = {
