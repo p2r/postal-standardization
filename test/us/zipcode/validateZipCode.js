@@ -26,7 +26,7 @@ describe( "Zip Codes:", function () {
 		zip.should.equal( zipExp );
 	} );
 
-	it( "'80020'", function () {
+	it( "' 80020'", function () {
 		var zipTest = " 80020";
 		var zipExp = "80020";
 		var zip = postal.standardization.zipcode( zipTest, null, true );
