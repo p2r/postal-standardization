@@ -925,4 +925,17 @@ describe( "New Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
+	it( "RR 2 BOX 274, Lake Butler, FL 32054", function () {
+
+		var addressString = "RR 2 BOX 274, Lake Butler, FL 32054";
+		var addressObject = {
+			rural_route: "RR 2 BOX 274",
+			// city: "LAKE BUTLER",
+			state: "FL",
+			zip: "32054"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
+
 } );
