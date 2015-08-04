@@ -156,4 +156,20 @@ describe( "Street Numbers:", function () {
 		num.should.equal( numExp );
 	} );
 
+	it( "'123 1/2'", function () {
+		var numTest = "123 1/2";
+		var numExp = "123 1/2";
+		var num = postal.standardization.streetNumber( numTest, true );
+		should.exist( num );
+		num.should.equal( numExp );
+	} );
+
+	it( "'123 1/3RD'", function () {
+		var numTest = "123 1/3RD";
+		var numExp = "123 1/3RD";
+		var num = postal.standardization.streetNumber( numTest, true );
+		should.exist( num );
+		num.should.equal( numExp );
+	} );
+
 } );

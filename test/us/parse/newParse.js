@@ -842,7 +842,7 @@ describe( "New Parse Address:", function () {
 		var addressObject = {
 			// sec_unit_type: "#",
 			// sec_unit_num: "42",
-			number: "233",
+			// number: "233",
 			// prefix: "S",
 			// street: "WACKER",
 			// type: "DR",
@@ -858,7 +858,7 @@ describe( "New Parse Address:", function () {
 		var addressObject = {
 			// sec_unit_type: "lt",
 			// sec_unit_num: "42",
-			number: "99",
+			// number: "99",
 			// street: "SOME",
 			// type: "RD",
 			// city: "SOME CITY",
@@ -904,7 +904,6 @@ describe( "New Parse Address:", function () {
 			number: "321",
 			// prefix: "S",
 			// street: "WASHINGTON"
-
 			//	TODO: Fix - Not true!
 			state: "WA"
 		};
