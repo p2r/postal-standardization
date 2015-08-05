@@ -6,7 +6,7 @@ var should = require( "should" );
 
 var Postal = require( "../../../lib" ).USPostal;
 
-describe( "New Parse Address:", function () {
+describe( "Parse Address:", function () {
 
 	var postal = new Postal();
 
@@ -254,8 +254,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 Gravenstein Hwy 95472";
 		var addressObject = {
 			number: "1005",
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
+			street: "GRAVENSTEIN",
+			type: "HWY",
 			zip: "95472"
 		};
 
@@ -267,8 +267,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 Gravenstein Hwy, 95472";
 		var addressObject = {
 			number: "1005",
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
+			street: "GRAVENSTEIN",
+			type: "HWY",
 			zip: "95472"
 		};
 
@@ -280,37 +280,37 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 Gravenstein Hwy N, 95472";
 		var addressObject = {
 			number: "1005",
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
-			// suffix: "N",
+			street: "GRAVENSTEIN",
+			type: "HWY",
+			suffix: "N",
 			zip: "95472"
 		};
 
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type Suffix,  Zipcode", function () {
+	it( "Number Street Type Suffix, Zipcode", function () {
 
 		var addressString = "1005 Gravenstein Highway North, 95472";
 		var addressObject = {
 			number: "1005",
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
-			// suffix: "N",
+			street: "GRAVENSTEIN",
+			type: "HWY",
+			suffix: "N",
 			zip: "95472"
 		};
 
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type, City, ST", function () {
+	it( "Number Prefix Street Type, City, ST", function () {
 
 		var addressString = "1005 N Gravenstein Highway, Sebastopol, CA";
 		var addressObject = {
 			number: "1005",
-			// prefix: "N",
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
+			prefix: "N",
+			street: "GRAVENSTEIN",
+			type: "HWY",
 			// city: "SEBASTOPOL",
 			state: "CA"
 		};
@@ -323,9 +323,9 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 N Gravenstein Highway, Suite 500, Sebastopol, CA";
 		var addressObject = {
 			number: "1005",
-			// prefix: "N",
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
+			prefix: "N",
+			street: "GRAVENSTEIN",
+			type: "HWY",
 			// sec_unit_type: "Suite",
 			// sec_unit_num: "500",
 			// city: "SEBASTOPOL",
@@ -340,7 +340,10 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 N Gravenstein Hwy Suite 500 Sebastopol, CA";
 		var addressObject = {
 			number: "1005",
-			// prefix: "N",
+			prefix: "N",
+
+			//	TODO: FIX!
+			street: "GRAVENSTEIN HWY SUITE 500 SEBASTOPOL",
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			// sec_unit_type: "Suite",
@@ -352,14 +355,14 @@ describe( "New Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type, City, ST, Zipcode", function () {
+	it( "Number Prefix Street Type, City, ST, Zipcode", function () {
 
 		var addressString = "1005 N Gravenstein Highway, Sebastopol, CA, 95472";
 		var addressObject = {
 			number: "1005",
-			// prefix: "N",
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
+			prefix: "N",
+			street: "GRAVENSTEIN",
+			type: "HWY",
 			// city: "SEBASTOPOL",
 			state: "CA",
 			zip: "95472"
@@ -373,7 +376,11 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 N Gravenstein Highway Sebastopol CA 95472";
 		var addressObject = {
 			number: "1005",
-			// prefix: "N",
+			prefix: "N",
+
+			//	TODO: FIX!
+			street: "GRAVENSTEIN HIGHWAY SEBASTOPOL",
+
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			// city: "SEBASTOPOL",
@@ -389,6 +396,10 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 Gravenstein Hwy N Sebastopol CA";
 		var addressObject = {
 			number: "1005",
+
+			//	TODO: FIX!
+			street: "GRAVENSTEIN HWY N SEBASTOPOL",
+
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			// suffix: "N",
@@ -404,9 +415,9 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 Gravenstein Hwy N, Sebastopol CA";
 		var addressObject = {
 			number: "1005",
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
-			// suffix: "N",
+			street: "GRAVENSTEIN",
+			type: "HWY",
+			suffix: "N",
 			// city: "SEBASTOPOL",
 			state: "CA"
 		};
@@ -419,8 +430,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 Gravenstein Hwy, N Sebastopol CA";
 		var addressObject = {
 			number: "1005",
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
+			street: "GRAVENSTEIN",
+			type: "HWY",
 			// city: "NORTH SEBASTOPOL",
 			state: "CA"
 		};
@@ -433,8 +444,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 Gravenstein Hwy, North Sebastopol CA";
 		var addressObject = {
 			number: "1005",
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
+			street: "GRAVENSTEIN",
+			type: "HWY",
 			// city: "NORTH SEBASTOPOL",
 			state: "CA"
 		};
@@ -447,6 +458,10 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 Gravenstein Hwy Sebastopol CA";
 		var addressObject = {
 			number: "1005",
+
+			//	TODO: FIX!
+			street: "GRAVENSTEIN HWY SEBASTOPOL",
+
 			// street: "GRAVENSTEIN",
 			// type: "HWY",
 			// city: "SEBASTOPOL",
@@ -461,6 +476,10 @@ describe( "New Parse Address:", function () {
 		var addressString = "115 Broadway San Francisco CA";
 		var addressObject = {
 			number: "115",
+
+			//	TODO: FIX!
+			street: "BROADWAY SAN FRANCISCO",
+
 			// street: "BROADWAY",
 			// city: "SAN FRANCISCO",
 			state: "CA"
@@ -469,13 +488,13 @@ describe( "New Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type, City, ST Zipcode", function () {
+	it( "Number Street Street Type, City, ST Zipcode", function () {
 
 		var addressString = "7800 Mill Station Rd, Sebastopol, CA 95472";
 		var addressObject = {
 			number: "7800",
-			// street: "MILL STATION",
-			// type: "RD",
+			street: "MILL STATION",
+			type: "RD",
 			// city: "SEBASTOPOL",
 			state: "CA",
 			zip: "95472"
@@ -489,6 +508,10 @@ describe( "New Parse Address:", function () {
 		var addressString = "7800 Mill Station Rd Sebastopol CA 95472";
 		var addressObject = {
 			number: "7800",
+
+			//	TODO: FIX!
+			street: "MILL STATION RD SEBASTOPOL",
+
 			// street: "MILL STATION",
 			// type: "RD",
 			// city: "SEBASTOPOL",
@@ -504,6 +527,10 @@ describe( "New Parse Address:", function () {
 		var addressString = "1005 State Highway 116 Sebastopol CA 95472";
 		var addressObject = {
 			number: "1005",
+
+			//	TODO: FIX!
+			street: "STATE HIGHWAY 116 SEBASTOPOL",
+
 			// street: "STATE HIGHWAY 116",
 			// city: "SEBASTOPOL",
 			state: "CA",
@@ -518,6 +545,10 @@ describe( "New Parse Address:", function () {
 		var addressString = "1600 Pennsylvania Ave. Washington DC";
 		var addressObject = {
 			number: "1600",
+
+			//	TODO: FIX!
+			street: "PENNSYLVANIA AVE. WASHINGTON",
+
 			// street: "PENNSYLVANIA",
 			// type: "AVE",
 			// city: "WASHINGTON",
@@ -532,6 +563,10 @@ describe( "New Parse Address:", function () {
 		var addressString = "1600 Pennsylvania Avenue Washington DC";
 		var addressObject = {
 			number: "1600",
+
+			//	TODO: FIX!
+			street: "PENNSYLVANIA AVENUE WASHINGTON",
+
 			// street: "PENNSYLVANIA",
 			// type: "AVE",
 			// city: "WASHINGTON",
@@ -561,7 +596,11 @@ describe( "New Parse Address:", function () {
 		var addressString = "550 S 400 E #3206, Salt Lake City UT 84111";
 		var addressObject = {
 			number: "550",
-			// prefix: "S",
+			prefix: "S",
+
+			//	TODO: FIX!
+			street: "400 E #3206",
+
 			// street: "400",
 			// suffix: "E",
 			// sec_unit_type: "#",
@@ -579,7 +618,11 @@ describe( "New Parse Address:", function () {
 		var addressString = "6641 N 2200 W Apt D304 Park City, UT 84098";
 		var addressObject = {
 			number: "6641",
-			// prefix: "N",
+			prefix: "N",
+
+			//	TODO: FIX!
+			street: "2200 W APT D304 PARK CITY",
+
 			// street: "2200",
 			// suffix: "W",
 			// sec_unit_type: "Apt",
@@ -597,8 +640,11 @@ describe( "New Parse Address:", function () {
 		var addressString = "100 South St, Philadelphia, PA";
 		var addressObject = {
 			number: "100",
+
+			//	TODO: FIX!
 			// street: "SOUTH",
-			// type: "ST",
+			prefix: "S",
+			type: "ST",
 			// city: "PHILADELPHIA",
 			state: "PA"
 		};
@@ -611,9 +657,9 @@ describe( "New Parse Address:", function () {
 		var addressString = "100 S.E. Washington Ave, Minneapolis, MN";
 		var addressObject = {
 			number: "100",
-			// prefix: "SE.",
-			// street: "WASHINGTON",
-			// type: "AVE",
+			prefix: "SE",
+			street: "WASHINGTON",
+			type: "AVE",
 			// city: "MINNEAPOLIS",
 			state: "MN"
 		};
@@ -626,8 +672,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "3813 1/2 Some Road, Los Angeles, CA";
 		var addressObject = {
 			number: "3813 1/2",
-			// street: "SOME",
-			// type: "RD",
+			street: "SOME",
+			type: "RD",
 			// city: "LOS ANGELES",
 			state: "CA"
 		};
@@ -756,8 +802,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "1 First St, e San Jose CA";
 		var addressObject = {
 			number: "1",
-			// street: "FIRST",
-			// type: "ST",
+			street: "FIRST",
+			type: "ST",
 			// city: "EAST SAN JOSE",
 			state: "CA"
 		};
@@ -770,6 +816,10 @@ describe( "New Parse Address:", function () {
 		var addressString = "123 Maple Rochester, New York";
 		var addressObject = {
 			number: "123",
+
+			//	TODO: FIX!
+			street: "MAPLE ROCHESTER",
+
 			// street: "MAPLE",
 			// city: "ROCHESTER",
 			state: "NY"
@@ -783,9 +833,9 @@ describe( "New Parse Address:", function () {
 		var addressString = "233 S Wacker Dr 60606-6306";
 		var addressObject = {
 			number: "233",
-			// prefix: "S",
-			// street: "WACKER",
-			// type: "DR",
+			prefix: "S",
+			street: "WACKER",
+			type: "DR",
 			zip: "60606-6306"
 		};
 
@@ -797,9 +847,9 @@ describe( "New Parse Address:", function () {
 		var addressString = "233 S Wacker Dr 606066306";
 		var addressObject = {
 			number: "233",
-			// prefix: "S",
-			// street: "WACKER",
-			// type: "DR",
+			prefix: "S",
+			street: "WACKER",
+			type: "DR",
 			zip: "60606-6306"
 		};
 
@@ -811,7 +861,11 @@ describe( "New Parse Address:", function () {
 		var addressString = "233 S Wacker Dr lobby 60606";
 		var addressObject = {
 			number: "233",
-			// prefix: "S",
+			prefix: "S",
+
+			//	TODO: FIX!
+			street: "WACKER DR LOBBY",
+
 			// street: "WACKER",
 			// type: "DR",
 			// sec_unit_type: "lobby",
@@ -826,7 +880,11 @@ describe( "New Parse Address:", function () {
 		var addressString = "233 S Wacker Dr lobby 60606";
 		var addressObject = {
 			number: "233",
-			// prefix: "S",
+			prefix: "S",
+
+			//	TODO: FIX!
+			street: "WACKER DR LOBBY",
+
 			// street: "WACKER",
 			// type: "DR",
 			// sec_unit_type: "lobby",
@@ -873,7 +931,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "36401 County Road 43, Eaton, CO 80615";
 		var addressObject = {
 			number: "36401",
-			// street: "COUNTY ROAD 43",
+			street: "COUNTY ROAD 43",
 			// city: "EATON",
 			state: "CO",
 			zip: "80615"
@@ -887,6 +945,10 @@ describe( "New Parse Address:", function () {
 		var addressString = "1234 COUNTY HWY 60E, Town, CO 12345";
 		var addressObject = {
 			number: "1234",
+
+			//	TODO: FIX!
+			street: "COUNTY HWY 60E",
+
 			// street: "COUNTY HWY 60",
 			// suffix: "E",
 			// city: "TOWN",
@@ -902,9 +964,11 @@ describe( "New Parse Address:", function () {
 		var addressString = "321 S. Washington";
 		var addressObject = {
 			number: "321",
-			// prefix: "S",
+			prefix: "S",
+
 			// street: "WASHINGTON"
-			//	TODO: Fix - Not true!
+
+			//	TODO: FIX!
 			state: "WA"
 		};
 
@@ -943,8 +1007,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "2 Soldier Dr, Sheridan WY 82801-9414";
 		var addressObject = {
 			number: "2",
-			// street: "SOLDIER",
-			// type: "DR",
+			street: "SOLDIER",
+			type: "DR",
 			// city: "SHERIDAN",
 			state: "WY",
 			zip: "82801-9414"
@@ -958,9 +1022,9 @@ describe( "New Parse Address:", function () {
 		var addressString = "301 S 21st St, Laramie WY 82070-4360";
 		var addressObject = {
 			number: "301",
-			// prefix: "S",
-			// street: "21ST",
-			// type: "ST",
+			prefix: "S",
+			street: "21ST",
+			type: "ST",
 			// city: "LARAMIE",
 			state: "WY",
 			zip: "82070-4360"
@@ -974,9 +1038,9 @@ describe( "New Parse Address:", function () {
 		var addressString = "12400 S Sheep Horn Rd, Jackson WY 83001-9192";
 		var addressObject = {
 			number: "12400",
-			// prefix: "S",
-			// street: "Sheep Horn",
-			// type: "RD",
+			prefix: "S",
+			street: "SHEEP HORN",
+			type: "RD",
 			// city: "JACKSON",
 			state: "WY",
 			zip: "83001-9192"
@@ -990,8 +1054,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "700 Minnesota Ln, Powell WY 82435-2903";
 		var addressObject = {
 			number: "700",
-			// street: "MINNESOTA",
-			// type: "LN",
+			street: "MINNESOTA",
+			type: "LN",
 			// city: "POWELL",
 			state: "WY",
 			zip: "82435-2903"
@@ -1007,7 +1071,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "4543 Jagged Rabbit Edge, Elevenmile Homestead, District of Columbia, 20079-7530";
 		var addressObject = {
 			number: "4543",
-			// street: "JAGGED RABBIT EDGE",
+			street: "JAGGED RABBIT EDGE",
 			// city: "ELEVENMILE HOMESTEAD",
 			state: "DC",
 			zip: "20079-7530"
@@ -1022,7 +1086,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "2774 Dusty Rise, Chistochina, Pennsylvania, 16036-7241";
 		var addressObject = {
 			number: "2774",
-			// street: "DUSTY RISE",
+			street: "DUSTY RISE",
 			// city: "CHISTOCHINA",
 			state: "PA",
 			zip: "16036-7241"
@@ -1037,8 +1101,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "9430 Cotton Apple Circle, Mars, Oklahoma, 74120-9610";
 		var addressObject = {
 			number: "9430",
-			// street: "COTTON APPLE",
-			// type: "CIRCLE",
+			street: "COTTON APPLE",
+			type: "CIR",
 			// city: "MARS",
 			state: "OK",
 			zip: "74120-9610"
@@ -1053,7 +1117,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "791 Red Beacon Close, Poverty Hill, North Dakota, 58169-5068";
 		var addressObject = {
 			number: "791",
-			// street: "RED BEACON CLOSE",
+			street: "RED BEACON CLOSE",
 			// city: "POVERTY HILL",
 			state: "ND",
 			zip: "58169-5068"
@@ -1068,7 +1132,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "6308 Hazy Falls, Stringtown, Tennessee, 38411-2765";
 		var addressObject = {
 			number: "6308",
-			// street: "HAZY FALLS",
+			street: "HAZY",
+			type: "FLS",
 			// city: "STRINGTOWN",
 			state: "TN",
 			zip: "38411-2765"
@@ -1083,7 +1148,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "354 Grand Embers Private, Steptoe, Florida, 34684-6048";
 		var addressObject = {
 			number: "354",
-			// street: "GRAND EMBERS PRIVATE",
+			street: "GRAND EMBERS PRIVATE",
 			// city: "STEPTOE",
 			state: "FL",
 			zip: "34684-6048"
@@ -1098,7 +1163,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "7787 High Anchor Via, Clatskanie, Louisiana, 70402-3561";
 		var addressObject = {
 			number: "7787",
-			// street: "HIGH ANCHOR VIA",
+			street: "HIGH ANCHOR",
+			type: "VIA",
 			// city: "CLATSKANIE",
 			state: "LA",
 			zip: "70402-3561"
@@ -1113,7 +1179,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "7741 Umber Blossom Glen, Little Switzerland, Virginia, 22212-9652";
 		var addressObject = {
 			number: "7741",
-			// street: "UMBER BLOSSOM GLEN",
+			street: "UMBER BLOSSOM",
+			type: "GLN",
 			// city: "LITTLE SWITZERLAND",
 			state: "VA",
 			zip: "22212-9652"
@@ -1128,7 +1195,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "4394 Honey Knoll, Breidablick, Missouri, 65593-0026";
 		var addressObject = {
 			number: "4394",
-			// street: "HONEY KNOLL",
+			street: "HONEY",
+			type: "KNL",
 			// city: "BREIDABLICK",
 			state: "MO",
 			zip: "65593-0026"
@@ -1143,7 +1211,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "9552 Round Ramp, Humorist, Massachusetts, 01828-6975";
 		var addressObject = {
 			number: "9552",
-			// street: "ROUND RAMP",
+			street: "ROUND",
+			type: "RAMP",
 			// city: "HUMORIST",
 			state: "MA",
 			zip: "01828-6975"
@@ -1158,7 +1227,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "8425 Silver Oak Inlet, Sivili Chuchg, South Dakota, 57255-8843";
 		var addressObject = {
 			number: "8425",
-			// street: "SILVER OAK INLET",
+			street: "SILVER OAK",
+			type: "INLT",
 			// city: "SIVILI CHUCHG",
 			state: "SD",
 			zip: "57255-8843"
@@ -1173,7 +1243,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "9265 Amber Hickory Pines, Tiny Town, Alaska, 99567-9030";
 		var addressObject = {
 			number: "9265",
-			// street: "AMBER HICKORY PINES",
+			street: "AMBER HICKORY",
+			type: "PNES",
 			// city: "TINY TOWN",
 			state: "AK",
 			zip: "99567-9030"
@@ -1188,7 +1259,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "80 Misty Panda Point, Wallstreet, Kansas, 67206-4373";
 		var addressObject = {
 			number: "80",
-			// street: "MISTY PANDA POINT",
+			street: "MISTY PANDA",
+			type: "PT",
 			// city: "WALLSTREET",
 			state: "KS",
 			zip: "67206-4373"
@@ -1203,7 +1275,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "1509 Silent Arbor, Star, North Carolina, 27053-8690";
 		var addressObject = {
 			number: "1509",
-			// street: "SILENT ARBOR",
+			street: "SILENT ARBOR",
 			// city: "STAR",
 			state: "NC",
 			zip: "27053-8690"
@@ -1218,7 +1290,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "6124 Colonial Ledge, Lesbia, Kansas, 67536-3846";
 		var addressObject = {
 			number: "6124",
-			// street: "COLONIAL LEDGE",
+			street: "COLONIAL LEDGE",
 			// city: "LESBIA",
 			state: "KS",
 			zip: "67536-3846"
@@ -1233,8 +1305,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "6702 Tawny Butterfly Autoroute, Pot Creek, Oklahoma, 73309-2621";
 		var addressObject = {
 			number: "6702",
-			// street: "TAWNY BUTTERFLY AUTOROUTE",
-			// type: "LN",
+			street: "TAWNY BUTTERFLY AUTOROUTE",
 			// city: "POT CREEK",
 			state: "OK",
 			zip: "73309-2621"
@@ -1249,7 +1320,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "5140 Quaking Nectar End, Devils Slide, Ohio, 45277-8312";
 		var addressObject = {
 			number: "5140",
-			// street: "QUAKING NECTAR END",
+			street: "QUAKING NECTAR END",
 			// city: "DEVILS SLIDE",
 			state: "OH",
 			zip: "45277-8312"
@@ -1264,7 +1335,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "3391 Foggy Meadow, Ten Sleep, Kentucky, 41661-1649";
 		var addressObject = {
 			number: "3391",
-			// street: "FOGGY MEADOW",
+			street: "FOGGY",
+			type: "MDW",
 			// city: "TEN SLEEP",
 			state: "KY",
 			zip: "41661-1649"
@@ -1279,7 +1351,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "6550 Easy Wharf, Natural Dam, Virginia, 22777-1163";
 		var addressObject = {
 			number: "6550",
-			// street: "EASY WHARF",
+			street: "EASY WHARF",
 			// city: "NATURAL DAM",
 			state: "VA",
 			zip: "22777-1163"
@@ -1294,7 +1366,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "407 Gentle Elk Highway, Munster, Georgia, 39996-3918";
 		var addressObject = {
 			number: "407",
-			// street: "GENTLE ELK HIGHWAY",
+			street: "GENTLE ELK",
+			type: "HWY",
 			// city: "MUNSTER",
 			state: "GA",
 			zip: "39996-3918"
@@ -1309,7 +1382,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "7900 Green Cape, Baptist, Maryland, 21285-4191";
 		var addressObject = {
 			number: "7900",
-			// street: "GREEN CAPE",
+			street: "GREEN",
+			type: "CPE",
 			// city: "BAPTIST",
 			state: "MD",
 			zip: "21285-4191"
@@ -1324,7 +1398,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "8680 Old Leaf Crescent, Sinking Valley, Nevada, 89169-8392";
 		var addressObject = {
 			number: "8680",
-			// street: "OLD LEAF CRESCENT",
+			street: "OLD LEAF",
+			type: "CRES",
 			// city: "SINKING VALLEY",
 			state: "NV",
 			zip: "89169-8392"
@@ -1339,7 +1414,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "2053 Noble Cloud Byway, Stopover, Michigan, 48409-8445";
 		var addressObject = {
 			number: "2053",
-			// street: "NOBLE CLOUD BYWAY",
+			street: "NOBLE CLOUD BYWAY",
 			// city: "STOPOVER",
 			state: "MI",
 			zip: "48409-8445"
@@ -1354,7 +1429,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "3735 Clear Lake Highlands, Redwine, Georgia, 39972-9498";
 		var addressObject = {
 			number: "3735",
-			// street: "CLEAR LAKE HIGHLANDS",
+			street: "CLEAR LAKE HIGHLANDS",
 			// city: "REDWINE",
 			state: "GA",
 			zip: "39972-9498"
@@ -1369,7 +1444,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "2006 Harvest Grove Mountain, Zylks, Vermont, 05382-4808";
 		var addressObject = {
 			number: "2006",
-			// street: "HARVEST GROVE MOUNTAIN",
+			street: "HARVEST GROVE",
+			type: "MTN",
 			// city: "ZYLKS",
 			state: "VT",
 			zip: "05382-4808"
@@ -1384,7 +1460,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "3170 Sleepy Quail Promenade, Coon Rapids, Illinois, 61507-9346";
 		var addressObject = {
 			number: "3170",
-			// street: "SLEEPY QUAIL PROMENADE",
+			street: "SLEEPY QUAIL PROMENADE",
 			// city: "COON RAPIDS",
 			state: "IL",
 			zip: "61507-9346"
@@ -1399,7 +1475,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "8904 Heather Pony Grounds, Foxhome, Arizona, 85638-9263";
 		var addressObject = {
 			number: "8904",
-			// street: "HEATHER PONY GROUNDS",
+			street: "HEATHER PONY GROUNDS",
 			// city: "FOXHOME",
 			state: "AZ",
 			zip: "85638-9263"
@@ -1414,7 +1490,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "6275 Little Jetty, Cincinnati, Kentucky, 41416-0597";
 		var addressObject = {
 			number: "6275",
-			// street: "LITTLE JETTY",
+			street: "LITTLE JETTY",
 			// city: "CINCINNATI",
 			state: "KY",
 			zip: "41416-0597"
@@ -1429,7 +1505,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "8680 Rustic Bank, Dukedom, Minnesota, 55783-5206";
 		var addressObject = {
 			number: "8680",
-			// street: "RUSTIC BANK",
+			street: "RUSTIC BANK",
 			// city: "DUKEDOM",
 			state: "MN",
 			zip: "55783-5206"
@@ -1444,7 +1520,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "3911 Emerald Berry Expressway, Littlelot, Nevada, 89397-5264";
 		var addressObject = {
 			number: "3911",
-			// street: "EMERALD BERRY EXPRESSWAY",
+			street: "EMERALD BERRY",
+			type: "EXPY",
 			// city: "LITTLELOT",
 			state: "NV",
 			zip: "89397-5264"
@@ -1459,7 +1536,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "2103 Stony Pine Glade, Dilly, North Dakota, 58244-6709";
 		var addressObject = {
 			number: "2103",
-			// street: "STONY PINE GLADE",
+			street: "STONY PINE GLADE",
 			// city: "DILLY",
 			state: "ND",
 			zip: "58244-6709"
@@ -1474,7 +1551,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "5472 Sunny Dale Estates, Poysippi, Michigan, 49129-5457";
 		var addressObject = {
 			number: "5472",
-			// street: "SUNNY DALE ESTATES",
+			street: "SUNNY DALE",
+			type: "ESTS",
 			// city: "POYSIPPI",
 			state: "MI",
 			zip: "49129-5457"
@@ -1489,7 +1567,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "90 Lost Gate Woods, Pepperbox, Mississippi, 39261-3784";
 		var addressObject = {
 			number: "90",
-			// street: "LOST GATE WOODS",
+			street: "LOST GATE WOODS",
 			// city: "PEPPERBOX",
 			state: "MS",
 			zip: "39261-3784"
@@ -1504,7 +1582,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "1814 Quiet Wagon Impasse, Watercolor, Wisconsin, 53848-6026";
 		var addressObject = {
 			number: "1814",
-			// street: "QUIET WAGON IMPASSE",
+			street: "QUIET WAGON IMPASSE",
 			// city: "WATERCOLOR",
 			state: "WI",
 			zip: "53848-6026"
@@ -1519,7 +1597,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "3044 Burning Pond Dale, Weeki Wachee, Massachusetts, 01427-4605";
 		var addressObject = {
 			number: "3044",
-			// street: "BURNING POND DALE",
+			street: "BURNING POND",
+			type: "DL",
 			// city: "WEEKI WACHEE",
 			state: "MA",
 			zip: "01427-4605"
@@ -1534,7 +1613,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "9497 Middle Carrefour, Alert, Delaware, 19847-5857";
 		var addressObject = {
 			number: "9497",
-			// street: "MIDDLE CARREFOUR",
+			street: "MIDDLE CARREFOUR",
 			// city: "ALERT",
 			state: "DE",
 			zip: "19847-5857"
@@ -1549,7 +1628,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "2981 Cinder Square, Hasty Corner, Alabama, 35979-0204";
 		var addressObject = {
 			number: "2981",
-			// street: "CINDER SQUARE",
+			street: "CINDER",
+			type: "SQ",
 			// city: "HASTY CORNER",
 			state: "AL",
 			zip: "35979-0204"
@@ -1564,7 +1644,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "6630 Merry Goose Bay, Parrot, Arizona, 85995-1228";
 		var addressObject = {
 			number: "6630",
-			// street: "MERRY GOOSE BAY",
+			street: "MERRY GOOSE BAY",
 			// city: "PARROT",
 			state: "AZ",
 			zip: "85995-1228"
@@ -1579,7 +1659,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "4600 Pleasant Row, Pejepscot, Delaware, 19702-9893";
 		var addressObject = {
 			number: "4600",
-			// street: "PLEASANT ROW",
+			street: "PLEASANT",
+			type: "ROW",
 			// city: "PEJEPSCOT",
 			state: "DE",
 			zip: "19702-9893"
@@ -1594,7 +1675,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "1480 Velvet Robin Chase, Robinhood, Iowa, 50941-4823";
 		var addressObject = {
 			number: "1480",
-			// street: "VELVET ROBIN CHASE",
+			street: "VELVET ROBIN CHASE",
 			// city: "ROBINHOOD",
 			state: "IA",
 			zip: "50941-4823"
@@ -1609,7 +1690,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "3653 Indian View Cove, Scientists Cliffs, Maryland, 21509-9340";
 		var addressObject = {
 			number: "3653",
-			// street: "INDIAN VIEW COVE",
+			street: "INDIAN VIEW",
+			type: "CV",
 			// city: "SCIENTISTS CLIFFS",
 			state: "MD",
 			zip: "21509-9340"
@@ -1624,7 +1706,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "7036 Dewy Pathway, Swampscott, South Carolina, 29853-5350";
 		var addressObject = {
 			number: "7036",
-			// street: "DEWY PATHWAY",
+			street: "DEWY PATHWAY",
 			// city: "SWAMPSCOTT",
 			state: "SC",
 			zip: "29853-5350"
@@ -1639,7 +1721,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "7085 Shady Manor, Payment, Kansas, 66773-3157";
 		var addressObject = {
 			number: "7085",
-			// street: "SHADY MANOR",
+			street: "SHADY",
+			type: "MNR",
 			// city: "PAYMENT",
 			state: "KS",
 			zip: "66773-3157"
@@ -1654,7 +1737,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "1542 Fallen Vista, Flanders, Delaware, 19783-3763";
 		var addressObject = {
 			number: "1542",
-			// street: "FALLEN VISTA",
+			street: "FALLEN",
+			type: "VIS",
 			// city: "FLANDERS",
 			state: "DE",
 			zip: "19783-3763"
@@ -1669,7 +1753,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "1096 Wishing Horse Trail, Bucklesberry, Alabama, 35271-3507";
 		var addressObject = {
 			number: "1096",
-			// street: "WISHING HORSE TRAIL",
+			street: "WISHING HORSE",
+			type: "TRL",
 			// city: "BUCKLESBERRY",
 			state: "AL",
 			zip: "35271-3507"
@@ -1684,7 +1769,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "570 Iron Gate, Hairtown, Ohio, 43605-8701";
 		var addressObject = {
 			number: "570",
-			// street: "IRON GATE",
+			street: "IRON GATE",
 			// city: "HAIRTOWN",
 			state: "OH",
 			zip: "43605-8701"
@@ -1699,8 +1784,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "6067 Thunder Willow Street, Pungo, Idaho, 83892-4506";
 		var addressObject = {
 			number: "6067",
-			// street: "THUNDER WILLOW",
-			// type: "ST",
+			street: "THUNDER WILLOW",
+			type: "ST",
 			// city: "PUNGO",
 			state: "ID",
 			zip: "83892-4506"
@@ -1715,7 +1800,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "442 Crystal Field, Tick Ridge, Mississippi, 38635-3965";
 		var addressObject = {
 			number: "442",
-			// street: "CRYSTAL FIELD",
+			street: "CRYSTAL",
+			type: "FLD",
 			// city: "TICK RIDGE",
 			state: "MS",
 			zip: "38635-3965"
@@ -1730,7 +1816,7 @@ describe( "New Parse Address:", function () {
 		var addressString = "4903 Cozy Pioneer Round, Puttstown, Illinois, 61502-4831";
 		var addressObject = {
 			number: "4903",
-			// street: "COZY PIONEER ROUND",
+			street: "COZY PIONEER ROUND",
 			// city: "PUTTSTOWN",
 			state: "IL",
 			zip: "61502-4831"
@@ -1745,7 +1831,8 @@ describe( "New Parse Address:", function () {
 		var addressString = "2795 Golden Loop, Moosup Valley, Oklahoma, 74503-7553";
 		var addressObject = {
 			number: "2795",
-			// street: "GOLDEN LOOP",
+			street: "GOLDEN",
+			type: "LOOP",
 			// city: "MOOSUP VALLEY",
 			state: "OK",
 			zip: "74503-7553"
