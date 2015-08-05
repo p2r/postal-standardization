@@ -19,7 +19,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "APT" );
 		}
@@ -35,7 +35,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BSMT" );
 		}
@@ -53,7 +53,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BLDG" );
 		}
@@ -71,7 +71,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FL" );
 		}
@@ -87,7 +87,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FRNT" );
 		}
@@ -102,7 +102,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "KEY" );
 		}
@@ -118,7 +118,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LBBY" );
 		}
@@ -133,7 +133,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LOT" );
 		}
@@ -149,7 +149,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LOWR" );
 		}
@@ -165,7 +165,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "OFC" );
 		}
@@ -181,7 +181,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PH" );
 		}
@@ -197,7 +197,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PIER" );
 		}
@@ -212,7 +212,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "REAR" );
 		}
@@ -227,7 +227,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SIDE" );
 		}
@@ -243,7 +243,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SLIP" );
 		}
@@ -259,7 +259,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SPC" );
 		}
@@ -275,7 +275,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "STOP" );
 		}
@@ -286,14 +286,14 @@ describe( "Unit Type:", function () {
 		var names = [
 			 "SUITE",
 			 "SUIT",
-			 "SUTE`",
+			 "SUTE",
 			 "STE"
 		];
 		var abbr, i;
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "STE" );
 		}
@@ -309,7 +309,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SPC" );
 		}
@@ -325,7 +325,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "TRLR" );
 		}
@@ -341,7 +341,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "UNIT" );
 		}
@@ -357,7 +357,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RM" );
 		}
@@ -374,7 +374,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "DEPT" );
 		}
@@ -392,7 +392,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "NUM" );
 		}
@@ -410,7 +410,7 @@ describe( "Unit Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.unitType( names[ i ], true );
+			abbr = postal.standardization.unitType.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "UPPR" );
 		}
