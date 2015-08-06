@@ -326,12 +326,8 @@ describe( "Parse Address:", function () {
 			prefix: "N",
 			street: "GRAVENSTEIN",
 			type: "HWY",
-
-			//	TODO: FIX!
-			unit: "STE 500",
-
-			// sec_unit_type: "Suite",
-			// sec_unit_num: "500",
+			sec_unit_type: "STE",
+			sec_unit_num: "500",
 			// city: "SEBASTOPOL",
 			state: "CA"
 		};
@@ -601,15 +597,10 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "550",
 			prefix: "S",
-
 			street: "400",
 			suffix: "E",
-
-			//	TODO: FIX!
-			unit: "# 3206",
-
-			// sec_unit_type: "#",
-			// sec_unit_num: "3206",
+			sec_unit_type: "#",
+			sec_unit_num: "3206",
 			// city: "SALT LAKE CITY",
 			state: "UT",
 			zip: "84111"
@@ -869,10 +860,7 @@ describe( "Parse Address:", function () {
 			prefix: "S",
 			street: "WACKER",
 			type: "DR",
-
-			//	TODO: FIX!
-			unit: "LOBBY",
-			//sec_unit_type: "lobby",
+			sec_unit_type: "LBBY",
 			zip: "60606"
 		};
 
@@ -887,11 +875,7 @@ describe( "Parse Address:", function () {
 			prefix: "S",
 			street: "WACKER",
 			type: "DR",
-
-			//	TODO: FIX!
-			unit: "LOBBY",
-
-			// sec_unit_type: "lobby",
+			sec_unit_type: "LBBY",
 			zip: "60606"
 		};
 
@@ -914,7 +898,7 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "unit unitNumber Street Street, City City ST", function () {
+	it( "unit Number Street Street, City City ST", function () {
 
 		var addressString = "lt42 99 Some Road, Some City LA";
 		var addressObject = {

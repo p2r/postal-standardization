@@ -13,60 +13,78 @@ describe( "Parse Secondary Address Units:", function () {
 	it( "#1", function () {
 
 		var unitAddress = "#1";
-		var expAddress = "# 1";
+		var expAddress = {
+			sec_unit_type: "#",
+			sec_unit_num: "1"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
 	it( "# 1", function () {
 
 		var unitAddress = "# 1";
-		var expAddress = unitAddress;
+		var expAddress = {
+			sec_unit_type: "#",
+			sec_unit_num: "1"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
 	it( " #  1 ", function () {
 
 		var unitAddress = " #  1 ";
-		var expAddress = "# 1";
+		var expAddress = {
+			sec_unit_type: "#",
+			sec_unit_num: "1"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
 	it( "# 12", function () {
 
 		var unitAddress = "# 12";
-		var expAddress = unitAddress;
+		var expAddress = {
+			sec_unit_type: "#",
+			sec_unit_num: "12"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
 	it( "# 1A2B", function () {
 
 		var unitAddress = "# 1A2B";
-		var expAddress = unitAddress;
+		var expAddress = {
+			sec_unit_type: "#",
+			sec_unit_num: "1A2B"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
 	it( "UNIT 23", function () {
 
 		var unitAddress = "UNIT 23";
-		var expAddress = unitAddress;
+		var expAddress = {
+			sec_unit_type: "UNIT",
+			sec_unit_num: "23"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
@@ -81,40 +99,52 @@ describe( "Parse Secondary Address Units:", function () {
 	it( " UNIT 23", function () {
 
 		var unitAddress = " UNIT 23";
-		var expAddress = "UNIT 23";
+		var expAddress = {
+			sec_unit_type: "UNIT",
+			sec_unit_num: "23"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
 	it( "UNIT 23 ", function () {
 
 		var unitAddress = "UNIT 23 ";
-		var expAddress = "UNIT 23";
+		var expAddress = {
+			sec_unit_type: "UNIT",
+			sec_unit_num: "23"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
 	it( " UNIT 23 ", function () {
 
 		var unitAddress = " UNIT 23 ";
-		var expAddress = "UNIT 23";
+		var expAddress = {
+			sec_unit_type: "UNIT",
+			sec_unit_num: "23"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
 	it( " UNIT  23 ", function () {
 
 		var unitAddress = " UNIT  23 ";
-		var expAddress = "UNIT 23";
+		var expAddress = {
+			sec_unit_type: "UNIT",
+			sec_unit_num: "23"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
@@ -153,20 +183,26 @@ describe( "Parse Secondary Address Units:", function () {
 	it( "UNIT #23", function () {
 
 		var unitAddress = "UNIT #23";
-		var expAddress = "UNIT 23";
+		var expAddress = {
+			sec_unit_type: "UNIT",
+			sec_unit_num: "23"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
 	it( "UNIT#23", function () {
 
 		var unitAddress = "UNIT#23";
-		var expAddress = "UNIT 23";
+		var expAddress = {
+			sec_unit_type: "UNIT",
+			sec_unit_num: "23"
+		};
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		secondaryAddress.should.eql( expAddress );
 
 	} );
 
