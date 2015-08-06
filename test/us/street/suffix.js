@@ -30,6 +30,8 @@ describe( "Street Suffixes:", function () {
 		var names = [
 			"NORTHEAST",
 			"NORTH EAST",
+			"NORTH-EAST",
+			"N E",
 			"NE"
 		];
 		var abbr, i;
@@ -47,6 +49,8 @@ describe( "Street Suffixes:", function () {
 		var names = [
 			"NORTHWEST",
 			"NORTH WEST",
+			"NORTH-WEST",
+			"N W",
 			"NW"
 		];
 		var abbr, i;
@@ -80,6 +84,8 @@ describe( "Street Suffixes:", function () {
 		var names = [
 			"SOUTHEAST",
 			"SOUTH EAST",
+			"SOUTH-EAST",
+			"S E",
 			"SE"
 		];
 		var abbr, i;
@@ -97,6 +103,8 @@ describe( "Street Suffixes:", function () {
 		var names = [
 			"SOUTHWEST",
 			"SOUTH WEST",
+			"SOUTH-WEST",
+			"S W",
 			"SW"
 		];
 		var abbr, i;
