@@ -662,7 +662,6 @@ describe( "Parse Address:", function () {
 
 			//	TODO: FIX!
 			street: "2200 W APT D304 PARK CITY",
-			city: "UT",
 
 			// street: "2200",
 			// suffix: "W",
