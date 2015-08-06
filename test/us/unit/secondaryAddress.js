@@ -73,10 +73,8 @@ describe( "Parse Secondary Address Units:", function () {
 	it( "UNIT23", function () {
 
 		var unitAddress = "UNIT23";
-		var expAddress = "UNIT 23";
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
-		should.exist( secondaryAddress );
-		secondaryAddress.should.equal( expAddress );
+		should.not.exist( secondaryAddress );
 
 	} );
 
@@ -147,6 +145,34 @@ describe( "Parse Secondary Address Units:", function () {
 	it( "#", function () {
 
 		var unitAddress = "#";
+		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
+		should.not.exist( secondaryAddress );
+
+	} );
+
+	it( "UNIT #23", function () {
+
+		var unitAddress = "UNIT #23";
+		var expAddress = "UNIT 23";
+		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
+		should.exist( secondaryAddress );
+		secondaryAddress.should.equal( expAddress );
+
+	} );
+
+	it( "UNIT#23", function () {
+
+		var unitAddress = "UNIT#23";
+		var expAddress = "UNIT 23";
+		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
+		should.exist( secondaryAddress );
+		secondaryAddress.should.equal( expAddress );
+
+	} );
+
+	it( "PHILADELPHIA", function () {
+
+		var unitAddress = "PHILADELPHIA";
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
 		should.not.exist( secondaryAddress );
 

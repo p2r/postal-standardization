@@ -326,6 +326,10 @@ describe( "Parse Address:", function () {
 			prefix: "N",
 			street: "GRAVENSTEIN",
 			type: "HWY",
+
+			//	TODO: FIX!
+			unit: "STE 500",
+
 			// sec_unit_type: "Suite",
 			// sec_unit_num: "500",
 			// city: "SEBASTOPOL",
@@ -598,11 +602,12 @@ describe( "Parse Address:", function () {
 			number: "550",
 			prefix: "S",
 
-			//	TODO: FIX!
-			street: "400 E #3206",
+			street: "400",
+			suffix: "E",
 
-			// street: "400",
-			// suffix: "E",
+			//	TODO: FIX!
+			unit: "# 3206",
+
 			// sec_unit_type: "#",
 			// sec_unit_num: "3206",
 			// city: "SALT LAKE CITY",
@@ -862,13 +867,12 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "233",
 			prefix: "S",
+			street: "WACKER",
+			type: "DR",
 
 			//	TODO: FIX!
-			street: "WACKER DR LOBBY",
-
-			// street: "WACKER",
-			// type: "DR",
-			// sec_unit_type: "lobby",
+			unit: "LOBBY",
+			//sec_unit_type: "lobby",
 			zip: "60606"
 		};
 
@@ -881,12 +885,12 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "233",
 			prefix: "S",
+			street: "WACKER",
+			type: "DR",
 
 			//	TODO: FIX!
-			street: "WACKER DR LOBBY",
+			unit: "LOBBY",
 
-			// street: "WACKER",
-			// type: "DR",
 			// sec_unit_type: "lobby",
 			zip: "60606"
 		};
