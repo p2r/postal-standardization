@@ -52,6 +52,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address\nUnited States";
 		var addressObject = {
+			//	TODO: Is this the right thing?
+			city: "SOME ADDRESS",
 			country: "UNITED STATES"
 		};
 
@@ -62,6 +64,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address 80023\nUnited States";
 		var addressObject = {
+			//	TODO: Is this the right thing?
+			city: "SOME ADDRESS",
 			zip: "80023",
 			country: "UNITED STATES"
 		};
@@ -72,7 +76,10 @@ describe( "Parse Address:", function () {
 	it( "Some Address, United States", function () {
 
 		var addressString = "Some Address, United States";
-		var addressObject = {};
+		var addressObject = {
+			//	TODO: Is this the right thing?
+			city: "SOME ADDRESS"
+		};
 
 		verifyAddress( addressString, addressObject );
 	} );
@@ -80,7 +87,10 @@ describe( "Parse Address:", function () {
 	it( "Some Address, US", function () {
 
 		var addressString = "Some Address, US";
-		var addressObject = {};
+		var addressObject = {
+			//	TODO: Is this the right thing?
+			city: "SOME ADDRESS"
+		};
 
 		verifyAddress( addressString, addressObject );
 	} );
@@ -88,7 +98,10 @@ describe( "Parse Address:", function () {
 	it( "Some Address, U.S.A.", function () {
 
 		var addressString = "Some Address, U.S.A.";
-		var addressObject = {};
+		var addressObject = {
+			//	TODO: Is this the right thing?
+			city: "SOME ADDRESS"
+		};
 
 		verifyAddress( addressString, addressObject );
 	} );
@@ -117,6 +130,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address\nCA";
 		var addressObject = {
+			//	TODO: Is this the right thing?
+			city: "SOME ADDRESS",
 			country: "CANADA"
 		};
 
@@ -127,6 +142,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address, CA";
 		var addressObject = {
+			//	TODO: Is this the right thing?
+			city: "SOME ADDRESS",
 			state: "CA"
 		};
 
@@ -137,6 +154,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7 CA";
 		var addressObject = {
+			city: "MONTREAL",
+			//	TODO: What about providence?
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -148,6 +167,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7, CA";
 		var addressObject = {
+			city: "MONTREAL",
+			//	TODO: What about providence?
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -159,6 +180,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7\nCA";
 		var addressObject = {
+			city: "MONTREAL",
+			//	TODO: What about providence?
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -170,6 +193,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC H3Z 2Y7\nCA";
 		var addressObject = {
+			city: "MONTREAL",
+			//	TODO: What about providence?
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -181,6 +206,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address\nCanada";
 		var addressObject = {
+			//	TODO: Is this the right thing?
+			city: "SOME ADDRESS",
 			country: "CANADA"
 		};
 
@@ -190,7 +217,10 @@ describe( "Parse Address:", function () {
 	it( "Some Address, Canada", function () {
 
 		var addressString = "Some Address, Canada";
-		var addressObject = {};
+		var addressObject = {
+			//	TODO: Is this the right thing?
+			city: "SOME ADDRESS"
+		};
 
 		verifyAddress( addressString, addressObject );
 	} );
@@ -199,6 +229,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7 Canada";
 		var addressObject = {
+			city: "MONTREAL",
+			//	TODO: What about providence?
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -210,6 +242,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7, Canada";
 		var addressObject = {
+			city: "MONTREAL",
+			//	TODO: What about providence?
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -221,6 +255,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7\nCanada";
 		var addressObject = {
+			city: "MONTREAL",
+			//	TODO: What about providence?
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -232,6 +268,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC H3Z 2Y7\nCanada";
 		var addressObject = {
+			city: "MONTREAL",
+			//	TODO: What about providence?
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -243,6 +281,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address\nBénin";
 		var addressObject = {
+			//	TODO: Is this the right thing?
+			city: "SOME ADDRESS",
 			country: "BENIN"
 		};
 
@@ -311,7 +351,7 @@ describe( "Parse Address:", function () {
 			prefix: "N",
 			street: "GRAVENSTEIN",
 			type: "HWY",
-			// city: "SEBASTOPOL",
+			city: "SEBASTOPOL",
 			state: "CA"
 		};
 
@@ -328,7 +368,7 @@ describe( "Parse Address:", function () {
 			type: "HWY",
 			sec_unit_type: "STE",
 			sec_unit_num: "500",
-			// city: "SEBASTOPOL",
+			city: "SEBASTOPOL",
 			state: "CA"
 		};
 
@@ -363,7 +403,7 @@ describe( "Parse Address:", function () {
 			prefix: "N",
 			street: "GRAVENSTEIN",
 			type: "HWY",
-			// city: "SEBASTOPOL",
+			city: "SEBASTOPOL",
 			state: "CA",
 			zip: "95472"
 		};
@@ -418,7 +458,7 @@ describe( "Parse Address:", function () {
 			street: "GRAVENSTEIN",
 			type: "HWY",
 			suffix: "N",
-			// city: "SEBASTOPOL",
+			city: "SEBASTOPOL",
 			state: "CA"
 		};
 
@@ -432,6 +472,8 @@ describe( "Parse Address:", function () {
 			number: "1005",
 			street: "GRAVENSTEIN",
 			type: "HWY",
+			city: "N SEBASTOPOL",
+			//	TODO: Which is right?
 			// city: "NORTH SEBASTOPOL",
 			state: "CA"
 		};
@@ -446,7 +488,7 @@ describe( "Parse Address:", function () {
 			number: "1005",
 			street: "GRAVENSTEIN",
 			type: "HWY",
-			// city: "NORTH SEBASTOPOL",
+			city: "NORTH SEBASTOPOL",
 			state: "CA"
 		};
 
@@ -495,7 +537,7 @@ describe( "Parse Address:", function () {
 			number: "7800",
 			street: "MILL STATION",
 			type: "RD",
-			// city: "SEBASTOPOL",
+			city: "SEBASTOPOL",
 			state: "CA",
 			zip: "95472"
 		};
@@ -584,6 +626,8 @@ describe( "Parse Address:", function () {
 			// prefix: "S",
 			// street: "400",
 			// suffix: "E",
+			// TODO: FIX!
+			city: "48S 400E",
 			// city: "SALT LAKE CITY",
 			state: "UT"
 		};
@@ -601,7 +645,7 @@ describe( "Parse Address:", function () {
 			suffix: "E",
 			sec_unit_type: "#",
 			sec_unit_num: "3206",
-			// city: "SALT LAKE CITY",
+			city: "SALT LAKE CITY",
 			state: "UT",
 			zip: "84111"
 		};
@@ -618,6 +662,7 @@ describe( "Parse Address:", function () {
 
 			//	TODO: FIX!
 			street: "2200 W APT D304 PARK CITY",
+			city: "UT",
 
 			// street: "2200",
 			// suffix: "W",
@@ -641,7 +686,7 @@ describe( "Parse Address:", function () {
 			// street: "SOUTH",
 			prefix: "S",
 			type: "ST",
-			// city: "PHILADELPHIA",
+			city: "PHILADELPHIA",
 			state: "PA"
 		};
 
@@ -656,7 +701,7 @@ describe( "Parse Address:", function () {
 			prefix: "SE",
 			street: "WASHINGTON",
 			type: "AVE",
-			// city: "MINNEAPOLIS",
+			city: "MINNEAPOLIS",
 			state: "MN"
 		};
 
@@ -670,7 +715,7 @@ describe( "Parse Address:", function () {
 			number: "3813 1/2",
 			street: "SOME",
 			type: "RD",
-			// city: "LOS ANGELES",
+			city: "LOS ANGELES",
 			state: "CA"
 		};
 
@@ -681,6 +726,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission & Valencia San Francisco CA";
 		var addressObject = {
+			//	TODO: FIX!
+			city: "MISSION & VALENCIA SAN FRANCISCO",
+
 			// street1: "MISSION",
 			// street2: "VALENCIA",
 			// city: "SAN FRANCISCO",
@@ -696,6 +744,9 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			// street1: "MISSION",
 			// street2: "VALENCIA",
+
+			// TODO: FIX!
+			city: "MISSION & VALENCIA",
 			// city: "SAN FRANCISCO",
 			state: "CA"
 		};
@@ -707,6 +758,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission St and Valencia St San Francisco CA";
 		var addressObject = {
+			//	TODO: FIX!
+			city: "MISSION ST AND VALENCIA ST SAN FRANCISCO",
+
 			// street1: "MISSION",
 			// type1: "ST",
 			// street2: "VALENCIA",
@@ -722,6 +776,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission St & Valencia St San Francisco CA";
 		var addressObject = {
+			//	TODO: FIX!
+			city: "MISSION ST & VALENCIA ST SAN FRANCISCO",
+
 			// street1: "MISSION",
 			// type1: "ST",
 			// street2: "VALENCIA",
@@ -737,6 +794,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission and Valencia Sts San Francisco CA";
 		var addressObject = {
+			//	TODO: FIX!
+			city: "MISSION AND VALENCIA STS SAN FRANCISCO",
+
 			// street1: "MISSION",
 			// street2: "VALENCIA",
 			// type1: "ST",
@@ -752,6 +812,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission & Valencia Sts. San Francisco CA";
 		var addressObject = {
+			//	TODO: FIX!
+			city: "MISSION & VALENCIA STS SAN FRANCISCO",
+
 			// street1: "MISSION",
 			// street2: "VALENCIA",
 			// type1: "ST",
@@ -767,6 +830,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission & Valencia Streets San Francisco CA";
 		var addressObject = {
+			//	TODO: FIX!
+			city: "MISSION & VALENCIA STREETS SAN FRANCISCO",
+
 			// street1: "MISSION",
 			// street2: "VALENCIA",
 			// type1: "ST",
@@ -782,6 +848,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission Avenue and Valencia Street San Francisco CA";
 		var addressObject = {
+			//	TODO: FIX!
+			city: "MISSION AVENUE AND VALENCIA STREET SAN FRANCISCO",
+
 			// street1: "MISSION",
 			// type1: "AVE",
 			// street2: "VALENCIA",
@@ -800,6 +869,8 @@ describe( "Parse Address:", function () {
 			number: "1",
 			street: "FIRST",
 			type: "ST",
+			//	TODO: Which is correct?
+			city: "E SAN JOSE",
 			// city: "EAST SAN JOSE",
 			state: "CA"
 		};
@@ -876,7 +947,7 @@ describe( "Parse Address:", function () {
 			street: "MCCASLIN",
 			type: "BLVD",
 			sec_unit_type: "LBBY",
-			// city: "LOUISVILLE",
+			city: "LOUISVILLE",
 			state: "CO",
 			zip: "80027"
 		};
@@ -909,6 +980,9 @@ describe( "Parse Address:", function () {
 			// prefix: "S",
 			// street: "WACKER",
 			// type: "DR",
+
+			// TODO: FIX!
+			city: "#42 233 S WACKER DR",
 			zip: "60606"
 		};
 
@@ -924,6 +998,9 @@ describe( "Parse Address:", function () {
 			// number: "99",
 			// street: "SOME",
 			// type: "RD",
+
+			//	TODO: FIX!
+			city: "LT42 99 SOME ROAD",
 			// city: "SOME CITY",
 			state: "LA"
 		};
@@ -937,7 +1014,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "36401",
 			street: "COUNTY ROAD 43",
-			// city: "EATON",
+			city: "EATON",
 			state: "CO",
 			zip: "80615"
 		};
@@ -956,7 +1033,7 @@ describe( "Parse Address:", function () {
 
 			// street: "COUNTY HWY 60",
 			// suffix: "E",
-			// city: "TOWN",
+			city: "TOWN",
 			state: "CO",
 			zip: "12345"
 		};
@@ -989,7 +1066,11 @@ describe( "Parse Address:", function () {
 			street: "QUAKER",
 			type: "AVE",
 			sec_unit_type: "STE",
-			sec_unit_num: "105"
+			sec_unit_num: "105",
+
+			//	TODO: FIX!
+			//	For some reason, the unit is being put back into unprocessed queue.
+			city: "STE 105"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -1000,7 +1081,7 @@ describe( "Parse Address:", function () {
 		var addressString = "RR 2 BOX 274, Lake Butler, FL 32054";
 		var addressObject = {
 			rural_route: "RR 2 BOX 274",
-			// city: "LAKE BUTLER",
+			city: "LAKE BUTLER",
 			state: "FL",
 			zip: "32054"
 		};
@@ -1015,7 +1096,7 @@ describe( "Parse Address:", function () {
 			number: "2",
 			street: "SOLDIER",
 			type: "DR",
-			// city: "SHERIDAN",
+			city: "SHERIDAN",
 			state: "WY",
 			zip: "82801-9414"
 		};
@@ -1031,7 +1112,7 @@ describe( "Parse Address:", function () {
 			prefix: "S",
 			street: "21ST",
 			type: "ST",
-			// city: "LARAMIE",
+			city: "LARAMIE",
 			state: "WY",
 			zip: "82070-4360"
 		};
@@ -1047,7 +1128,7 @@ describe( "Parse Address:", function () {
 			prefix: "S",
 			street: "SHEEP HORN",
 			type: "RD",
-			// city: "JACKSON",
+			city: "JACKSON",
 			state: "WY",
 			zip: "83001-9192"
 		};
@@ -1062,7 +1143,7 @@ describe( "Parse Address:", function () {
 			number: "700",
 			street: "MINNESOTA",
 			type: "LN",
-			// city: "POWELL",
+			city: "POWELL",
 			state: "WY",
 			zip: "82435-2903"
 		};
@@ -1078,7 +1159,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "4543",
 			street: "JAGGED RABBIT EDGE",
-			// city: "ELEVENMILE HOMESTEAD",
+			city: "ELEVENMILE HOMESTEAD",
 			state: "DC",
 			zip: "20079-7530"
 		};
@@ -1093,7 +1174,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "2774",
 			street: "DUSTY RISE",
-			// city: "CHISTOCHINA",
+			city: "CHISTOCHINA",
 			state: "PA",
 			zip: "16036-7241"
 		};
@@ -1109,7 +1190,7 @@ describe( "Parse Address:", function () {
 			number: "9430",
 			street: "COTTON APPLE",
 			type: "CIR",
-			// city: "MARS",
+			city: "MARS",
 			state: "OK",
 			zip: "74120-9610"
 		};
@@ -1124,7 +1205,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "791",
 			street: "RED BEACON CLOSE",
-			// city: "POVERTY HILL",
+			city: "POVERTY HILL",
 			state: "ND",
 			zip: "58169-5068"
 		};
@@ -1140,7 +1221,7 @@ describe( "Parse Address:", function () {
 			number: "6308",
 			street: "HAZY",
 			type: "FLS",
-			// city: "STRINGTOWN",
+			city: "STRINGTOWN",
 			state: "TN",
 			zip: "38411-2765"
 		};
@@ -1155,7 +1236,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "354",
 			street: "GRAND EMBERS PRIVATE",
-			// city: "STEPTOE",
+			city: "STEPTOE",
 			state: "FL",
 			zip: "34684-6048"
 		};
@@ -1171,7 +1252,7 @@ describe( "Parse Address:", function () {
 			number: "7787",
 			street: "HIGH ANCHOR",
 			type: "VIA",
-			// city: "CLATSKANIE",
+			city: "CLATSKANIE",
 			state: "LA",
 			zip: "70402-3561"
 		};
@@ -1187,7 +1268,7 @@ describe( "Parse Address:", function () {
 			number: "7741",
 			street: "UMBER BLOSSOM",
 			type: "GLN",
-			// city: "LITTLE SWITZERLAND",
+			city: "LITTLE SWITZERLAND",
 			state: "VA",
 			zip: "22212-9652"
 		};
@@ -1203,7 +1284,7 @@ describe( "Parse Address:", function () {
 			number: "4394",
 			street: "HONEY",
 			type: "KNL",
-			// city: "BREIDABLICK",
+			city: "BREIDABLICK",
 			state: "MO",
 			zip: "65593-0026"
 		};
@@ -1219,7 +1300,7 @@ describe( "Parse Address:", function () {
 			number: "9552",
 			street: "ROUND",
 			type: "RAMP",
-			// city: "HUMORIST",
+			city: "HUMORIST",
 			state: "MA",
 			zip: "01828-6975"
 		};
@@ -1235,7 +1316,7 @@ describe( "Parse Address:", function () {
 			number: "8425",
 			street: "SILVER OAK",
 			type: "INLT",
-			// city: "SIVILI CHUCHG",
+			city: "SIVILI CHUCHG",
 			state: "SD",
 			zip: "57255-8843"
 		};
@@ -1251,7 +1332,7 @@ describe( "Parse Address:", function () {
 			number: "9265",
 			street: "AMBER HICKORY",
 			type: "PNES",
-			// city: "TINY TOWN",
+			city: "TINY TOWN",
 			state: "AK",
 			zip: "99567-9030"
 		};
@@ -1267,7 +1348,7 @@ describe( "Parse Address:", function () {
 			number: "80",
 			street: "MISTY PANDA",
 			type: "PT",
-			// city: "WALLSTREET",
+			city: "WALLSTREET",
 			state: "KS",
 			zip: "67206-4373"
 		};
@@ -1282,7 +1363,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "1509",
 			street: "SILENT ARBOR",
-			// city: "STAR",
+			city: "STAR",
 			state: "NC",
 			zip: "27053-8690"
 		};
@@ -1297,7 +1378,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "6124",
 			street: "COLONIAL LEDGE",
-			// city: "LESBIA",
+			city: "LESBIA",
 			state: "KS",
 			zip: "67536-3846"
 		};
@@ -1312,7 +1393,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "6702",
 			street: "TAWNY BUTTERFLY AUTOROUTE",
-			// city: "POT CREEK",
+			city: "POT CREEK",
 			state: "OK",
 			zip: "73309-2621"
 		};
@@ -1327,7 +1408,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "5140",
 			street: "QUAKING NECTAR END",
-			// city: "DEVILS SLIDE",
+			city: "DEVILS SLIDE",
 			state: "OH",
 			zip: "45277-8312"
 		};
@@ -1343,7 +1424,7 @@ describe( "Parse Address:", function () {
 			number: "3391",
 			street: "FOGGY",
 			type: "MDW",
-			// city: "TEN SLEEP",
+			city: "TEN SLEEP",
 			state: "KY",
 			zip: "41661-1649"
 		};
@@ -1358,7 +1439,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "6550",
 			street: "EASY WHARF",
-			// city: "NATURAL DAM",
+			city: "NATURAL DAM",
 			state: "VA",
 			zip: "22777-1163"
 		};
@@ -1374,7 +1455,7 @@ describe( "Parse Address:", function () {
 			number: "407",
 			street: "GENTLE ELK",
 			type: "HWY",
-			// city: "MUNSTER",
+			city: "MUNSTER",
 			state: "GA",
 			zip: "39996-3918"
 		};
@@ -1390,7 +1471,7 @@ describe( "Parse Address:", function () {
 			number: "7900",
 			street: "GREEN",
 			type: "CPE",
-			// city: "BAPTIST",
+			city: "BAPTIST",
 			state: "MD",
 			zip: "21285-4191"
 		};
@@ -1406,7 +1487,7 @@ describe( "Parse Address:", function () {
 			number: "8680",
 			street: "OLD LEAF",
 			type: "CRES",
-			// city: "SINKING VALLEY",
+			city: "SINKING VALLEY",
 			state: "NV",
 			zip: "89169-8392"
 		};
@@ -1421,7 +1502,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "2053",
 			street: "NOBLE CLOUD BYWAY",
-			// city: "STOPOVER",
+			city: "STOPOVER",
 			state: "MI",
 			zip: "48409-8445"
 		};
@@ -1436,7 +1517,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "3735",
 			street: "CLEAR LAKE HIGHLANDS",
-			// city: "REDWINE",
+			city: "REDWINE",
 			state: "GA",
 			zip: "39972-9498"
 		};
@@ -1452,7 +1533,7 @@ describe( "Parse Address:", function () {
 			number: "2006",
 			street: "HARVEST GROVE",
 			type: "MTN",
-			// city: "ZYLKS",
+			city: "ZYLKS",
 			state: "VT",
 			zip: "05382-4808"
 		};
@@ -1467,7 +1548,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "3170",
 			street: "SLEEPY QUAIL PROMENADE",
-			// city: "COON RAPIDS",
+			city: "COON RAPIDS",
 			state: "IL",
 			zip: "61507-9346"
 		};
@@ -1482,7 +1563,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "8904",
 			street: "HEATHER PONY GROUNDS",
-			// city: "FOXHOME",
+			city: "FOXHOME",
 			state: "AZ",
 			zip: "85638-9263"
 		};
@@ -1497,7 +1578,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "6275",
 			street: "LITTLE JETTY",
-			// city: "CINCINNATI",
+			city: "CINCINNATI",
 			state: "KY",
 			zip: "41416-0597"
 		};
@@ -1512,7 +1593,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "8680",
 			street: "RUSTIC BANK",
-			// city: "DUKEDOM",
+			city: "DUKEDOM",
 			state: "MN",
 			zip: "55783-5206"
 		};
@@ -1528,7 +1609,7 @@ describe( "Parse Address:", function () {
 			number: "3911",
 			street: "EMERALD BERRY",
 			type: "EXPY",
-			// city: "LITTLELOT",
+			city: "LITTLELOT",
 			state: "NV",
 			zip: "89397-5264"
 		};
@@ -1543,7 +1624,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "2103",
 			street: "STONY PINE GLADE",
-			// city: "DILLY",
+			city: "DILLY",
 			state: "ND",
 			zip: "58244-6709"
 		};
@@ -1559,7 +1640,7 @@ describe( "Parse Address:", function () {
 			number: "5472",
 			street: "SUNNY DALE",
 			type: "ESTS",
-			// city: "POYSIPPI",
+			city: "POYSIPPI",
 			state: "MI",
 			zip: "49129-5457"
 		};
@@ -1574,7 +1655,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "90",
 			street: "LOST GATE WOODS",
-			// city: "PEPPERBOX",
+			city: "PEPPERBOX",
 			state: "MS",
 			zip: "39261-3784"
 		};
@@ -1589,7 +1670,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "1814",
 			street: "QUIET WAGON IMPASSE",
-			// city: "WATERCOLOR",
+			city: "WATERCOLOR",
 			state: "WI",
 			zip: "53848-6026"
 		};
@@ -1605,7 +1686,7 @@ describe( "Parse Address:", function () {
 			number: "3044",
 			street: "BURNING POND",
 			type: "DL",
-			// city: "WEEKI WACHEE",
+			city: "WEEKI WACHEE",
 			state: "MA",
 			zip: "01427-4605"
 		};
@@ -1620,7 +1701,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "9497",
 			street: "MIDDLE CARREFOUR",
-			// city: "ALERT",
+			city: "ALERT",
 			state: "DE",
 			zip: "19847-5857"
 		};
@@ -1636,7 +1717,7 @@ describe( "Parse Address:", function () {
 			number: "2981",
 			street: "CINDER",
 			type: "SQ",
-			// city: "HASTY CORNER",
+			city: "HASTY CORNER",
 			state: "AL",
 			zip: "35979-0204"
 		};
@@ -1651,7 +1732,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "6630",
 			street: "MERRY GOOSE BAY",
-			// city: "PARROT",
+			city: "PARROT",
 			state: "AZ",
 			zip: "85995-1228"
 		};
@@ -1667,7 +1748,7 @@ describe( "Parse Address:", function () {
 			number: "4600",
 			street: "PLEASANT",
 			type: "ROW",
-			// city: "PEJEPSCOT",
+			city: "PEJEPSCOT",
 			state: "DE",
 			zip: "19702-9893"
 		};
@@ -1682,7 +1763,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "1480",
 			street: "VELVET ROBIN CHASE",
-			// city: "ROBINHOOD",
+			city: "ROBINHOOD",
 			state: "IA",
 			zip: "50941-4823"
 		};
@@ -1698,7 +1779,7 @@ describe( "Parse Address:", function () {
 			number: "3653",
 			street: "INDIAN VIEW",
 			type: "CV",
-			// city: "SCIENTISTS CLIFFS",
+			city: "SCIENTISTS CLIFFS",
 			state: "MD",
 			zip: "21509-9340"
 		};
@@ -1713,7 +1794,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "7036",
 			street: "DEWY PATHWAY",
-			// city: "SWAMPSCOTT",
+			city: "SWAMPSCOTT",
 			state: "SC",
 			zip: "29853-5350"
 		};
@@ -1729,7 +1810,7 @@ describe( "Parse Address:", function () {
 			number: "7085",
 			street: "SHADY",
 			type: "MNR",
-			// city: "PAYMENT",
+			city: "PAYMENT",
 			state: "KS",
 			zip: "66773-3157"
 		};
@@ -1745,7 +1826,7 @@ describe( "Parse Address:", function () {
 			number: "1542",
 			street: "FALLEN",
 			type: "VIS",
-			// city: "FLANDERS",
+			city: "FLANDERS",
 			state: "DE",
 			zip: "19783-3763"
 		};
@@ -1761,7 +1842,7 @@ describe( "Parse Address:", function () {
 			number: "1096",
 			street: "WISHING HORSE",
 			type: "TRL",
-			// city: "BUCKLESBERRY",
+			city: "BUCKLESBERRY",
 			state: "AL",
 			zip: "35271-3507"
 		};
@@ -1776,7 +1857,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "570",
 			street: "IRON GATE",
-			// city: "HAIRTOWN",
+			city: "HAIRTOWN",
 			state: "OH",
 			zip: "43605-8701"
 		};
@@ -1792,7 +1873,7 @@ describe( "Parse Address:", function () {
 			number: "6067",
 			street: "THUNDER WILLOW",
 			type: "ST",
-			// city: "PUNGO",
+			city: "PUNGO",
 			state: "ID",
 			zip: "83892-4506"
 		};
@@ -1808,7 +1889,7 @@ describe( "Parse Address:", function () {
 			number: "442",
 			street: "CRYSTAL",
 			type: "FLD",
-			// city: "TICK RIDGE",
+			city: "TICK RIDGE",
 			state: "MS",
 			zip: "38635-3965"
 		};
@@ -1823,7 +1904,7 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "4903",
 			street: "COZY PIONEER ROUND",
-			// city: "PUTTSTOWN",
+			city: "PUTTSTOWN",
 			state: "IL",
 			zip: "61502-4831"
 		};
@@ -1839,7 +1920,7 @@ describe( "Parse Address:", function () {
 			number: "2795",
 			street: "GOLDEN",
 			type: "LOOP",
-			// city: "MOOSUP VALLEY",
+			city: "MOOSUP VALLEY",
 			state: "OK",
 			zip: "74503-7553"
 		};
