@@ -70,7 +70,7 @@ describe( "State/Possession FIPS:", function () {
 		for ( fip in fips ) {
 			if ( fips.hasOwnProperty( fip ) ) {
 				expected = fips[ fip ].toUpperCase();
-				abbr = postal.standardization.fips.getStateForCode( fip, true );
+				abbr = postal.standardization.fips.getStateForCode( fip );
 				if ( !abbr ) {
 					//	Need to assist in test debugging
 					expected.should.equal( abbr );
@@ -141,7 +141,7 @@ it( "Geo-StreetAddress-US State to FIPS", function () {
 		for ( fip in fips ) {
 			if ( fips.hasOwnProperty( fip ) ) {
 				expected = fips[ fip ].toUpperCase();
-				abbr = postal.standardization.fips.getCodeForState( fip, true );
+				abbr = postal.standardization.fips.getCodeForState( fip );
 				if ( !abbr ) {
 					//	Need to assist in test debugging
 					expected.should.equal( abbr );

@@ -547,7 +547,7 @@ describe( "Parse Address:", function () {
 			number: "1600",
 
 			//	TODO: FIX!
-			street: "PENNSYLVANIA AVE. WASHINGTON",
+			street: "PENNSYLVANIA AVE WASHINGTON",
 
 			// street: "PENNSYLVANIA",
 			// type: "AVE",
@@ -867,6 +867,23 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
+	it( "Unit, Number Pre Street Type, Some City, State Zipcode", function () {
+
+		var addressString = "Lobby, 357 S McCaslin Blvd., Louisville, CO 80027";
+		var addressObject = {
+			number: "357",
+			prefix: "S",
+			street: "MCCASLIN",
+			type: "BLVD",
+			sec_unit_type: "LBBY",
+			// city: "LOUISVILLE",
+			state: "CO",
+			zip: "80027"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
+
 	it( "Number Pre Street Type unit Zipcode", function () {
 
 		var addressString = "233 S Wacker Dr lobby 60606";
@@ -952,12 +969,13 @@ describe( "Parse Address:", function () {
 		var addressString = "321 S. Washington";
 		var addressObject = {
 			number: "321",
-			prefix: "S",
 
+			// prefix: "S",
 			// street: "WASHINGTON"
 
 			//	TODO: FIX!
-			state: "WA"
+			state: "WA",
+			suffix: "S"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -967,11 +985,11 @@ describe( "Parse Address:", function () {
 
 		var addressString = "\'45 Quaker Ave, Ste 105\'";
 		var addressObject = {
-			// number: "45",
-			// street: "QUAKER",
-			// type: "AVE",
-			// sec_unit_type: "Ste",
-			// sec_unit_num: "105"
+			number: "45",
+			street: "QUAKER",
+			type: "AVE",
+			sec_unit_type: "STE",
+			sec_unit_num: "105"
 		};
 
 		verifyAddress( addressString, addressObject );

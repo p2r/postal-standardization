@@ -22,7 +22,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "ALY" );
 		}
@@ -41,7 +41,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "ANX" );
 		}
@@ -57,7 +57,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "ARC" );
 		}
@@ -79,7 +79,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "AVE" );
 		}
@@ -96,7 +96,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BYU" );
 		}
@@ -112,7 +112,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BCH" );
 		}
@@ -128,7 +128,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BND" );
 		}
@@ -145,7 +145,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BLF" );
 		}
@@ -163,7 +163,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BLFS" );
 		}
@@ -182,7 +182,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BTM" );
 		}
@@ -200,7 +200,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BLVD" );
 		}
@@ -218,7 +218,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BR" );
 		}
@@ -236,7 +236,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BRG" );
 		}
@@ -252,7 +252,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BRK" );
 		}
@@ -268,7 +268,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BRKS" );
 		}
@@ -284,7 +284,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BG" );
 		}
@@ -300,7 +300,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BGS" );
 		}
@@ -319,7 +319,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "BYP" );
 		}
@@ -336,7 +336,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CP" );
 		}
@@ -354,7 +354,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CYN" );
 		}
@@ -370,7 +370,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CPE" );
 		}
@@ -388,7 +388,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CSWY" );
 		}
@@ -410,7 +410,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CTR" );
 		}
@@ -426,7 +426,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CTRS" );
 		}
@@ -446,7 +446,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CIR" );
 		}
@@ -462,7 +462,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CIRS" );
 		}
@@ -478,7 +478,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CLF" );
 		}
@@ -494,7 +494,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CLFS" );
 		}
@@ -510,7 +510,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CLB" );
 		}
@@ -526,7 +526,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CMN" );
 		}
@@ -542,7 +542,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CMNS" );
 		}
@@ -558,7 +558,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "COR" );
 		}
@@ -574,7 +574,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CORS" );
 		}
@@ -590,7 +590,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CRSE" );
 		}
@@ -607,7 +607,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CT" );
 		}
@@ -624,7 +624,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CTS" );
 		}
@@ -640,7 +640,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CV" );
 		}
@@ -656,7 +656,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CVS" );
 		}
@@ -674,7 +674,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CRK" );
 		}
@@ -696,7 +696,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CRES" );
 		}
@@ -712,7 +712,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CRST" );
 		}
@@ -730,7 +730,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "XING" );
 		}
@@ -746,7 +746,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "XRD" );
 		}
@@ -762,7 +762,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "XRDS" );
 		}
@@ -778,7 +778,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "CURV" );
 		}
@@ -794,7 +794,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "DL" );
 		}
@@ -810,7 +810,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "DM" );
 		}
@@ -828,7 +828,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "DV" );
 		}
@@ -846,7 +846,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "DR" );
 		}
@@ -862,7 +862,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "DRS" );
 		}
@@ -878,7 +878,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "EST" );
 		}
@@ -894,7 +894,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "ESTS" );
 		}
@@ -914,7 +914,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "EXPY" );
 		}
@@ -932,7 +932,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "EXT" );
 		}
@@ -948,7 +948,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "EXTS" );
 		}
@@ -964,7 +964,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FALL" );
 		}
@@ -980,7 +980,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FLS" );
 		}
@@ -997,7 +997,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FRY" );
 		}
@@ -1013,7 +1013,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FLD" );
 		}
@@ -1029,7 +1029,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FLDS" );
 		}
@@ -1045,7 +1045,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FLT" );
 		}
@@ -1061,7 +1061,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FLTS" );
 		}
@@ -1077,7 +1077,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FRD" );
 		}
@@ -1093,7 +1093,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FRDS" );
 		}
@@ -1110,7 +1110,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FRST" );
 		}
@@ -1127,7 +1127,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FRG" );
 		}
@@ -1143,7 +1143,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FRGS" );
 		}
@@ -1159,7 +1159,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FRK" );
 		}
@@ -1175,7 +1175,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FRKS" );
 		}
@@ -1192,7 +1192,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FT" );
 		}
@@ -1211,7 +1211,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "FWY" );
 		}
@@ -1230,7 +1230,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "GDN" );
 		}
@@ -1247,7 +1247,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "GDNS" );
 		}
@@ -1266,7 +1266,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "GTWY" );
 		}
@@ -1282,7 +1282,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "GLN" );
 		}
@@ -1298,7 +1298,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "GLNS" );
 		}
@@ -1314,7 +1314,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "GRN" );
 		}
@@ -1330,7 +1330,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "GRNS" );
 		}
@@ -1347,7 +1347,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "GRV" );
 		}
@@ -1363,7 +1363,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "GRVS" );
 		}
@@ -1382,7 +1382,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "HBR" );
 		}
@@ -1398,7 +1398,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "HBRS" );
 		}
@@ -1415,7 +1415,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "HVN" );
 		}
@@ -1434,7 +1434,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "HTS" );
 		}
@@ -1454,7 +1454,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "HWY" );
 		}
@@ -1470,7 +1470,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "HL" );
 		}
@@ -1486,7 +1486,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "HLS" );
 		}
@@ -1505,7 +1505,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "HOLW" );
 		}
@@ -1521,7 +1521,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "INLT" );
 		}
@@ -1538,7 +1538,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "IS" );
 		}
@@ -1555,7 +1555,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "ISS" );
 		}
@@ -1571,7 +1571,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "ISLE" );
 		}
@@ -1591,7 +1591,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "JCT" );
 		}
@@ -1608,7 +1608,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "JCTS" );
 		}
@@ -1624,7 +1624,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "KY" );
 		}
@@ -1640,7 +1640,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "KYS" );
 		}
@@ -1657,7 +1657,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "KNL" );
 		}
@@ -1673,7 +1673,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "KNLS" );
 		}
@@ -1689,7 +1689,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LK" );
 		}
@@ -1705,7 +1705,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LKS" );
 		}
@@ -1720,7 +1720,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LAND" );
 		}
@@ -1737,7 +1737,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LNDG" );
 		}
@@ -1755,7 +1755,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LN" );
 		}
@@ -1771,7 +1771,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LGT" );
 		}
@@ -1787,7 +1787,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LGTS" );
 		}
@@ -1803,7 +1803,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LF" );
 		}
@@ -1819,7 +1819,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LCK" );
 		}
@@ -1835,7 +1835,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LCKS" );
 		}
@@ -1853,7 +1853,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LDG" );
 		}
@@ -1870,7 +1870,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "LOOP" );
 		}
@@ -1885,7 +1885,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MALL" );
 		}
@@ -1901,7 +1901,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MNR" );
 		}
@@ -1917,7 +1917,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MNRS" );
 		}
@@ -1933,7 +1933,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MDW" );
 		}
@@ -1950,7 +1950,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MDWS" );
 		}
@@ -1965,7 +1965,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MEWS" );
 		}
@@ -1981,7 +1981,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "ML" );
 		}
@@ -1997,7 +1997,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MLS" );
 		}
@@ -2015,7 +2015,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MSN" );
 		}
@@ -2033,7 +2033,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MTWY" );
 		}
@@ -2050,7 +2050,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MT" );
 		}
@@ -2070,7 +2070,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MTN" );
 		}
@@ -2087,7 +2087,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "MTNS" );
 		}
@@ -2103,7 +2103,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "NCK" );
 		}
@@ -2120,7 +2120,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "ORCH" );
 		}
@@ -2136,7 +2136,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "OVAL" );
 		}
@@ -2152,7 +2152,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "OPAS" );
 		}
@@ -2171,7 +2171,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PARK" );
 		}
@@ -2195,7 +2195,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PKWY" );
 		}
@@ -2210,7 +2210,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PASS" );
 		}
@@ -2226,7 +2226,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PSGE" );
 		}
@@ -2242,7 +2242,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PATH" );
 		}
@@ -2258,7 +2258,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PIKE" );
 		}
@@ -2274,7 +2274,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PNE" );
 		}
@@ -2290,7 +2290,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PNES" );
 		}
@@ -2306,7 +2306,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PL" );
 		}
@@ -2322,7 +2322,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PLN" );
 		}
@@ -2339,7 +2339,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PLNS" );
 		}
@@ -2356,7 +2356,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PLZ" );
 		}
@@ -2372,7 +2372,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PT" );
 		}
@@ -2388,7 +2388,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PTS" );
 		}
@@ -2404,7 +2404,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PRT" );
 		}
@@ -2420,7 +2420,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PRTS" );
 		}
@@ -2438,7 +2438,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "PR" );
 		}
@@ -2456,7 +2456,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RADL" );
 		}
@@ -2471,7 +2471,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RAMP" );
 		}
@@ -2489,7 +2489,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RNCH" );
 		}
@@ -2505,7 +2505,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RPD" );
 		}
@@ -2521,7 +2521,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RPDS" );
 		}
@@ -2537,7 +2537,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RST" );
 		}
@@ -2554,7 +2554,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RDG" );
 		}
@@ -2570,7 +2570,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RDGS" );
 		}
@@ -2588,7 +2588,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RIV" );
 		}
@@ -2604,7 +2604,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RD" );
 		}
@@ -2620,7 +2620,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RDS" );
 		}
@@ -2636,7 +2636,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RTE" );
 		}
@@ -2651,7 +2651,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "ROW" );
 		}
@@ -2666,7 +2666,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RUE" );
 		}
@@ -2681,7 +2681,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "RUN" );
 		}
@@ -2697,7 +2697,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SHL" );
 		}
@@ -2713,7 +2713,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SHLS" );
 		}
@@ -2730,7 +2730,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SHR" );
 		}
@@ -2747,7 +2747,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SHRS" );
 		}
@@ -2764,7 +2764,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SKWY" );
 		}
@@ -2782,7 +2782,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SPG" );
 		}
@@ -2800,7 +2800,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SPGS" );
 		}
@@ -2818,7 +2818,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SPUR" );
 		}
@@ -2837,7 +2837,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SQ" );
 		}
@@ -2854,7 +2854,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SQS" );
 		}
@@ -2872,7 +2872,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "STA" );
 		}
@@ -2894,7 +2894,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "STRA" );
 		}
@@ -2911,7 +2911,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "STRM" );
 		}
@@ -2929,7 +2929,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "ST" );
 		}
@@ -2945,7 +2945,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "STS" );
 		}
@@ -2963,7 +2963,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SMT" );
 		}
@@ -2980,7 +2980,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "TER" );
 		}
@@ -2996,7 +2996,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "TRWY" );
 		}
@@ -3013,7 +3013,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "TRCE" );
 		}
@@ -3032,7 +3032,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "TRAK" );
 		}
@@ -3048,7 +3048,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "TRFY" );
 		}
@@ -3067,7 +3067,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "TRL" );
 		}
@@ -3085,7 +3085,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "TRLR" );
 		}
@@ -3105,7 +3105,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "TUNL" );
 		}
@@ -3125,7 +3125,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "TPKE" );
 		}
@@ -3146,7 +3146,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "UPAS" );
 		}
@@ -3162,7 +3162,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "UN" );
 		}
@@ -3178,7 +3178,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "UNS" );
 		}
@@ -3196,7 +3196,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "VLY" );
 		}
@@ -3212,7 +3212,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "VLYS" );
 		}
@@ -3230,7 +3230,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "VIA" );
 		}
@@ -3246,7 +3246,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "VW" );
 		}
@@ -3262,7 +3262,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "VWS" );
 		}
@@ -3283,7 +3283,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "VLG" );
 		}
@@ -3300,7 +3300,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "VLGS" );
 		}
@@ -3316,7 +3316,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "VL" );
 		}
@@ -3335,7 +3335,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "VIS" );
 		}
@@ -3351,7 +3351,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "WALK" );
 		}
@@ -3367,7 +3367,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "WALL" );
 		}
@@ -3383,7 +3383,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "WAY" );
 		}
@@ -3398,7 +3398,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "WAYS" );
 		}
@@ -3415,7 +3415,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "WL" );
 		}
@@ -3432,7 +3432,7 @@ describe( "Street Type:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.type( names[ i ], true );
+			abbr = postal.standardization.street.type( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "WLS" );
 		}
@@ -3808,7 +3808,7 @@ describe( "Street Type:", function () {
 		for ( streetType in streetTypes ) {
 			if ( streetTypes.hasOwnProperty( streetType ) ) {
 				expected = streetTypes[ streetType ].toUpperCase();
-				abbr = postal.standardization.street.type( streetType, true );
+				abbr = postal.standardization.street.type( streetType );
 				if ( !abbr ) {
 					//	Need to assist in test debugging
 					expected.should.equal( abbr );

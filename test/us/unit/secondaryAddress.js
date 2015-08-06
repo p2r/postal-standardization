@@ -206,6 +206,31 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
+	it( "LOBBY 2", function () {
+
+		var unitAddress = "LOBBY 2";
+		var expAddress = {
+			sec_unit_type: "LBBY",
+			sec_unit_num: "2"
+		};
+		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
+		should.exist( secondaryAddress );
+		secondaryAddress.should.eql( expAddress );
+
+	} );
+
+	it( "LOBBY", function () {
+
+		var unitAddress = "LOBBY";
+		var expAddress = {
+			sec_unit_type: "LBBY"
+		};
+		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
+		should.exist( secondaryAddress );
+		secondaryAddress.should.eql( expAddress );
+
+	} );
+
 	it( "PHILADELPHIA", function () {
 
 		var unitAddress = "PHILADELPHIA";
