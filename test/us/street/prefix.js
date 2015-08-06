@@ -19,7 +19,7 @@ describe( "Street Prefixes:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.prefix( names[ i ] );
+			abbr = postal.standardization.street.prefix.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "N" );
 		}
@@ -30,13 +30,15 @@ describe( "Street Prefixes:", function () {
 		var names = [
 			"NORTHEAST",
 			"NORTH EAST",
+			"NORTH-EAST",
+			"N E",
 			"NE"
 		];
 		var abbr, i;
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.prefix( names[ i ] );
+			abbr = postal.standardization.street.prefix.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "NE" );
 		}
@@ -47,13 +49,15 @@ describe( "Street Prefixes:", function () {
 		var names = [
 			"NORTHWEST",
 			"NORTH WEST",
+			"NORTH-WEST",
+			"N W",
 			"NW"
 		];
 		var abbr, i;
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.prefix( names[ i ] );
+			abbr = postal.standardization.street.prefix.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "NW" );
 		}
@@ -69,7 +73,7 @@ describe( "Street Prefixes:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.prefix( names[ i ] );
+			abbr = postal.standardization.street.prefix.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "S" );
 		}
@@ -80,13 +84,15 @@ describe( "Street Prefixes:", function () {
 		var names = [
 			"SOUTHEAST",
 			"SOUTH EAST",
+			"SOUTH-EAST",
+			"S E",
 			"SE"
 		];
 		var abbr, i;
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.prefix( names[ i ] );
+			abbr = postal.standardization.street.prefix.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SE" );
 		}
@@ -97,13 +103,15 @@ describe( "Street Prefixes:", function () {
 		var names = [
 			"SOUTHWEST",
 			"SOUTH WEST",
+			"SOUTH-WEST",
+			"S W",
 			"SW"
 		];
 		var abbr, i;
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.prefix( names[ i ] );
+			abbr = postal.standardization.street.prefix.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "SW" );
 		}
@@ -119,7 +127,7 @@ describe( "Street Prefixes:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.prefix( names[ i ] );
+			abbr = postal.standardization.street.prefix.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "E" );
 		}
@@ -135,7 +143,7 @@ describe( "Street Prefixes:", function () {
 		var numNames = names.length;
 
 		for ( i = 0; i < numNames; i++ ) {
-			abbr = postal.standardization.street.prefix( names[ i ] );
+			abbr = postal.standardization.street.prefix.match( names[ i ] );
 			should.exist( abbr );
 			abbr.should.equal( "W" );
 		}
