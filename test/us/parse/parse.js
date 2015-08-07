@@ -154,8 +154,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7 CA";
 		var addressObject = {
+			//	TODO: FIX!
 			city: "MONTREAL",
-			//	TODO: What about providence?
+			// state: QC,
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -167,8 +168,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7, CA";
 		var addressObject = {
+			//	TODO: FIX!
 			city: "MONTREAL",
-			//	TODO: What about providence?
+			// state: QC,
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -180,8 +182,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7\nCA";
 		var addressObject = {
+			//	TODO: FIX!
 			city: "MONTREAL",
-			//	TODO: What about providence?
+			// state: QC,
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -193,8 +196,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC H3Z 2Y7\nCA";
 		var addressObject = {
+			//	TODO: FIX!
 			city: "MONTREAL",
-			//	TODO: What about providence?
+			// state: QC,
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -229,8 +233,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7 Canada";
 		var addressObject = {
+			//	TODO: FIX!
 			city: "MONTREAL",
-			//	TODO: What about providence?
+			// state: QC,
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -242,8 +247,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7, Canada";
 		var addressObject = {
+			//	TODO: FIX!
 			city: "MONTREAL",
-			//	TODO: What about providence?
+			// state: QC,
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -255,8 +261,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC, H3Z 2Y7\nCanada";
 		var addressObject = {
+			//	TODO: FIX!
 			city: "MONTREAL",
-			//	TODO: What about providence?
+			// state: QC,
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -268,8 +275,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Montreal, QC H3Z 2Y7\nCanada";
 		var addressObject = {
+			//	TODO: FIX!
 			city: "MONTREAL",
-			//	TODO: What about providence?
+			// state: QC,
 			zip: "H3Z 2Y7",
 			country: "CANADA"
 		};
@@ -417,13 +425,9 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "1005",
 			prefix: "N",
-
-			//	TODO: FIX!
-			street: "GRAVENSTEIN HIGHWAY SEBASTOPOL",
-
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
-			// city: "SEBASTOPOL",
+			street: "GRAVENSTEIN",
+			type: "HWY",
+			city: "SEBASTOPOL",
 			state: "CA",
 			zip: "95472"
 		};
@@ -550,13 +554,9 @@ describe( "Parse Address:", function () {
 		var addressString = "7800 Mill Station Rd Sebastopol CA 95472";
 		var addressObject = {
 			number: "7800",
-
-			//	TODO: FIX!
-			street: "MILL STATION RD SEBASTOPOL",
-
-			// street: "MILL STATION",
-			// type: "RD",
-			// city: "SEBASTOPOL",
+			street: "MILL STATION",
+			type: "RD",
+			city: "SEBASTOPOL",
 			state: "CA",
 			zip: "95472"
 		};
@@ -569,12 +569,8 @@ describe( "Parse Address:", function () {
 		var addressString = "1005 State Highway 116 Sebastopol CA 95472";
 		var addressObject = {
 			number: "1005",
-
-			//	TODO: FIX!
-			street: "STATE HIGHWAY 116 SEBASTOPOL",
-
-			// street: "STATE HIGHWAY 116",
-			// city: "SEBASTOPOL",
+			street: "STATE HIGHWAY 116",
+			city: "SEBASTOPOL",
 			state: "CA",
 			zip: "95472"
 		};
@@ -659,15 +655,11 @@ describe( "Parse Address:", function () {
 		var addressObject = {
 			number: "6641",
 			prefix: "N",
-
-			//	TODO: FIX!
-			street: "2200 W APT D304 PARK CITY",
-
-			// street: "2200",
-			// suffix: "W",
-			// sec_unit_type: "Apt",
-			// sec_unit_num: "D304",
-			// city: "PARK CITY",
+			street: "2200",
+			suffix: "W",
+			sec_unit_type: "APT",
+			sec_unit_num: "D304",
+			city: "PARK CITY",
 			state: "UT",
 			zip: "84098"
 		};
