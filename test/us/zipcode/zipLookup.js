@@ -61,3 +61,36 @@ describe( "Location Lookup:", function () {
 	} );
 
 } );
+
+describe( "Cities Lookup:", function () {
+
+	var postal = new Postal();
+
+	it( "80021", function () {
+		var zipcode = "80021";
+		var expCities = [
+			"BROOMFIELD",
+			"WESTMINSTER"
+		];
+		var location = postal.standardization.zipLookup.getLocationForZip( zipcode );
+		var cities = postal.standardization.zipLookup.getCitiesForZip( zipcode );
+		should.exist( cities );
+		should.exist( location );
+		should.exist( location.city );
+		should.exist( cities[ 0 ] );
+		cities[ 0 ].should.equal( location.city );
+		cities.should.eql( expCities );
+	} );
+
+	it( "80019", function () {
+		var zipcode = "80019";
+		var expCities = [
+			"AURORA"
+		];
+		var cities = postal.standardization.zipLookup.getCitiesForZip( zipcode );
+		should.exist( cities );
+		should.exist( cities[ 0 ] );
+		cities.should.eql( expCities );
+	} );
+
+} );
