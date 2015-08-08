@@ -10,12 +10,12 @@ describe( "CA Zip Lookup:", function () {
 
 	var postal = new Postal();
 
-	it( "80020", function () {
-		var zipcode = "80020";
+	it( "A0A-1G0", function () {
+		var zipcode = "A0A-1G0";
 		var expLocation = {
-			country: "US",
-			state: "CO",
-			city: "BROOMFIELD"
+			city: "BAY ROBERTS",
+			state: "NL",
+			country: "CA"
 		};
 		var location = postal.standardization.zipLookup.getLocationForZip( zipcode );
 		should.exist( location );
@@ -24,12 +24,12 @@ describe( "CA Zip Lookup:", function () {
 		location.city.should.equal( expLocation.city );
 	} );
 
-	it( "80027", function () {
-		var zipcode = "80027";
+	it( "L6B-0G2", function () {
+		var zipcode = "L6B-0G2";
 		var expLocation = {
-			country: "US",
-			state: "CO",
-			city: "LOUISVILLE"
+			city: "RICHMOND HILL",
+			state: "ON",
+			country: "CA"
 		};
 		var location = postal.standardization.zipLookup.getLocationForZip( zipcode );
 		should.exist( location );
@@ -40,21 +40,21 @@ describe( "CA Zip Lookup:", function () {
 
 } );
 
-describe( "Location Lookup:", function () {
+describe( "CA Location Lookup:", function () {
 
 	var postal = new Postal();
 
-	it( "Broomfield, CO", function () {
-		var expZipcode = "80020";
-		var zipcodes = postal.standardization.zipLookup.getZipsForLocation( "Broomfield", "CO" );
+	it( "York, ON", function () {
+		var expZipcode = "L4A-1L9";
+		var zipcodes = postal.standardization.zipLookup.getZipsForLocation( "York", "ON" );
 		should.exist( zipcodes );
 		should.exist( zipcodes[ 0 ] );
 		zipcodes[ 0 ].should.equal( expZipcode );
 	} );
 
-	it( "Louisville, CO", function () {
-		var expZipcode = "80027";
-		var zipcodes = postal.standardization.zipLookup.getZipsForLocation( "Louisville", "CO" );
+	it( "Murray Harbour, PE", function () {
+		var expZipcode = "C0A-1V0";
+		var zipcodes = postal.standardization.zipLookup.getZipsForLocation( "Murray Harbour", "PE" );
 		should.exist( zipcodes );
 		should.exist( zipcodes[ 0 ] );
 		zipcodes[ 0 ].should.equal( expZipcode );
@@ -62,15 +62,14 @@ describe( "Location Lookup:", function () {
 
 } );
 
-describe( "Cities Lookup:", function () {
+describe( "CA Cities Lookup:", function () {
 
 	var postal = new Postal();
 
-	it( "80021", function () {
-		var zipcode = "80021";
+	it( "L6B-0G2", function () {
+		var zipcode = "L6B-0G2";
 		var expCities = [
-			"BROOMFIELD",
-			"WESTMINSTER"
+			"RICHMOND HILL"
 		];
 		var location = postal.standardization.zipLookup.getLocationForZip( zipcode );
 		var cities = postal.standardization.zipLookup.getCitiesForZip( zipcode );
@@ -82,10 +81,10 @@ describe( "Cities Lookup:", function () {
 		cities.should.eql( expCities );
 	} );
 
-	it( "80019", function () {
-		var zipcode = "80019";
+	it( "C0A-1V0", function () {
+		var zipcode = "C0A-1V0";
 		var expCities = [
-			"AURORA"
+			"MURRAY HARBOUR"
 		];
 		var cities = postal.standardization.zipLookup.getCitiesForZip( zipcode );
 		should.exist( cities );
