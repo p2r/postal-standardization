@@ -52,8 +52,7 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address\nUnited States";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS",
+			street: "SOME ADDRESS",
 			country: "UNITED STATES"
 		};
 
@@ -64,8 +63,7 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address 80023\nUnited States";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS",
+			street: "SOME ADDRESS",
 			zip: "80023",
 			country: "UNITED STATES"
 		};
@@ -77,8 +75,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address, United States";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS"
+			street: "SOME ADDRESS",
+			country: "UNITED STATES"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -88,8 +86,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address, US";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS"
+			street: "SOME ADDRESS",
+			country: "UNITED STATES"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -99,8 +97,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address, U.S.A.";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS"
+			street: "SOME ADDRESS",
+			country: "UNITED STATES"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -130,8 +128,7 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address\nCA";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS",
+			street: "SOME ADDRESS",
 			country: "CANADA"
 		};
 
@@ -142,8 +139,7 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address, CA";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS",
+			street: "SOME ADDRESS",
 			state: "CA"
 		};
 

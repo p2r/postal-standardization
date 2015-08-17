@@ -4,14 +4,21 @@
 
 var should = require( "should" );
 
+var logStatus = require( "../../../lib/common/logStatus" );
 var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Parse Address:", function () {
 
 	var postal = new Postal();
 
-	function verifyAddress( addressString, addressObject ) {
+	function verifyAddress( addressString, addressObject, debugLogging ) {
+		if ( debugLogging ) {
+			logStatus( true );
+		}
 		postal.standardization.parseAddress( addressString, function ( err, result ) {
+			if ( debugLogging ) {
+				logStatus( false );
+			}
 			should.not.exist( err );
 			should.exist( result );
 			result.should.eql( addressObject );
@@ -52,8 +59,7 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address\nUnited States";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS",
+			street: "SOME ADDRESS",
 			country: "UNITED STATES"
 		};
 
@@ -64,8 +70,7 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address 80023\nUnited States";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS",
+			street: "SOME ADDRESS",
 			zip: "80023",
 			country: "UNITED STATES"
 		};
@@ -77,8 +82,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address, United States";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS"
+			street: "SOME ADDRESS",
+			country: "UNITED STATES"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -88,8 +93,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address, US";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS"
+			street: "SOME ADDRESS",
+			country: "UNITED STATES"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -99,8 +104,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address, U.S.A.";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS"
+			street: "SOME ADDRESS",
+			country: "UNITED STATES"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -120,9 +125,8 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address\nCA";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS",
-			country: "CANADA"
+			street: "SOME ADDRESS",
+			state: "CA"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -132,8 +136,7 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address, CA";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS",
+			street: "SOME ADDRESS",
 			state: "CA"
 		};
 
@@ -145,7 +148,7 @@ describe( "Parse Address:", function () {
 		var addressString = "Some Address\nBénin";
 		var addressObject = {
 			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS",
+			street: "SOME ADDRESS",
 			country: "BENIN"
 		};
 
@@ -238,20 +241,18 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type Suite City, ST", function () {
+	it( "Number Prefix Street Type Suite Number City, ST", function () {
+		//	npxtUxS = npxtuux,S = npstuuc,S
 
 		var addressString = "1005 N Gravenstein Hwy Suite 500 Sebastopol, CA";
 		var addressObject = {
 			number: "1005",
 			prefix: "N",
-
-			//	TODO: FIX!
-			street: "GRAVENSTEIN HWY SUITE 500 SEBASTOPOL",
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
-			// sec_unit_type: "Suite",
-			// sec_unit_num: "500",
-			// city: "SEBASTOPOL",
+			street: "GRAVENSTEIN",
+			type: "HWY",
+			sec_unit_type: "STE",
+			sec_unit_num: "500",
+			city: "SEBASTOPOL",
 			state: "CA"
 		};
 
@@ -295,14 +296,10 @@ describe( "Parse Address:", function () {
 		var addressString = "1005 Gravenstein Hwy N Sebastopol CA";
 		var addressObject = {
 			number: "1005",
-
-			//	TODO: FIX!
-			street: "GRAVENSTEIN HWY N SEBASTOPOL",
-
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
-			// suffix: "N",
-			// city: "SEBASTOPOL",
+			street: "GRAVENSTEIN",
+			type: "HWY",
+			suffix: "N",
+			city: "SEBASTOPOL",
 			state: "CA"
 		};
 
@@ -332,8 +329,6 @@ describe( "Parse Address:", function () {
 			street: "GRAVENSTEIN",
 			type: "HWY",
 			city: "N SEBASTOPOL",
-			//	TODO: Which is right?
-			// city: "NORTH SEBASTOPOL",
 			state: "CA"
 		};
 
@@ -359,13 +354,9 @@ describe( "Parse Address:", function () {
 		var addressString = "1005 Gravenstein Hwy Sebastopol CA";
 		var addressObject = {
 			number: "1005",
-
-			//	TODO: FIX!
-			street: "GRAVENSTEIN HWY SEBASTOPOL",
-
-			// street: "GRAVENSTEIN",
-			// type: "HWY",
-			// city: "SEBASTOPOL",
+			street: "GRAVENSTEIN",
+			type: "HWY",
+			city: "SEBASTOPOL",
 			state: "CA"
 		};
 
@@ -390,6 +381,7 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Street Street Type, City, ST Zipcode", function () {
+		//	nxtxSZ = nxxtx,SZ = nsstc,SZ
 
 		var addressString = "7800 Mill Station Rd, Sebastopol, CA 95472";
 		var addressObject = {
@@ -401,7 +393,7 @@ describe( "Parse Address:", function () {
 			zip: "95472"
 		};
 
-		verifyAddress( addressString, addressObject );
+		verifyAddress( addressString, addressObject, true );
 	} );
 
 	it( "Number Street Type City ST Zipcode", function () {
@@ -438,13 +430,9 @@ describe( "Parse Address:", function () {
 		var addressString = "1600 Pennsylvania Ave. Washington DC";
 		var addressObject = {
 			number: "1600",
-
-			//	TODO: FIX!
-			street: "PENNSYLVANIA AVE WASHINGTON",
-
-			// street: "PENNSYLVANIA",
-			// type: "AVE",
-			// city: "WASHINGTON",
+			street: "PENNSYLVANIA",
+			type: "AVE",
+			city: "WASHINGTON",
 			state: "DC"
 		};
 
@@ -456,13 +444,9 @@ describe( "Parse Address:", function () {
 		var addressString = "1600 Pennsylvania Avenue Washington DC";
 		var addressObject = {
 			number: "1600",
-
-			//	TODO: FIX!
-			street: "PENNSYLVANIA AVENUE WASHINGTON",
-
-			// street: "PENNSYLVANIA",
-			// type: "AVE",
-			// city: "WASHINGTON",
+			street: "PENNSYLVANIA",
+			type: "AVE",
+			city: "WASHINGTON",
 			state: "DC"
 		};
 
