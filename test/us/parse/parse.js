@@ -156,6 +156,7 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Street Type Zipcode", function () {
+		//	nxtZ
 
 		var addressString = "1005 Gravenstein Hwy 95472";
 		var addressObject = {
@@ -197,6 +198,8 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Street Type Suffix, Zipcode", function () {
+		//	nxtf,Z
+		//	nstf,Z
 
 		var addressString = "1005 Gravenstein Highway North, 95472";
 		var addressObject = {
@@ -211,7 +214,7 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Prefix Street Type, City, ST", function () {
-		// npxt,x,S
+		//	npxt,x,S
 
 		var addressString = "1005 N Gravenstein Highway, Sebastopol, CA";
 		var addressObject = {
@@ -371,12 +374,8 @@ describe( "Parse Address:", function () {
 		var addressString = "115 Broadway San Francisco CA";
 		var addressObject = {
 			number: "115",
-
-			//	TODO: FIX!
-			street: "BROADWAY SAN FRANCISCO",
-
-			// street: "BROADWAY",
-			// city: "SAN FRANCISCO",
+			street: "BROADWAY",
+			city: "SAN FRANCISCO",
 			state: "CA"
 		};
 
@@ -415,7 +414,7 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Street Type Number City ST Zipcode", function () {
-		// nxxxxSZ
+		//	nxxxxSZ
 
 		var addressString = "1005 State Highway 116 Sebastopol CA 95472";
 		var addressObject = {
@@ -538,7 +537,7 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Fraction Street Type, City City, ST", function () {
-		// nnxt,xx,S
+		//	nnxt,xx,S
 
 		var addressString = "3813 1/2 Some Road, Los Angeles, CA";
 		var addressObject = {
@@ -553,6 +552,8 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Street & Street City City ST", function () {
+		//	x&xxxS
+		//	s&sxxS
 
 		var addressString = "Mission & Valencia San Francisco CA";
 		var addressObject = {
@@ -566,6 +567,8 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Street & Street, City ST", function () {
+		//	x&x,xxS
+		//	s&s,ccS
 
 		var addressString = "Mission & Valencia, San Francisco CA";
 		var addressObject = {
@@ -579,6 +582,8 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Street Type and Street Type City City ST", function () {
+		//	st&stxxS
+		//	st&stxxS
 
 		var addressString = "Mission St and Valencia St San Francisco CA";
 		var addressObject = {
@@ -687,12 +692,8 @@ describe( "Parse Address:", function () {
 		var addressString = "123 Maple Rochester, New York";
 		var addressObject = {
 			number: "123",
-
-			//	TODO: FIX!
-			street: "MAPLE ROCHESTER",
-
-			// street: "MAPLE",
-			// city: "ROCHESTER",
+			street: "MAPLE",
+			city: "ROCHESTER",
 			state: "NY"
 		};
 
@@ -778,15 +779,12 @@ describe( "Parse Address:", function () {
 
 		var addressString = "#42 233 S Wacker Dr 60606";
 		var addressObject = {
-			// sec_unit_type: "#",
-			// sec_unit_num: "42",
-			// number: "233",
-			// prefix: "S",
-			// street: "WACKER",
-			// type: "DR",
-
-			// TODO: FIX!
-			city: "#42 233 S WACKER DR",
+			sec_unit_type: "#",
+			sec_unit_num: "42",
+			number: "233",
+			prefix: "S",
+			street: "WACKER",
+			type: "DR",
 			zip: "60606"
 		};
 
@@ -797,15 +795,12 @@ describe( "Parse Address:", function () {
 
 		var addressString = "lt42 99 Some Road, Some City LA";
 		var addressObject = {
-			// sec_unit_type: "lt",
-			// sec_unit_num: "42",
-			// number: "99",
-			// street: "SOME",
-			// type: "RD",
-
-			//	TODO: FIX!
-			city: "LT42 99 SOME ROAD",
-			// city: "SOME CITY",
+			sec_unit_type: "lt",
+			sec_unit_num: "42",
+			number: "99",
+			street: "SOME",
+			type: "RD",
+			city: "SOME CITY",
 			state: "LA"
 		};
 
@@ -831,12 +826,8 @@ describe( "Parse Address:", function () {
 		var addressString = "1234 COUNTY HWY 60E, Town, CO 12345";
 		var addressObject = {
 			number: "1234",
-
-			//	TODO: FIX!
-			street: "COUNTY HWY 60E",
-
-			// street: "COUNTY HWY 60",
-			// suffix: "E",
+			street: "COUNTY HWY 60",
+			suffix: "E",
 			city: "TOWN",
 			state: "CO",
 			zip: "12345"
@@ -871,10 +862,6 @@ describe( "Parse Address:", function () {
 			type: "AVE",
 			sec_unit_type: "STE",
 			sec_unit_num: "105",
-
-			//	TODO: FIX!
-			//	For some reason, the unit is being put back into unprocessed queue.
-			city: "STE 105"
 		};
 
 		verifyAddress( addressString, addressObject );
