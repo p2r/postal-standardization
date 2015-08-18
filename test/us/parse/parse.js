@@ -182,6 +182,7 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Street Type Suf, Zipcode", function () {
+		//	nxtf,Z
 
 		var addressString = "1005 Gravenstein Hwy N, 95472";
 		var addressObject = {
@@ -210,6 +211,7 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Prefix Street Type, City, ST", function () {
+		// npxt,x,S
 
 		var addressString = "1005 N Gravenstein Highway, Sebastopol, CA";
 		var addressObject = {
@@ -225,6 +227,7 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Street Type, Suite, City, ST", function () {
+		//	npxt,uu,x,S
 
 		var addressString = "1005 N Gravenstein Highway, Suite 500, Sebastopol, CA";
 		var addressObject = {
@@ -381,7 +384,7 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Street Street Type, City, ST Zipcode", function () {
-		//	nxtxSZ = nxxtx,SZ = nsstc,SZ
+		//	nxxt,x,SZ = nsst,c,SZ
 
 		var addressString = "7800 Mill Station Rd, Sebastopol, CA 95472";
 		var addressObject = {
@@ -393,7 +396,7 @@ describe( "Parse Address:", function () {
 			zip: "95472"
 		};
 
-		verifyAddress( addressString, addressObject, true );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	it( "Number Street Type City ST Zipcode", function () {
@@ -412,6 +415,7 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Street Type Number City ST Zipcode", function () {
+		// nxxxxSZ
 
 		var addressString = "1005 State Highway 116 Sebastopol CA 95472";
 		var addressObject = {
@@ -425,50 +429,48 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street. City City", function () {
+	// it( "Number Street. City City", function () {
 
-		var addressString = "1600 Pennsylvania Ave. Washington DC";
-		var addressObject = {
-			number: "1600",
-			street: "PENNSYLVANIA",
-			type: "AVE",
-			city: "WASHINGTON",
-			state: "DC"
-		};
+	// 	var addressString = "1600 Pennsylvania Ave. Washington DC";
+	// 	var addressObject = {
+	// 		number: "1600",
+	// 		street: "PENNSYLVANIA",
+	// 		type: "AVE",
+	// 		city: "WASHINGTON",
+	// 		state: "DC"
+	// 	};
 
-		verifyAddress( addressString, addressObject );
-	} );
+	// 	verifyAddress( addressString, addressObject );
+	// } );
 
-	it( "Number Street Type City City", function () {
+	// it( "Number Street Type City City", function () {
 
-		var addressString = "1600 Pennsylvania Avenue Washington DC";
-		var addressObject = {
-			number: "1600",
-			street: "PENNSYLVANIA",
-			type: "AVE",
-			city: "WASHINGTON",
-			state: "DC"
-		};
+	// 	var addressString = "1600 Pennsylvania Avenue Washington DC";
+	// 	var addressObject = {
+	// 		number: "1600",
+	// 		street: "PENNSYLVANIA",
+	// 		type: "AVE",
+	// 		city: "WASHINGTON",
+	// 		state: "DC"
+	// 	};
 
-		verifyAddress( addressString, addressObject );
-	} );
+	// 	verifyAddress( addressString, addressObject );
+	// } );
 
-	it( "NumberLetter StreetNumberLetter, City City ST", function () {
+	// it( "NumberLetter StreetNumberLetter, City City ST", function () {
 
-		var addressString = "48S 400E, Salt Lake City UT";
-		var addressObject = {
-			// number: "48",
-			// prefix: "S",
-			// street: "400",
-			// suffix: "E",
-			// TODO: FIX!
-			city: "48S 400E",
-			// city: "SALT LAKE CITY",
-			state: "UT"
-		};
+	// 	var addressString = "48S 400E, Salt Lake City UT";
+	// 	var addressObject = {
+	// 		number: "48",
+	// 		prefix: "S",
+	// 		street: "400",
+	// 		suffix: "E",
+	// 		city: "SALT LAKE CITY",
+	// 		state: "UT"
+	// 	};
 
-		verifyAddress( addressString, addressObject );
-	} );
+	// 	verifyAddress( addressString, addressObject );
+	// } );
 
 	it( "Number Pre Street Type #Suite City City ST Zipcode", function () {
 
@@ -511,10 +513,7 @@ describe( "Parse Address:", function () {
 		var addressString = "100 South St, Philadelphia, PA";
 		var addressObject = {
 			number: "100",
-
-			//	TODO: FIX!
-			// street: "SOUTH",
-			prefix: "S",
+			street: "SOUTH",
 			type: "ST",
 			city: "PHILADELPHIA",
 			state: "PA"
@@ -539,6 +538,7 @@ describe( "Parse Address:", function () {
 	} );
 
 	it( "Number Fraction Street Type, City City, ST", function () {
+		// nnxt,xx,S
 
 		var addressString = "3813 1/2 Some Road, Los Angeles, CA";
 		var addressObject = {
@@ -556,12 +556,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission & Valencia San Francisco CA";
 		var addressObject = {
-			//	TODO: FIX!
-			city: "MISSION & VALENCIA SAN FRANCISCO",
-
-			// street1: "MISSION",
-			// street2: "VALENCIA",
-			// city: "SAN FRANCISCO",
+			street1: "MISSION",
+			street2: "VALENCIA",
+			city: "SAN FRANCISCO",
 			state: "CA"
 		};
 
@@ -572,12 +569,9 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission & Valencia, San Francisco CA";
 		var addressObject = {
-			// street1: "MISSION",
-			// street2: "VALENCIA",
-
-			// TODO: FIX!
-			city: "MISSION & VALENCIA",
-			// city: "SAN FRANCISCO",
+			street1: "MISSION",
+			street2: "VALENCIA",
+			city: "SAN FRANCISCO",
 			state: "CA"
 		};
 
@@ -588,14 +582,11 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission St and Valencia St San Francisco CA";
 		var addressObject = {
-			//	TODO: FIX!
-			city: "MISSION ST AND VALENCIA ST SAN FRANCISCO",
-
-			// street1: "MISSION",
-			// type1: "ST",
-			// street2: "VALENCIA",
-			// type2: "ST",
-			// city: "SAN FRANCISCO",
+			street1: "MISSION",
+			type1: "ST",
+			street2: "VALENCIA",
+			type2: "ST",
+			city: "SAN FRANCISCO",
 			state: "CA"
 		};
 
@@ -606,14 +597,11 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission St & Valencia St San Francisco CA";
 		var addressObject = {
-			//	TODO: FIX!
-			city: "MISSION ST & VALENCIA ST SAN FRANCISCO",
-
-			// street1: "MISSION",
-			// type1: "ST",
-			// street2: "VALENCIA",
-			// type2: "ST",
-			// city: "SAN FRANCISCO",
+			street1: "MISSION",
+			type1: "ST",
+			street2: "VALENCIA",
+			type2: "ST",
+			city: "SAN FRANCISCO",
 			state: "CA"
 		};
 
@@ -624,14 +612,11 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission and Valencia Sts San Francisco CA";
 		var addressObject = {
-			//	TODO: FIX!
-			city: "MISSION AND VALENCIA STS SAN FRANCISCO",
-
-			// street1: "MISSION",
-			// street2: "VALENCIA",
-			// type1: "ST",
-			// type2: "ST",
-			// city: "SAN FRANCISCO",
+			street1: "MISSION",
+			type1: "ST",
+			street2: "VALENCIA",
+			type2: "ST",
+			city: "SAN FRANCISCO",
 			state: "CA"
 		};
 
@@ -642,14 +627,11 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission & Valencia Sts. San Francisco CA";
 		var addressObject = {
-			//	TODO: FIX!
-			city: "MISSION & VALENCIA STS SAN FRANCISCO",
-
-			// street1: "MISSION",
-			// street2: "VALENCIA",
-			// type1: "ST",
-			// type2: "ST",
-			// city: "SAN FRANCISCO",
+			street1: "MISSION",
+			type1: "ST",
+			street2: "VALENCIA",
+			type2: "ST",
+			city: "SAN FRANCISCO",
 			state: "CA"
 		};
 
@@ -660,14 +642,11 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission & Valencia Streets San Francisco CA";
 		var addressObject = {
-			//	TODO: FIX!
-			city: "MISSION & VALENCIA STREETS SAN FRANCISCO",
-
-			// street1: "MISSION",
-			// street2: "VALENCIA",
-			// type1: "ST",
-			// type2: "ST",
-			// city: "SAN FRANCISCO",
+			street1: "MISSION",
+			type1: "ST",
+			street2: "VALENCIA",
+			type2: "ST",
+			city: "SAN FRANCISCO",
 			state: "CA"
 		};
 
@@ -678,14 +657,11 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Mission Avenue and Valencia Street San Francisco CA";
 		var addressObject = {
-			//	TODO: FIX!
-			city: "MISSION AVENUE AND VALENCIA STREET SAN FRANCISCO",
-
-			// street1: "MISSION",
-			// type1: "AVE",
-			// street2: "VALENCIA",
-			// type2: "ST",
-			// city: "SAN FRANCISCO",
+			street1: "MISSION",
+			type1: "AVE",
+			street2: "VALENCIA",
+			type2: "ST",
+			city: "SAN FRANCISCO",
 			state: "CA"
 		};
 
@@ -699,9 +675,7 @@ describe( "Parse Address:", function () {
 			number: "1",
 			street: "FIRST",
 			type: "ST",
-			//	TODO: Which is correct?
 			city: "E SAN JOSE",
-			// city: "EAST SAN JOSE",
 			state: "CA"
 		};
 
