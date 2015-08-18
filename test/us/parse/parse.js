@@ -804,7 +804,7 @@ describe( "Parse Address:", function () {
 			state: "LA"
 		};
 
-		verifyAddress( addressString, addressObject );
+		verifyAddress( addressString, addressObject, true );
 	} );
 
 	it( "Number Street Type, City, ST Zipcode", function () {
