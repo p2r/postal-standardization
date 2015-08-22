@@ -147,7 +147,6 @@ describe( "Parse Address:", function () {
 
 		var addressString = "Some Address\nBénin";
 		var addressObject = {
-			//	TODO: Is this the right thing?
 			street: "SOME ADDRESS",
 			country: "BENIN"
 		};
@@ -428,48 +427,48 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	// it( "Number Street. City City", function () {
+	it( "Number Street. City City", function () {
 
-	// 	var addressString = "1600 Pennsylvania Ave. Washington DC";
-	// 	var addressObject = {
-	// 		number: "1600",
-	// 		street: "PENNSYLVANIA",
-	// 		type: "AVE",
-	// 		city: "WASHINGTON",
-	// 		state: "DC"
-	// 	};
+		var addressString = "1600 Pennsylvania Ave. Washington DC";
+		var addressObject = {
+			number: "1600",
+			street: "PENNSYLVANIA",
+			type: "AVE",
+			city: "WASHINGTON",
+			state: "DC"
+		};
 
-	// 	verifyAddress( addressString, addressObject );
-	// } );
+		verifyAddress( addressString, addressObject );
+	} );
 
-	// it( "Number Street Type City City", function () {
+	it( "Number Street Type City City", function () {
 
-	// 	var addressString = "1600 Pennsylvania Avenue Washington DC";
-	// 	var addressObject = {
-	// 		number: "1600",
-	// 		street: "PENNSYLVANIA",
-	// 		type: "AVE",
-	// 		city: "WASHINGTON",
-	// 		state: "DC"
-	// 	};
+		var addressString = "1600 Pennsylvania Avenue Washington DC";
+		var addressObject = {
+			number: "1600",
+			street: "PENNSYLVANIA",
+			type: "AVE",
+			city: "WASHINGTON",
+			state: "DC"
+		};
 
-	// 	verifyAddress( addressString, addressObject );
-	// } );
+		verifyAddress( addressString, addressObject );
+	} );
 
-	// it( "NumberLetter StreetNumberLetter, City City ST", function () {
+	it( "NumberLetter StreetNumberLetter, City City ST", function () {
 
-	// 	var addressString = "48S 400E, Salt Lake City UT";
-	// 	var addressObject = {
-	// 		number: "48",
-	// 		prefix: "S",
-	// 		street: "400",
-	// 		suffix: "E",
-	// 		city: "SALT LAKE CITY",
-	// 		state: "UT"
-	// 	};
+		var addressString = "48S 400E, Salt Lake City UT";
+		var addressObject = {
+			number: "48",
+			prefix: "S",
+			street: "400",
+			suffix: "E",
+			city: "SALT LAKE CITY",
+			state: "UT"
+		};
 
-	// 	verifyAddress( addressString, addressObject );
-	// } );
+		verifyAddress( addressString, addressObject );
+	} );
 
 	it( "Number Pre Street Type #Suite City City ST Zipcode", function () {
 
@@ -842,13 +841,8 @@ describe( "Parse Address:", function () {
 		var addressString = "321 S. Washington";
 		var addressObject = {
 			number: "321",
-
-			// prefix: "S",
-			// street: "WASHINGTON"
-
-			//	TODO: FIX!
-			state: "WA",
-			suffix: "S"
+			prefix: "S",
+			street: "WASHINGTON"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -880,7 +874,22 @@ describe( "Parse Address:", function () {
 			zip: "32054"
 		};
 
-		verifyAddress( addressString, addressObject, true );
+		verifyAddress( addressString, addressObject );
+	} );
+
+	it( "HC 2 BOX 274, Lake Butler, FL 32054", function () {
+		//	HHHH,xx,SZ
+		//	HHHH,cc,SZ
+
+		var addressString = "HC 2 BOX 274, Lake Butler, FL 32054";
+		var addressObject = {
+			highway_contract: "HC 2 BOX 274",
+			city: "LAKE BUTLER",
+			state: "FL",
+			zip: "32054"
+		};
+
+		verifyAddress( addressString, addressObject );
 	} );
 
 	it( "Experian - July 2015", function () {
