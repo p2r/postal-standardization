@@ -55,100 +55,11 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Some Address\\nUnited States", function () {
-
-		var addressString = "Some Address\nUnited States";
-		var addressObject = {
-			street: "SOME ADDRESS",
-			country: "UNITED STATES"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
-	it( "Some Address 80023\\nUnited States", function () {
-
-		var addressString = "Some Address 80023\nUnited States";
-		var addressObject = {
-			street: "SOME ADDRESS",
-			zip: "80023",
-			country: "UNITED STATES"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
-	it( "Some Address, United States", function () {
-
-		var addressString = "Some Address, United States";
-		var addressObject = {
-			street: "SOME ADDRESS",
-			country: "UNITED STATES"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
-	it( "Some Address, US", function () {
-
-		var addressString = "Some Address, US";
-		var addressObject = {
-			street: "SOME ADDRESS",
-			country: "UNITED STATES"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
-	it( "Some Address, U.S.A.", function () {
-
-		var addressString = "Some Address, U.S.A.";
-		var addressObject = {
-			street: "SOME ADDRESS",
-			country: "UNITED STATES"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
 	it( "Canada", function () {
 
 		var addressString = "Canada";
 		var addressObject = {
 			country: "CANADA"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
-	it( "Some Address\\nCA", function () {
-
-		var addressString = "Some Address\nCA";
-		var addressObject = {
-			street: "SOME ADDRESS",
-			state: "CA"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
-	it( "Some Address, CA", function () {
-
-		var addressString = "Some Address, CA";
-		var addressObject = {
-			street: "SOME ADDRESS",
-			state: "CA"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
-	it( "Some Address\\nBénin", function () {
-
-		var addressString = "Some Address\nBénin";
-		var addressObject = {
-			street: "SOME ADDRESS",
-			country: "BENIN"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -790,22 +701,6 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	// it( "unit Number Street Street, City City ST", function () {
-
-	// 	var addressString = "lt42 99 Some Road, Some City LA";
-	// 	var addressObject = {
-	// 		sec_unit_type: "lt",
-	// 		sec_unit_num: "42",
-	// 		number: "99",
-	// 		street: "SOME",
-	// 		type: "RD",
-	// 		city: "SOME CITY",
-	// 		state: "LA"
-	// 	};
-
-	// 	verifyAddress( addressString, addressObject );
-	// } );
-
 	it( "Number Street Type, City, ST Zipcode", function () {
 
 		var addressString = "36401 County Road 43, Eaton, CO 80615";
@@ -825,8 +720,6 @@ describe( "Parse Address:", function () {
 		var addressString = "1234 COUNTY HWY 60E, Town, CO 12345";
 		var addressObject = {
 			number: "1234",
-			// street: "COUNTY HWY 60",
-			// suffix: "E",
 			street: "COUNTY HWY 60E",
 			city: "TOWN",
 			state: "CO",
@@ -908,9 +801,7 @@ describe( "Parse Address:", function () {
 			zip: "80023"
 		};
 
-		logStatus( true );
 		verifyAddress( addressString, addressObject );
-		logStatus( false );
 	} );
 
 	it( "Experian - July 2015", function () {
