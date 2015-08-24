@@ -55,11 +55,100 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
+	it( "Some Address\\nUnited States", function () {
+
+		var addressString = "Some Address\nUnited States";
+		var addressObject = {
+			city: "SOME ADDRESS",
+			country: "UNITED STATES"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
+
+	it( "Some Address 80023\\nUnited States", function () {
+
+		var addressString = "Some Address 80023\nUnited States";
+		var addressObject = {
+			city: "SOME ADDRESS",
+			zip: "80023",
+			country: "UNITED STATES"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
+
+	it( "Some Address, United States", function () {
+
+		var addressString = "Some Address, United States";
+		var addressObject = {
+			city: "SOME ADDRESS",
+			country: "UNITED STATES"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
+
+	it( "Some Address, US", function () {
+
+		var addressString = "Some Address, US";
+		var addressObject = {
+			city: "SOME ADDRESS",
+			country: "UNITED STATES"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
+
+	it( "Some Address, U.S.A.", function () {
+
+		var addressString = "Some Address, U.S.A.";
+		var addressObject = {
+			city: "SOME ADDRESS",
+			country: "UNITED STATES"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
+
 	it( "Canada", function () {
 
 		var addressString = "Canada";
 		var addressObject = {
 			country: "CANADA"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
+
+	it( "Some Address\\nCA", function () {
+
+		var addressString = "Some Address\nCA";
+		var addressObject = {
+			city: "SOME ADDRESS",
+			state: "CA"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
+
+	it( "Some Address, CA", function () {
+
+		var addressString = "Some Address, CA";
+		var addressObject = {
+			city: "SOME ADDRESS",
+			state: "CA"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
+
+	it( "Some Address\\nBénin", function () {
+
+		var addressString = "Some Address\nBénin";
+		var addressObject = {
+			city: "SOME ADDRESS",
+			country: "BENIN"
 		};
 
 		verifyAddress( addressString, addressObject );
