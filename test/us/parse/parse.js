@@ -898,11 +898,12 @@ describe( "Parse Address:", function () {
 
 		var addressString = "PO Box 233, 5023 W. 120th Ave., Broomfield, CO 80023";
 		var addressObject = {
-			po_box: "233",
+			po_box: "PO BOX 233",
 			number: "5023",
+			prefix: "W",
 			street: "120TH",
 			type: "AVE",
-			city: "BROMFIELD",
+			city: "BROOMFIELD",
 			state: "CO",
 			zip: "80023"
 		};
