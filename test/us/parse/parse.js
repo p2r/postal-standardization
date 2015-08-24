@@ -892,6 +892,26 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
+	it( "PO Box 233, 5023 W. 120th Ave., Broomfield, CO 80023", function () {
+		//	PPP,npxt,x,SZ
+		//	PPP,npst,c,SZ
+
+		var addressString = "PO Box 233, 5023 W. 120th Ave., Broomfield, CO 80023";
+		var addressObject = {
+			po_box: "233",
+			number: "5023",
+			street: "120TH",
+			type: "AVE",
+			city: "BROMFIELD",
+			state: "CO",
+			zip: "80023"
+		};
+
+		logStatus( true );
+		verifyAddress( addressString, addressObject );
+		logStatus( false );
+	} );
+
 	it( "Experian - July 2015", function () {
 
 		var addressString = "2 Soldier Dr, Sheridan WY 82801-9414";
