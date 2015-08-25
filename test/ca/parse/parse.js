@@ -79,7 +79,7 @@ describe( "CA Parse Address:", function () {
 		var addressString = "Some Address, CA";
 		var addressObject = {
 			city: "SOME ADDRESS",
-			state: "CA"
+			country: "CANADA"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -99,10 +99,8 @@ describe( "CA Parse Address:", function () {
 
 		var addressString = "Some Address\nCA";
 		var addressObject = {
-			//	TODO: FIX!
 			city: "SOME ADDRESS",
-			// country: "CANADA"
-			state: "CA"
+			country: "CANADA"
 		};
 
 		verifyAddress( addressString, addressObject );

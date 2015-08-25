@@ -8,14 +8,12 @@
 Given an address in general string format, the tool will break down the parts of the address and attempt to identify
 the street number, street, street type, unit, city, state, zip, etc. for the address.
 
-Individual components of the address (states, zipcodes, etc.) have been written. The parser for the tool is under development.
-
 Standardization does _not_ validate the address.
 
 ## Validation
 
-TBD
+Under development.
 
 ## Matching
 
-TBD
+Under active development.
