@@ -8,9 +8,16 @@ var Postal = require( "../../../lib" ).CAPostal;
 
 describe( "CA Zip Lookup:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "A0A-1G0", function () {
+	it( "A0A-1G0", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var zipcode = "A0A-1G0";
 		var expLocation = {
 			city: "BAY ROBERTS",
@@ -24,7 +31,11 @@ describe( "CA Zip Lookup:", function () {
 		location.city.should.equal( expLocation.city );
 	} );
 
-	it( "L6B-0G2", function () {
+	it( "L6B-0G2", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var zipcode = "L6B-0G2";
 		var expLocation = {
 			city: "RICHMOND HILL",
@@ -42,9 +53,16 @@ describe( "CA Zip Lookup:", function () {
 
 describe( "CA Location Lookup:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "York, ON", function () {
+	it( "York, ON", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var expZipcode = "L4A-1L9";
 		var zipcodes = postal.validation.zipLookup.getZipsForLocation( "York", "ON" );
 		should.exist( zipcodes );
@@ -52,7 +70,11 @@ describe( "CA Location Lookup:", function () {
 		zipcodes[ 0 ].should.equal( expZipcode );
 	} );
 
-	it( "Murray Harbour, PE", function () {
+	it( "Murray Harbour, PE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var expZipcode = "C0A-1V0";
 		var zipcodes = postal.validation.zipLookup.getZipsForLocation( "Murray Harbour", "PE" );
 		should.exist( zipcodes );
@@ -64,9 +86,16 @@ describe( "CA Location Lookup:", function () {
 
 describe( "CA Cities Lookup:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "L6B-0G2", function () {
+	it( "L6B-0G2", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var zipcode = "L6B-0G2";
 		var expCities = [
 			"RICHMOND HILL"
@@ -81,7 +110,11 @@ describe( "CA Cities Lookup:", function () {
 		cities.should.eql( expCities );
 	} );
 
-	it( "C0A-1V0", function () {
+	it( "C0A-1V0", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var zipcode = "C0A-1V0";
 		var expCities = [
 			"MURRAY HARBOUR"

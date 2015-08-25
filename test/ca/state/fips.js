@@ -8,9 +8,16 @@ var Postal = require( "../../../lib" ).CAPostal;
 
 describe( "CA Possession FIPS:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "Geo-StreetAddress-CA FIPS to Provinces/Territories", function () {
+	it( "Geo-StreetAddress-CA FIPS to Provinces/Territories", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var fips = {
 			"10": "NL",
 			"11": "PE",
@@ -40,7 +47,11 @@ describe( "CA Possession FIPS:", function () {
 		}
 	} );
 
-it( "Geo-StreetAddress-CA Provinces/Territories to FIPS", function () {
+	it( "Geo-StreetAddress-CA Provinces/Territories to FIPS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var fips = {
 			"NL": "10",
 			"PE": "11",

@@ -9,12 +9,20 @@ var Postal = require( "../../../lib" ).CAPostal;
 
 describe( "CA Parse Address:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	function verifyAddress( addressString, addressObject, debugLogging ) {
+	function verifyAddress( done, addressString, addressObject, debugLogging ) {
 		if ( debugLogging ) {
 			logStatus( true );
 		}
+
+		if ( !postal ) {
+			return done();
+		}
+
 		postal.standardization.parseAddress( addressString, function ( err, result ) {
 			if ( debugLogging ) {
 				logStatus( false );
@@ -25,27 +33,27 @@ describe( "CA Parse Address:", function () {
 		} );
 	}
 
-	it( "Canada", function () {
+	it( "Canada", function ( done ) {
 
 		var addressString = "Canada";
 		var addressObject = {
 			country: "CANADA"
 		};
 
-		verifyAddress( addressString, addressObject );
+		verifyAddress( done, addressString, addressObject );
 	} );
 
-	it( "CA", function () {
+	it( "CA", function ( done ) {
 
 		var addressString = "CA";
 		var addressObject = {
 			country: "CANADA"
 		};
 
-		verifyAddress( addressString, addressObject );
+		verifyAddress( done, addressString, addressObject );
 	} );
 
-	it( "Some Address\\nCanada", function () {
+	it( "Some Address\\nCanada", function ( done ) {
 
 		var addressString = "Some Address\nCanada";
 		var addressObject = {
@@ -53,10 +61,10 @@ describe( "CA Parse Address:", function () {
 			country: "CANADA"
 		};
 
-		verifyAddress( addressString, addressObject );
+		verifyAddress( done, addressString, addressObject );
 	} );
 
-	it( "Some Address, Canada", function () {
+	it( "Some Address, Canada", function ( done ) {
 
 		var addressString = "Some Address, Canada";
 		var addressObject = {
@@ -64,10 +72,10 @@ describe( "CA Parse Address:", function () {
 			country: "CANADA"
 		};
 
-		verifyAddress( addressString, addressObject );
+		verifyAddress( done, addressString, addressObject );
 	} );
 
-	it( "Some Address, CA", function () {
+	it( "Some Address, CA", function ( done ) {
 
 		var addressString = "Some Address, CA";
 		var addressObject = {
@@ -75,20 +83,20 @@ describe( "CA Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( addressString, addressObject );
+		verifyAddress( done, addressString, addressObject );
 	} );
 
-	it( "Cañada", function () {
+	it( "Cañada", function ( done ) {
 
 		var addressString = "Cañada";
 		var addressObject = {
 			country: "CANADA"
 		};
 
-		verifyAddress( addressString, addressObject );
+		verifyAddress( done, addressString, addressObject );
 	} );
 
-	it( "Some Address\\nCA", function () {
+	it( "Some Address\\nCA", function ( done ) {
 
 		var addressString = "Some Address\nCA";
 		var addressObject = {
@@ -98,10 +106,10 @@ describe( "CA Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( addressString, addressObject );
+		verifyAddress( done, addressString, addressObject );
 	} );
 
-	// it( "Montreal, QC, H3Z 2Y7 CA", function () {
+	// it( "Montreal, QC, H3Z 2Y7 CA", function ( done ) {
 
 	// 	var addressString = "Montreal, QC, H3Z 2Y7 CA";
 	// 	var addressObject = {
@@ -111,10 +119,10 @@ describe( "CA Parse Address:", function () {
 	// 		country: "CANADA"
 	// 	};
 
-	// 	verifyAddress( addressString, addressObject, true );
+	// 	verifyAddress( done, addressString, addressObject, true );
 	// } );
 
-	// it( "Montreal, QC, H3Z 2Y7, CA", function () {
+	// it( "Montreal, QC, H3Z 2Y7, CA", function ( done ) {
 
 	// 	var addressString = "Montreal, QC, H3Z 2Y7, CA";
 	// 	var addressObject = {
@@ -124,10 +132,10 @@ describe( "CA Parse Address:", function () {
 	// 		country: "CANADA"
 	// 	};
 
-	// 	verifyAddress( addressString, addressObject );
+	// 	verifyAddress( done, addressString, addressObject );
 	// } );
 
-	// it( "Montreal, QC, H3Z 2Y7\\nCA", function () {
+	// it( "Montreal, QC, H3Z 2Y7\\nCA", function ( done ) {
 
 	// 	var addressString = "Montreal, QC, H3Z 2Y7\nCA";
 	// 	var addressObject = {
@@ -137,10 +145,10 @@ describe( "CA Parse Address:", function () {
 	// 		country: "CANADA"
 	// 	};
 
-	// 	verifyAddress( addressString, addressObject );
+	// 	verifyAddress( done, addressString, addressObject );
 	// } );
 
-	// it( "Montreal, QC H3Z 2Y7\\nCA", function () {
+	// it( "Montreal, QC H3Z 2Y7\\nCA", function ( done ) {
 
 	// 	var addressString = "Montreal, QC H3Z 2Y7\nCA";
 	// 	var addressObject = {
@@ -150,10 +158,10 @@ describe( "CA Parse Address:", function () {
 	// 		country: "CANADA"
 	// 	};
 
-	// 	verifyAddress( addressString, addressObject );
+	// 	verifyAddress( done, addressString, addressObject );
 	// } );
 
-	it( "Some Address\\nCanada", function () {
+	it( "Some Address\\nCanada", function ( done ) {
 
 		var addressString = "Some Address\nCanada";
 		var addressObject = {
@@ -161,10 +169,10 @@ describe( "CA Parse Address:", function () {
 			country: "CANADA"
 		};
 
-		verifyAddress( addressString, addressObject );
+		verifyAddress( done, addressString, addressObject );
 	} );
 
-	it( "Some Address, Canada", function () {
+	it( "Some Address, Canada", function ( done ) {
 
 		var addressString = "Some Address, Canada";
 		var addressObject = {
@@ -172,10 +180,10 @@ describe( "CA Parse Address:", function () {
 			country: "CANADA"
 		};
 
-		verifyAddress( addressString, addressObject );
+		verifyAddress( done, addressString, addressObject );
 	} );
 
-	// it( "Montreal, QC, H3Z 2Y7 Canada", function () {
+	// it( "Montreal, QC, H3Z 2Y7 Canada", function ( done ) {
 
 	// 	var addressString = "Montreal, QC, H3Z 2Y7 Canada";
 	// 	var addressObject = {
@@ -185,10 +193,10 @@ describe( "CA Parse Address:", function () {
 	// 		country: "CANADA"
 	// 	};
 
-	// 	verifyAddress( addressString, addressObject );
+	// 	verifyAddress( done, addressString, addressObject );
 	// } );
 
-	// it( "Montreal, QC, H3Z 2Y7, Canada", function () {
+	// it( "Montreal, QC, H3Z 2Y7, Canada", function ( done ) {
 
 	// 	var addressString = "Montreal, QC, H3Z 2Y7, Canada";
 	// 	var addressObject = {
@@ -198,10 +206,10 @@ describe( "CA Parse Address:", function () {
 	// 		country: "CANADA"
 	// 	};
 
-	// 	verifyAddress( addressString, addressObject );
+	// 	verifyAddress( done, addressString, addressObject );
 	// } );
 
-	// it( "Montreal, QC, H3Z 2Y7\\nCanada", function () {
+	// it( "Montreal, QC, H3Z 2Y7\\nCanada", function ( done ) {
 
 	// 	var addressString = "Montreal, QC, H3Z 2Y7\nCanada";
 	// 	var addressObject = {
@@ -211,10 +219,10 @@ describe( "CA Parse Address:", function () {
 	// 		country: "CANADA"
 	// 	};
 
-	// 	verifyAddress( addressString, addressObject );
+	// 	verifyAddress( done, addressString, addressObject );
 	// } );
 
-	// it( "Montreal, QC H3Z 2Y7\\nCanada", function () {
+	// it( "Montreal, QC H3Z 2Y7\\nCanada", function ( done ) {
 
 	// 	var addressString = "Montreal, QC H3Z 2Y7\nCanada";
 	// 	var addressObject = {
@@ -224,7 +232,7 @@ describe( "CA Parse Address:", function () {
 	// 		country: "CANADA"
 	// 	};
 
-	// 	verifyAddress( addressString, addressObject );
+	// 	verifyAddress( done, addressString, addressObject );
 	// } );
 
 } );
