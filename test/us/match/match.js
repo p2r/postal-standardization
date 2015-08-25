@@ -119,7 +119,9 @@ describe( "Address Match Similarity:", function () {
 					should.not.exist( err );
 					should.exist( result );
 
-					result.should.equal( 0.75 );
+					// result.should.equal( 0.75 );
+					result.should.be.above( 0.7 );
+					result.should.be.below( 0.8 );
 				} );
 			} );
 		} );
@@ -147,7 +149,8 @@ describe( "Address Match Similarity:", function () {
 					should.not.exist( err );
 					should.exist( result );
 
-					result.should.equal( 0.75 );
+					result.should.be.above( 0.8 );
+					result.should.be.below( 0.9 );
 				} );
 			} );
 		} );
@@ -175,7 +178,8 @@ describe( "Address Match Similarity:", function () {
 					should.not.exist( err );
 					should.exist( result );
 
-					result.should.equal( 0.75 );
+					result.should.be.above( 0.8 );
+					result.should.be.below( 0.9 );
 				} );
 			} );
 		} );
@@ -203,7 +207,8 @@ describe( "Address Match Similarity:", function () {
 					should.not.exist( err );
 					should.exist( result );
 
-					result.should.equal( 0.75 );
+					result.should.be.above( 0.8 );
+					result.should.be.below( 0.9 );
 				} );
 			} );
 		} );
