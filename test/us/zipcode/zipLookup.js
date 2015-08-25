@@ -13,9 +13,9 @@ describe( "Zip Lookup:", function () {
 		postal = new Postal();
 	}
 
-	it( "80020", function ( done ) {
+	it( "80020", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var zipcode = "80020";
@@ -31,9 +31,9 @@ describe( "Zip Lookup:", function () {
 		location.city.should.equal( expLocation.city );
 	} );
 
-	it( "80027", function ( done ) {
+	it( "80027", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var zipcode = "80027";
@@ -58,9 +58,9 @@ describe( "Location Lookup:", function () {
 		postal = new Postal();
 	}
 
-	it( "Broomfield, CO", function ( done ) {
+	it( "Broomfield, CO", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var expZipcode = "80020";
@@ -70,9 +70,9 @@ describe( "Location Lookup:", function () {
 		zipcodes[ 0 ].should.equal( expZipcode );
 	} );
 
-	it( "Louisville, CO", function ( done ) {
+	it( "Louisville, CO", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var expZipcode = "80027";
@@ -91,9 +91,9 @@ describe( "Cities Lookup:", function () {
 		postal = new Postal();
 	}
 
-	it( "80021", function ( done ) {
+	it( "80021", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var zipcode = "80021";
@@ -111,9 +111,9 @@ describe( "Cities Lookup:", function () {
 		cities.should.eql( expCities );
 	} );
 
-	it( "80019", function ( done ) {
+	it( "80019", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var zipcode = "80019";

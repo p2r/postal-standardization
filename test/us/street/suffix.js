@@ -13,9 +13,9 @@ describe( "Street Suffixes:", function () {
 		postal = new Postal();
 	}
 
-	it( "N", function ( done ) {
+	it( "N", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -33,9 +33,9 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "NE", function ( done ) {
+	it( "NE", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -56,9 +56,9 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "NW", function ( done ) {
+	it( "NW", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -79,9 +79,9 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "S", function ( done ) {
+	it( "S", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -99,9 +99,9 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "SE", function ( done ) {
+	it( "SE", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -122,9 +122,9 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "SW", function ( done ) {
+	it( "SW", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -145,9 +145,9 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "E", function ( done ) {
+	it( "E", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -165,9 +165,9 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "W", function ( done ) {
+	it( "W", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [

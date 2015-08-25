@@ -13,9 +13,9 @@ describe( "CA Zip Lookup:", function () {
 		postal = new Postal();
 	}
 
-	it( "A0A-1G0", function ( done ) {
+	it( "A0A-1G0", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var zipcode = "A0A-1G0";
@@ -31,9 +31,9 @@ describe( "CA Zip Lookup:", function () {
 		location.city.should.equal( expLocation.city );
 	} );
 
-	it( "L6B-0G2", function ( done ) {
+	it( "L6B-0G2", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var zipcode = "L6B-0G2";
@@ -58,9 +58,9 @@ describe( "CA Location Lookup:", function () {
 		postal = new Postal();
 	}
 
-	it( "York, ON", function ( done ) {
+	it( "York, ON", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var expZipcode = "L4A-1L9";
@@ -70,9 +70,9 @@ describe( "CA Location Lookup:", function () {
 		zipcodes[ 0 ].should.equal( expZipcode );
 	} );
 
-	it( "Murray Harbour, PE", function ( done ) {
+	it( "Murray Harbour, PE", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var expZipcode = "C0A-1V0";
@@ -91,9 +91,9 @@ describe( "CA Cities Lookup:", function () {
 		postal = new Postal();
 	}
 
-	it( "L6B-0G2", function ( done ) {
+	it( "L6B-0G2", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var zipcode = "L6B-0G2";
@@ -110,9 +110,9 @@ describe( "CA Cities Lookup:", function () {
 		cities.should.eql( expCities );
 	} );
 
-	it( "C0A-1V0", function ( done ) {
+	it( "C0A-1V0", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var zipcode = "C0A-1V0";

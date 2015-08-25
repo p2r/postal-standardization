@@ -13,9 +13,9 @@ describe( "PO Box:", function () {
 		postal = new Postal();
 	}
 
-	it( "'PO BOX 233'", function ( done ) {
+	it( "'PO BOX 233'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var poBoxTest = "PO BOX 233";
@@ -25,9 +25,9 @@ describe( "PO Box:", function () {
 		poBox.should.equal( poBoxExp );
 	} );
 
-	it( "'PO BOX #233'", function ( done ) {
+	it( "'PO BOX #233'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var poBoxTest = "PO BOX #233";
@@ -37,9 +37,9 @@ describe( "PO Box:", function () {
 		poBox.should.equal( poBoxExp );
 	} );
 
-	it( "'PO BOX -233'", function ( done ) {
+	it( "'PO BOX -233'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var poBoxTest = "PO BOX -233";
@@ -49,9 +49,9 @@ describe( "PO Box:", function () {
 		poBox.should.equal( poBoxExp );
 	} );
 
-	it( "'PO BOX 0233'", function ( done ) {
+	it( "'PO BOX 0233'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var poBoxTest = "PO BOX 0233";
@@ -61,9 +61,9 @@ describe( "PO Box:", function () {
 		poBox.should.equal( poBoxExp );
 	} );
 
-	it( "' PO BOX 233'", function ( done ) {
+	it( "' PO BOX 233'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var poBoxTest = " PO BOX 233";
@@ -73,9 +73,9 @@ describe( "PO Box:", function () {
 		poBox.should.equal( poBoxExp );
 	} );
 
-	it( "'PO BOX 233 '", function ( done ) {
+	it( "'PO BOX 233 '", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var poBoxTest = "PO BOX 233 ";
@@ -85,9 +85,9 @@ describe( "PO Box:", function () {
 		poBox.should.equal( poBoxExp );
 	} );
 
-	it( "'P.O. BOX 233'", function ( done ) {
+	it( "'P.O. BOX 233'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var poBoxTest = "P.O. BOX 233";
@@ -97,9 +97,9 @@ describe( "PO Box:", function () {
 		poBox.should.equal( poBoxExp );
 	} );
 
-	it( "'P.O BOX 233'", function ( done ) {
+	it( "'P.O BOX 233'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var poBoxTest = "P.O BOX 233";
@@ -109,9 +109,9 @@ describe( "PO Box:", function () {
 		poBox.should.equal( poBoxExp );
 	} );
 
-	it( "'PO. BOX 233'", function ( done ) {
+	it( "'PO. BOX 233'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var poBoxTest = "PO. BOX 233";
@@ -121,9 +121,9 @@ describe( "PO Box:", function () {
 		poBox.should.equal( poBoxExp );
 	} );
 
-	it( "'POBOX 233'", function ( done ) {
+	it( "'POBOX 233'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var poBoxTest = "POBOX 233";

@@ -13,9 +13,9 @@ describe( "Unit Type:", function () {
 		postal = new Postal();
 	}
 
-	it( "APT", function ( done ) {
+	it( "APT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -33,9 +33,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "BSMT", function ( done ) {
+	it( "BSMT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -53,9 +53,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "BLDG", function ( done ) {
+	it( "BLDG", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -75,9 +75,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "FL", function ( done ) {
+	it( "FL", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -97,9 +97,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "FRNT", function ( done ) {
+	it( "FRNT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -117,9 +117,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "KEY", function ( done ) {
+	it( "KEY", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -136,9 +136,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "LBBY", function ( done ) {
+	it( "LBBY", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -156,9 +156,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "LOT", function ( done ) {
+	it( "LOT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -175,9 +175,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "LOWR", function ( done ) {
+	it( "LOWR", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -195,9 +195,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "OFC", function ( done ) {
+	it( "OFC", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -215,9 +215,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "PH", function ( done ) {
+	it( "PH", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -235,9 +235,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "PIER", function ( done ) {
+	it( "PIER", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -255,9 +255,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "REAR", function ( done ) {
+	it( "REAR", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -274,9 +274,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "SIDE", function ( done ) {
+	it( "SIDE", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -293,9 +293,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "SLIP", function ( done ) {
+	it( "SLIP", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -313,9 +313,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "SPC", function ( done ) {
+	it( "SPC", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -333,9 +333,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "STOP", function ( done ) {
+	it( "STOP", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -353,9 +353,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "STE", function ( done ) {
+	it( "STE", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -375,9 +375,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "SPC", function ( done ) {
+	it( "SPC", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -395,9 +395,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "TRLR", function ( done ) {
+	it( "TRLR", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -415,9 +415,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "UNIT", function ( done ) {
+	it( "UNIT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -435,9 +435,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "RM", function ( done ) {
+	it( "RM", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -455,9 +455,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "DEPT", function ( done ) {
+	it( "DEPT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -476,9 +476,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "NUM", function ( done ) {
+	it( "NUM", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -498,9 +498,9 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "UPPR", function ( done ) {
+	it( "UPPR", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [

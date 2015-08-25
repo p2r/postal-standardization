@@ -13,9 +13,9 @@ describe( "Rural Routes:", function () {
 		postal = new Postal();
 	}
 
-	it( "'RR 2 BOX 274'", function ( done ) {
+	it( "'RR 2 BOX 274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "RR 2 BOX 274";
@@ -25,9 +25,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'R 2 BOX 274'", function ( done ) {
+	it( "'R 2 BOX 274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "R 2 BOX 274";
@@ -37,9 +37,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'Rural Route 2 Box 274'", function ( done ) {
+	it( "'Rural Route 2 Box 274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "Rural Route 2 Box 274";
@@ -49,9 +49,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'Rural Route 2 Box #274'", function ( done ) {
+	it( "'Rural Route 2 Box #274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "Rural Route 2 Box #274";
@@ -61,9 +61,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'RuralRoute 2 Box#274'", function ( done ) {
+	it( "'RuralRoute 2 Box#274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "RuralRoute 2 Box#274";
@@ -73,9 +73,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'RuralRoute 2 Box274'", function ( done ) {
+	it( "'RuralRoute 2 Box274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "RuralRoute 2 Box274";
@@ -85,9 +85,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'RuralRoute2Box274'", function ( done ) {
+	it( "'RuralRoute2Box274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "RuralRoute2Box274";
@@ -97,9 +97,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'Rural Number 2 Box 274'", function ( done ) {
+	it( "'Rural Number 2 Box 274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "Rural Number 2 Box 274";
@@ -109,9 +109,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'Rural Number 2 Box #274'", function ( done ) {
+	it( "'Rural Number 2 Box #274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "Rural Number 2 Box #274";
@@ -121,9 +121,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'RuralNumber 2 Box#274'", function ( done ) {
+	it( "'RuralNumber 2 Box#274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "RuralNumber 2 Box#274";
@@ -133,9 +133,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'RuralNumber 2 Box274'", function ( done ) {
+	it( "'RuralNumber 2 Box274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "RuralNumber 2 Box274";
@@ -145,9 +145,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'Rural#2 Box 274'", function ( done ) {
+	it( "'Rural#2 Box 274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "Rural#2 Box 274";
@@ -157,9 +157,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'Rural#2Box274'", function ( done ) {
+	it( "'Rural#2Box274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "Rural#2Box274";
@@ -169,9 +169,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'RuralNumber2Box274'", function ( done ) {
+	it( "'RuralNumber2Box274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "RuralNumber2Box274";
@@ -181,9 +181,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'Route 2 Box 274'", function ( done ) {
+	it( "'Route 2 Box 274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "Route 2 Box 274";
@@ -193,9 +193,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'Route 2 Box #274'", function ( done ) {
+	it( "'Route 2 Box #274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "Route 2 Box #274";
@@ -205,9 +205,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'Route 2 Box#274'", function ( done ) {
+	it( "'Route 2 Box#274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "Route 2 Box#274";
@@ -217,9 +217,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'Route 2 Box274'", function ( done ) {
+	it( "'Route 2 Box274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "Route 2 Box274";
@@ -229,9 +229,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'Route2Box274'", function ( done ) {
+	it( "'Route2Box274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "Route2Box274";
@@ -241,9 +241,9 @@ describe( "Rural Routes:", function () {
 		ruralRoute.should.equal( ruralExp );
 	} );
 
-	it( "'RR X2 BOX 274'", function ( done ) {
+	it( "'RR X2 BOX 274'", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var ruralTest = "RR X2 BOX 274";

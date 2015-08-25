@@ -66,18 +66,6 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Some Address 80023\\nUnited States", function () {
-
-		var addressString = "Some Address 80023\nUnited States";
-		var addressObject = {
-			city: "SOME ADDRESS",
-			zip: "80023",
-			country: "UNITED STATES"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
 	it( "Some Address, United States", function () {
 
 		var addressString = "Some Address, United States";
@@ -126,28 +114,6 @@ describe( "Parse Address:", function () {
 		var addressString = "Cañada";
 		var addressObject = {
 			country: "CANADA"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
-	it( "Some Address\\nCA", function () {
-
-		var addressString = "Some Address\nCA";
-		var addressObject = {
-			city: "SOME ADDRESS",
-			state: "CA"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
-	it( "Some Address, CA", function () {
-
-		var addressString = "Some Address, CA";
-		var addressObject = {
-			city: "SOME ADDRESS",
-			state: "CA"
 		};
 
 		verifyAddress( addressString, addressObject );

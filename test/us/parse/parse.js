@@ -14,13 +14,13 @@ describe( "Parse Address:", function () {
 		postal = new Postal();
 	}
 
-	function verifyAddress( done, addressString, addressObject, debugLogging ) {
+	function verifyAddress( addressString, addressObject, debugLogging ) {
 		if ( debugLogging ) {
 			logStatus( true );
 		}
 
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		postal.standardization.parseAddress( addressString, function ( err, result ) {
@@ -33,37 +33,37 @@ describe( "Parse Address:", function () {
 		} );
 	}
 
-	it( "United States", function ( done ) {
+	it( "United States", function () {
 
 		var addressString = "United States";
 		var addressObject = {
 			country: "UNITED STATES"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "US", function ( done ) {
+	it( "US", function () {
 
 		var addressString = "US";
 		var addressObject = {
 			country: "UNITED STATES"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "U.S.", function ( done ) {
+	it( "U.S.", function () {
 
 		var addressString = "U.S.";
 		var addressObject = {
 			country: "UNITED STATES"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Some Address\\nUnited States", function ( done ) {
+	it( "Some Address\\nUnited States", function () {
 
 		var addressString = "Some Address\nUnited States";
 		var addressObject = {
@@ -71,10 +71,10 @@ describe( "Parse Address:", function () {
 			country: "UNITED STATES"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Some Address 80023\\nUnited States", function ( done ) {
+	it( "Some Address 80023\\nUnited States", function () {
 
 		var addressString = "Some Address 80023\nUnited States";
 		var addressObject = {
@@ -83,10 +83,10 @@ describe( "Parse Address:", function () {
 			country: "UNITED STATES"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Some Address, United States", function ( done ) {
+	it( "Some Address, United States", function () {
 
 		var addressString = "Some Address, United States";
 		var addressObject = {
@@ -94,10 +94,10 @@ describe( "Parse Address:", function () {
 			country: "UNITED STATES"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Some Address, US", function ( done ) {
+	it( "Some Address, US", function () {
 
 		var addressString = "Some Address, US";
 		var addressObject = {
@@ -105,10 +105,10 @@ describe( "Parse Address:", function () {
 			country: "UNITED STATES"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Some Address, U.S.A.", function ( done ) {
+	it( "Some Address, U.S.A.", function () {
 
 		var addressString = "Some Address, U.S.A.";
 		var addressObject = {
@@ -116,20 +116,20 @@ describe( "Parse Address:", function () {
 			country: "UNITED STATES"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Canada", function ( done ) {
+	it( "Canada", function () {
 
 		var addressString = "Canada";
 		var addressObject = {
 			country: "CANADA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Some Address\\nCA", function ( done ) {
+	it( "Some Address\\nCA", function () {
 
 		var addressString = "Some Address\nCA";
 		var addressObject = {
@@ -137,10 +137,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Some Address, CA", function ( done ) {
+	it( "Some Address, CA", function () {
 
 		var addressString = "Some Address, CA";
 		var addressObject = {
@@ -148,10 +148,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Some Address\\nBénin", function ( done ) {
+	it( "Some Address\\nBénin", function () {
 
 		var addressString = "Some Address\nBénin";
 		var addressObject = {
@@ -159,10 +159,10 @@ describe( "Parse Address:", function () {
 			country: "BENIN"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type Zipcode", function ( done ) {
+	it( "Number Street Type Zipcode", function () {
 		//	nxtZ
 
 		var addressString = "1005 Gravenstein Hwy 95472";
@@ -173,10 +173,10 @@ describe( "Parse Address:", function () {
 			zip: "95472"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type, Zipcode", function ( done ) {
+	it( "Number Street Type, Zipcode", function () {
 
 		var addressString = "1005 Gravenstein Hwy, 95472";
 		var addressObject = {
@@ -186,10 +186,10 @@ describe( "Parse Address:", function () {
 			zip: "95472"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type Suf, Zipcode", function ( done ) {
+	it( "Number Street Type Suf, Zipcode", function () {
 		//	nxtf,Z
 
 		var addressString = "1005 Gravenstein Hwy N, 95472";
@@ -201,10 +201,10 @@ describe( "Parse Address:", function () {
 			zip: "95472"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type Suffix, Zipcode", function ( done ) {
+	it( "Number Street Type Suffix, Zipcode", function () {
 		//	nxtf,Z
 		//	nstf,Z
 
@@ -217,10 +217,10 @@ describe( "Parse Address:", function () {
 			zip: "95472"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Prefix Street Type, City, ST", function ( done ) {
+	it( "Number Prefix Street Type, City, ST", function () {
 		//	npxt,x,S
 
 		var addressString = "1005 N Gravenstein Highway, Sebastopol, CA";
@@ -233,10 +233,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type, Suite, City, ST", function ( done ) {
+	it( "Number Street Type, Suite, City, ST", function () {
 		//	npxt,uu,x,S
 
 		var addressString = "1005 N Gravenstein Highway, Suite 500, Sebastopol, CA";
@@ -251,10 +251,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Prefix Street Type Suite Number City, ST", function ( done ) {
+	it( "Number Prefix Street Type Suite Number City, ST", function () {
 		//	npxtUxS = npxtuux,S = npstuuc,S
 
 		var addressString = "1005 N Gravenstein Hwy Suite 500 Sebastopol, CA";
@@ -269,10 +269,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Prefix Street Type, City, ST, Zipcode", function ( done ) {
+	it( "Number Prefix Street Type, City, ST, Zipcode", function () {
 
 		var addressString = "1005 N Gravenstein Highway, Sebastopol, CA, 95472";
 		var addressObject = {
@@ -285,10 +285,10 @@ describe( "Parse Address:", function () {
 			zip: "95472"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type City ST Zipcode", function ( done ) {
+	it( "Number Street Type City ST Zipcode", function () {
 
 		var addressString = "1005 N Gravenstein Highway Sebastopol CA 95472";
 		var addressObject = {
@@ -301,10 +301,10 @@ describe( "Parse Address:", function () {
 			zip: "95472"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type Suf City ST", function ( done ) {
+	it( "Number Street Type Suf City ST", function () {
 
 		var addressString = "1005 Gravenstein Hwy N Sebastopol CA";
 		var addressObject = {
@@ -316,10 +316,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type Suf, City ST", function ( done ) {
+	it( "Number Street Type Suf, City ST", function () {
 
 		var addressString = "1005 Gravenstein Hwy N, Sebastopol CA";
 		var addressObject = {
@@ -331,10 +331,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type, Suff City ST", function ( done ) {
+	it( "Number Street Type, Suff City ST", function () {
 
 		var addressString = "1005 Gravenstein Hwy, N Sebastopol CA";
 		var addressObject = {
@@ -345,10 +345,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type, Suffix City ST", function ( done ) {
+	it( "Number Street Type, Suffix City ST", function () {
 
 		var addressString = "1005 Gravenstein Hwy, North Sebastopol CA";
 		var addressObject = {
@@ -359,10 +359,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type City ST", function ( done ) {
+	it( "Number Street Type City ST", function () {
 
 		var addressString = "1005 Gravenstein Hwy Sebastopol CA";
 		var addressObject = {
@@ -373,10 +373,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street City City ST", function ( done ) {
+	it( "Number Street City City ST", function () {
 
 		var addressString = "115 Broadway San Francisco CA";
 		var addressObject = {
@@ -386,10 +386,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Street Type, City, ST Zipcode", function ( done ) {
+	it( "Number Street Street Type, City, ST Zipcode", function () {
 		//	nxxt,x,SZ = nsst,c,SZ
 
 		var addressString = "7800 Mill Station Rd, Sebastopol, CA 95472";
@@ -402,10 +402,10 @@ describe( "Parse Address:", function () {
 			zip: "95472"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type City ST Zipcode", function ( done ) {
+	it( "Number Street Type City ST Zipcode", function () {
 
 		var addressString = "7800 Mill Station Rd Sebastopol CA 95472";
 		var addressObject = {
@@ -417,10 +417,10 @@ describe( "Parse Address:", function () {
 			zip: "95472"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type Number City ST Zipcode", function ( done ) {
+	it( "Number Street Type Number City ST Zipcode", function () {
 		//	nxxxxSZ
 
 		var addressString = "1005 State Highway 116 Sebastopol CA 95472";
@@ -432,10 +432,10 @@ describe( "Parse Address:", function () {
 			zip: "95472"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	// it( "Number Street. City City", function ( done ) {
+	// it( "Number Street. City City", function () {
 
 	// 	var addressString = "1600 Pennsylvania Ave. Washington DC";
 	// 	var addressObject = {
@@ -446,10 +446,10 @@ describe( "Parse Address:", function () {
 	// 		state: "DC"
 	// 	};
 
-	// 	verifyAddress( done, addressString, addressObject );
+	// 	verifyAddress( addressString, addressObject );
 	// } );
 
-	// it( "Number Street Type City City", function ( done ) {
+	// it( "Number Street Type City City", function () {
 
 	// 	var addressString = "1600 Pennsylvania Avenue Washington DC";
 	// 	var addressObject = {
@@ -460,10 +460,10 @@ describe( "Parse Address:", function () {
 	// 		state: "DC"
 	// 	};
 
-	// 	verifyAddress( done, addressString, addressObject );
+	// 	verifyAddress( addressString, addressObject );
 	// } );
 
-	// it( "NumberLetter StreetNumberLetter, City City ST", function ( done ) {
+	// it( "NumberLetter StreetNumberLetter, City City ST", function () {
 
 	// 	var addressString = "48S 400E, Salt Lake City UT";
 	// 	var addressObject = {
@@ -475,10 +475,10 @@ describe( "Parse Address:", function () {
 	// 		state: "UT"
 	// 	};
 
-	// 	verifyAddress( done, addressString, addressObject );
+	// 	verifyAddress( addressString, addressObject );
 	// } );
 
-	it( "Number Pre Street Type #Suite City City ST Zipcode", function ( done ) {
+	it( "Number Pre Street Type #Suite City City ST Zipcode", function () {
 
 		var addressString = "550 S 400 E #3206, Salt Lake City UT 84111";
 		var addressObject = {
@@ -493,10 +493,10 @@ describe( "Parse Address:", function () {
 			zip: "84111"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Pre Street Type Apt Suite City City, ST Zipcode", function ( done ) {
+	it( "Number Pre Street Type Apt Suite City City, ST Zipcode", function () {
 
 		var addressString = "6641 N 2200 W Apt D304 Park City, UT 84098";
 		var addressObject = {
@@ -511,10 +511,10 @@ describe( "Parse Address:", function () {
 			zip: "84098"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type, City, ST", function ( done ) {
+	it( "Number Street Type, City, ST", function () {
 
 		var addressString = "100 South St, Philadelphia, PA";
 		var addressObject = {
@@ -525,10 +525,10 @@ describe( "Parse Address:", function () {
 			state: "PA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Pre.Pre. Street Type, City, ST", function ( done ) {
+	it( "Number Pre.Pre. Street Type, City, ST", function () {
 
 		var addressString = "100 S.E. Washington Ave, Minneapolis, MN";
 		var addressObject = {
@@ -540,10 +540,10 @@ describe( "Parse Address:", function () {
 			state: "MN"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Fraction Street Type, City City, ST", function ( done ) {
+	it( "Number Fraction Street Type, City City, ST", function () {
 		//	nnxt,xx,S
 
 		var addressString = "3813 1/2 Some Road, Los Angeles, CA";
@@ -555,10 +555,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Street & Street City City ST", function ( done ) {
+	it( "Street & Street City City ST", function () {
 		//	x&xxxS
 		//	s&sxxS
 
@@ -570,10 +570,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Street & Street, City ST", function ( done ) {
+	it( "Street & Street, City ST", function () {
 		//	x&x,xxS
 		//	s&s,ccS
 
@@ -585,10 +585,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Street Type and Street Type City City ST", function ( done ) {
+	it( "Street Type and Street Type City City ST", function () {
 		//	st&stxxS
 		//	st&stxxS
 
@@ -602,10 +602,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Street Type & Street Type City City ST", function ( done ) {
+	it( "Street Type & Street Type City City ST", function () {
 
 		var addressString = "Mission St & Valencia St San Francisco CA";
 		var addressObject = {
@@ -617,10 +617,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Street and Street Types City City ST", function ( done ) {
+	it( "Street and Street Types City City ST", function () {
 
 		var addressString = "Mission and Valencia Sts San Francisco CA";
 		var addressObject = {
@@ -632,10 +632,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Street & Street Types. City City ST ", function ( done ) {
+	it( "Street & Street Types. City City ST ", function () {
 
 		var addressString = "Mission & Valencia Sts. San Francisco CA";
 		var addressObject = {
@@ -647,10 +647,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Street & Street Types City City ST", function ( done ) {
+	it( "Street & Street Types City City ST", function () {
 
 		var addressString = "Mission & Valencia Streets San Francisco CA";
 		var addressObject = {
@@ -662,10 +662,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Street Type and Street Type City City ST", function ( done ) {
+	it( "Street Type and Street Type City City ST", function () {
 
 		var addressString = "Mission Avenue and Valencia Street San Francisco CA";
 		var addressObject = {
@@ -677,10 +677,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type, Pre City City ST", function ( done ) {
+	it( "Number Street Type, Pre City City ST", function () {
 
 		var addressString = "1 First St, e San Jose CA";
 		var addressObject = {
@@ -691,10 +691,10 @@ describe( "Parse Address:", function () {
 			state: "CA"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street City, State State", function ( done ) {
+	it( "Number Street City, State State", function () {
 
 		var addressString = "123 Maple Rochester, New York";
 		var addressObject = {
@@ -704,10 +704,10 @@ describe( "Parse Address:", function () {
 			state: "NY"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Pre Street Type Zipcode-Four", function ( done ) {
+	it( "Number Pre Street Type Zipcode-Four", function () {
 
 		var addressString = "233 S Wacker Dr 60606-6306";
 		var addressObject = {
@@ -718,10 +718,10 @@ describe( "Parse Address:", function () {
 			zip: "60606-6306"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Pre Street Type ZipCodeFour", function ( done ) {
+	it( "Number Pre Street Type ZipCodeFour", function () {
 
 		var addressString = "233 S Wacker Dr 606066306";
 		var addressObject = {
@@ -732,10 +732,10 @@ describe( "Parse Address:", function () {
 			zip: "60606-6306"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Pre Street Type unit Zipcode", function ( done ) {
+	it( "Number Pre Street Type unit Zipcode", function () {
 
 		var addressString = "233 S Wacker Dr lobby 60606";
 		var addressObject = {
@@ -747,10 +747,10 @@ describe( "Parse Address:", function () {
 			zip: "60606"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Unit, Number Pre Street Type, Some City, State Zipcode", function ( done ) {
+	it( "Unit, Number Pre Street Type, Some City, State Zipcode", function () {
 
 		var addressString = "Lobby, 357 S McCaslin Blvd., Louisville, CO 80027";
 		var addressObject = {
@@ -764,10 +764,10 @@ describe( "Parse Address:", function () {
 			zip: "80027"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Pre Street Type unit Zipcode", function ( done ) {
+	it( "Number Pre Street Type unit Zipcode", function () {
 
 		var addressString = "233 S Wacker Dr lobby 60606";
 		var addressObject = {
@@ -779,10 +779,10 @@ describe( "Parse Address:", function () {
 			zip: "60606"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "#Number Number Pre Street Zipcode", function ( done ) {
+	it( "#Number Number Pre Street Zipcode", function () {
 
 		var addressString = "#42 233 S Wacker Dr 60606";
 		var addressObject = {
@@ -795,10 +795,10 @@ describe( "Parse Address:", function () {
 			zip: "60606"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type, City, ST Zipcode", function ( done ) {
+	it( "Number Street Type, City, ST Zipcode", function () {
 
 		var addressString = "36401 County Road 43, Eaton, CO 80615";
 		var addressObject = {
@@ -809,10 +809,10 @@ describe( "Parse Address:", function () {
 			zip: "80615"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Number Street Type Suff, City, ST Zipcode", function ( done ) {
+	it( "Number Street Type Suff, City, ST Zipcode", function () {
 
 		var addressString = "1234 COUNTY HWY 60E, Town, CO 12345";
 		var addressObject = {
@@ -823,10 +823,10 @@ describe( "Parse Address:", function () {
 			zip: "12345"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	// it( "Number Pre. Street", function ( done ) {
+	// it( "Number Pre. Street", function () {
 
 	// 	var addressString = "321 S. Washington";
 	// 	var addressObject = {
@@ -835,10 +835,10 @@ describe( "Parse Address:", function () {
 	// 		street: "WASHINGTON"
 	// 	};
 
-	// 	verifyAddress( done, addressString, addressObject );
+	// 	verifyAddress( addressString, addressObject );
 	// } );
 
-	it( "Apostrophe Number Street Type, Unit UnitNumber Apostrophe", function ( done ) {
+	it( "Apostrophe Number Street Type, Unit UnitNumber Apostrophe", function () {
 
 		var addressString = "\'45 Quaker Ave, Ste 105\'";
 		var addressObject = {
@@ -849,10 +849,10 @@ describe( "Parse Address:", function () {
 			sec_unit_num: "105",
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "RR 2 BOX 274, Lake Butler, FL 32054", function ( done ) {
+	it( "RR 2 BOX 274, Lake Butler, FL 32054", function () {
 		//	RRRR,xx,SZ
 		//	RRRR,cc,SZ
 
@@ -864,10 +864,10 @@ describe( "Parse Address:", function () {
 			zip: "32054"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "HC 2 BOX 274, Lake Butler, FL 32054", function ( done ) {
+	it( "HC 2 BOX 274, Lake Butler, FL 32054", function () {
 		//	HHHH,xx,SZ
 		//	HHHH,cc,SZ
 
@@ -879,10 +879,10 @@ describe( "Parse Address:", function () {
 			zip: "32054"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "PO Box 233, 5023 W. 120th Ave., Broomfield, CO 80023", function ( done ) {
+	it( "PO Box 233, 5023 W. 120th Ave., Broomfield, CO 80023", function () {
 		//	PPP,npxt,x,SZ
 		//	PPP,npst,c,SZ
 
@@ -898,10 +898,10 @@ describe( "Parse Address:", function () {
 			zip: "80023"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Experian - July 2015", function ( done ) {
+	it( "Experian - July 2015", function () {
 
 		var addressString = "2 Soldier Dr, Sheridan WY 82801-9414";
 		var addressObject = {
@@ -913,10 +913,10 @@ describe( "Parse Address:", function () {
 			zip: "82801-9414"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Experian - May 2015", function ( done ) {
+	it( "Experian - May 2015", function () {
 
 		var addressString = "301 S 21st St, Laramie WY 82070-4360";
 		var addressObject = {
@@ -929,10 +929,10 @@ describe( "Parse Address:", function () {
 			zip: "82070-4360"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Experian - April 2015", function ( done ) {
+	it( "Experian - April 2015", function () {
 
 		var addressString = "12400 S Sheep Horn Rd, Jackson WY 83001-9192";
 		var addressObject = {
@@ -945,10 +945,10 @@ describe( "Parse Address:", function () {
 			zip: "83001-9192"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Experian - March 2015", function ( done ) {
+	it( "Experian - March 2015", function () {
 
 		var addressString = "700 Minnesota Ln, Powell WY 82435-2903";
 		var addressObject = {
@@ -960,12 +960,12 @@ describe( "Parse Address:", function () {
 			zip: "82435-2903"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 
 	//	Address generated from User Info Gen
-	it( "4543 Jagged Rabbit Edge, Elevenmile Homestead, District of Columbia, 20079-7530", function ( done ) {
+	it( "4543 Jagged Rabbit Edge, Elevenmile Homestead, District of Columbia, 20079-7530", function () {
 
 		var addressString = "4543 Jagged Rabbit Edge, Elevenmile Homestead, District of Columbia, 20079-7530";
 		var addressObject = {
@@ -976,11 +976,11 @@ describe( "Parse Address:", function () {
 			zip: "20079-7530"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "2774 Dusty Rise, Chistochina, Pennsylvania, 16036-7241", function ( done ) {
+	it( "2774 Dusty Rise, Chistochina, Pennsylvania, 16036-7241", function () {
 
 		var addressString = "2774 Dusty Rise, Chistochina, Pennsylvania, 16036-7241";
 		var addressObject = {
@@ -991,11 +991,11 @@ describe( "Parse Address:", function () {
 			zip: "16036-7241"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "9430 Cotton Apple Circle, Mars, Oklahoma, 74120-9610", function ( done ) {
+	it( "9430 Cotton Apple Circle, Mars, Oklahoma, 74120-9610", function () {
 
 		var addressString = "9430 Cotton Apple Circle, Mars, Oklahoma, 74120-9610";
 		var addressObject = {
@@ -1007,11 +1007,11 @@ describe( "Parse Address:", function () {
 			zip: "74120-9610"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "791 Red Beacon Close, Poverty Hill, North Dakota, 58169-5068", function ( done ) {
+	it( "791 Red Beacon Close, Poverty Hill, North Dakota, 58169-5068", function () {
 
 		var addressString = "791 Red Beacon Close, Poverty Hill, North Dakota, 58169-5068";
 		var addressObject = {
@@ -1022,11 +1022,11 @@ describe( "Parse Address:", function () {
 			zip: "58169-5068"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "6308 Hazy Falls, Stringtown, Tennessee, 38411-2765", function ( done ) {
+	it( "6308 Hazy Falls, Stringtown, Tennessee, 38411-2765", function () {
 
 		var addressString = "6308 Hazy Falls, Stringtown, Tennessee, 38411-2765";
 		var addressObject = {
@@ -1038,11 +1038,11 @@ describe( "Parse Address:", function () {
 			zip: "38411-2765"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "354 Grand Embers Private, Steptoe, Florida, 34684-6048", function ( done ) {
+	it( "354 Grand Embers Private, Steptoe, Florida, 34684-6048", function () {
 
 		var addressString = "354 Grand Embers Private, Steptoe, Florida, 34684-6048";
 		var addressObject = {
@@ -1053,11 +1053,11 @@ describe( "Parse Address:", function () {
 			zip: "34684-6048"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "7787 High Anchor Via, Clatskanie, Louisiana, 70402-3561", function ( done ) {
+	it( "7787 High Anchor Via, Clatskanie, Louisiana, 70402-3561", function () {
 
 		var addressString = "7787 High Anchor Via, Clatskanie, Louisiana, 70402-3561";
 		var addressObject = {
@@ -1069,11 +1069,11 @@ describe( "Parse Address:", function () {
 			zip: "70402-3561"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "7741 Umber Blossom Glen, Little Switzerland, Virginia, 22212-9652", function ( done ) {
+	it( "7741 Umber Blossom Glen, Little Switzerland, Virginia, 22212-9652", function () {
 
 		var addressString = "7741 Umber Blossom Glen, Little Switzerland, Virginia, 22212-9652";
 		var addressObject = {
@@ -1085,11 +1085,11 @@ describe( "Parse Address:", function () {
 			zip: "22212-9652"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "4394 Honey Knoll, Breidablick, Missouri, 65593-0026", function ( done ) {
+	it( "4394 Honey Knoll, Breidablick, Missouri, 65593-0026", function () {
 
 		var addressString = "4394 Honey Knoll, Breidablick, Missouri, 65593-0026";
 		var addressObject = {
@@ -1101,11 +1101,11 @@ describe( "Parse Address:", function () {
 			zip: "65593-0026"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "9552 Round Ramp, Humorist, Massachusetts, 01828-6975", function ( done ) {
+	it( "9552 Round Ramp, Humorist, Massachusetts, 01828-6975", function () {
 
 		var addressString = "9552 Round Ramp, Humorist, Massachusetts, 01828-6975";
 		var addressObject = {
@@ -1117,11 +1117,11 @@ describe( "Parse Address:", function () {
 			zip: "01828-6975"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "8425 Silver Oak Inlet, Sivili Chuchg, South Dakota, 57255-8843", function ( done ) {
+	it( "8425 Silver Oak Inlet, Sivili Chuchg, South Dakota, 57255-8843", function () {
 
 		var addressString = "8425 Silver Oak Inlet, Sivili Chuchg, South Dakota, 57255-8843";
 		var addressObject = {
@@ -1133,11 +1133,11 @@ describe( "Parse Address:", function () {
 			zip: "57255-8843"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "9265 Amber Hickory Pines, Tiny Town, Alaska, 99567-9030", function ( done ) {
+	it( "9265 Amber Hickory Pines, Tiny Town, Alaska, 99567-9030", function () {
 
 		var addressString = "9265 Amber Hickory Pines, Tiny Town, Alaska, 99567-9030";
 		var addressObject = {
@@ -1149,11 +1149,11 @@ describe( "Parse Address:", function () {
 			zip: "99567-9030"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "80 Misty Panda Point, Wallstreet, Kansas, 67206-4373", function ( done ) {
+	it( "80 Misty Panda Point, Wallstreet, Kansas, 67206-4373", function () {
 
 		var addressString = "80 Misty Panda Point, Wallstreet, Kansas, 67206-4373";
 		var addressObject = {
@@ -1165,11 +1165,11 @@ describe( "Parse Address:", function () {
 			zip: "67206-4373"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "1509 Silent Arbor, Star, North Carolina, 27053-8690", function ( done ) {
+	it( "1509 Silent Arbor, Star, North Carolina, 27053-8690", function () {
 
 		var addressString = "1509 Silent Arbor, Star, North Carolina, 27053-8690";
 		var addressObject = {
@@ -1180,11 +1180,11 @@ describe( "Parse Address:", function () {
 			zip: "27053-8690"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "6124 Colonial Ledge, Lesbia, Kansas, 67536-3846", function ( done ) {
+	it( "6124 Colonial Ledge, Lesbia, Kansas, 67536-3846", function () {
 
 		var addressString = "6124 Colonial Ledge, Lesbia, Kansas, 67536-3846";
 		var addressObject = {
@@ -1195,11 +1195,11 @@ describe( "Parse Address:", function () {
 			zip: "67536-3846"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "6702 Tawny Butterfly Autoroute, Pot Creek, Oklahoma, 73309-2621", function ( done ) {
+	it( "6702 Tawny Butterfly Autoroute, Pot Creek, Oklahoma, 73309-2621", function () {
 
 		var addressString = "6702 Tawny Butterfly Autoroute, Pot Creek, Oklahoma, 73309-2621";
 		var addressObject = {
@@ -1210,11 +1210,11 @@ describe( "Parse Address:", function () {
 			zip: "73309-2621"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "5140 Quaking Nectar End, Devils Slide, Ohio, 45277-8312", function ( done ) {
+	it( "5140 Quaking Nectar End, Devils Slide, Ohio, 45277-8312", function () {
 
 		var addressString = "5140 Quaking Nectar End, Devils Slide, Ohio, 45277-8312";
 		var addressObject = {
@@ -1225,11 +1225,11 @@ describe( "Parse Address:", function () {
 			zip: "45277-8312"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "3391 Foggy Meadow, Ten Sleep, Kentucky, 41661-1649", function ( done ) {
+	it( "3391 Foggy Meadow, Ten Sleep, Kentucky, 41661-1649", function () {
 
 		var addressString = "3391 Foggy Meadow, Ten Sleep, Kentucky, 41661-1649";
 		var addressObject = {
@@ -1241,11 +1241,11 @@ describe( "Parse Address:", function () {
 			zip: "41661-1649"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "6550 Easy Wharf, Natural Dam, Virginia, 22777-1163", function ( done ) {
+	it( "6550 Easy Wharf, Natural Dam, Virginia, 22777-1163", function () {
 
 		var addressString = "6550 Easy Wharf, Natural Dam, Virginia, 22777-1163";
 		var addressObject = {
@@ -1256,11 +1256,11 @@ describe( "Parse Address:", function () {
 			zip: "22777-1163"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "407 Gentle Elk Highway, Munster, Georgia, 39996-3918", function ( done ) {
+	it( "407 Gentle Elk Highway, Munster, Georgia, 39996-3918", function () {
 
 		var addressString = "407 Gentle Elk Highway, Munster, Georgia, 39996-3918";
 		var addressObject = {
@@ -1272,11 +1272,11 @@ describe( "Parse Address:", function () {
 			zip: "39996-3918"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "7900 Green Cape, Baptist, Maryland, 21285-4191", function ( done ) {
+	it( "7900 Green Cape, Baptist, Maryland, 21285-4191", function () {
 
 		var addressString = "7900 Green Cape, Baptist, Maryland, 21285-4191";
 		var addressObject = {
@@ -1288,11 +1288,11 @@ describe( "Parse Address:", function () {
 			zip: "21285-4191"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "8680 Old Leaf Crescent, Sinking Valley, Nevada, 89169-8392", function ( done ) {
+	it( "8680 Old Leaf Crescent, Sinking Valley, Nevada, 89169-8392", function () {
 
 		var addressString = "8680 Old Leaf Crescent, Sinking Valley, Nevada, 89169-8392";
 		var addressObject = {
@@ -1304,11 +1304,11 @@ describe( "Parse Address:", function () {
 			zip: "89169-8392"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "2053 Noble Cloud Byway, Stopover, Michigan, 48409-8445", function ( done ) {
+	it( "2053 Noble Cloud Byway, Stopover, Michigan, 48409-8445", function () {
 
 		var addressString = "2053 Noble Cloud Byway, Stopover, Michigan, 48409-8445";
 		var addressObject = {
@@ -1319,11 +1319,11 @@ describe( "Parse Address:", function () {
 			zip: "48409-8445"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "3735 Clear Lake Highlands, Redwine, Georgia, 39972-9498", function ( done ) {
+	it( "3735 Clear Lake Highlands, Redwine, Georgia, 39972-9498", function () {
 
 		var addressString = "3735 Clear Lake Highlands, Redwine, Georgia, 39972-9498";
 		var addressObject = {
@@ -1334,11 +1334,11 @@ describe( "Parse Address:", function () {
 			zip: "39972-9498"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "2006 Harvest Grove Mountain, Zylks, Vermont, 05382-4808", function ( done ) {
+	it( "2006 Harvest Grove Mountain, Zylks, Vermont, 05382-4808", function () {
 
 		var addressString = "2006 Harvest Grove Mountain, Zylks, Vermont, 05382-4808";
 		var addressObject = {
@@ -1350,11 +1350,11 @@ describe( "Parse Address:", function () {
 			zip: "05382-4808"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "3170 Sleepy Quail Promenade, Coon Rapids, Illinois, 61507-9346", function ( done ) {
+	it( "3170 Sleepy Quail Promenade, Coon Rapids, Illinois, 61507-9346", function () {
 
 		var addressString = "3170 Sleepy Quail Promenade, Coon Rapids, Illinois, 61507-9346";
 		var addressObject = {
@@ -1365,11 +1365,11 @@ describe( "Parse Address:", function () {
 			zip: "61507-9346"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "8904 Heather Pony Grounds, Foxhome, Arizona, 85638-9263", function ( done ) {
+	it( "8904 Heather Pony Grounds, Foxhome, Arizona, 85638-9263", function () {
 
 		var addressString = "8904 Heather Pony Grounds, Foxhome, Arizona, 85638-9263";
 		var addressObject = {
@@ -1380,11 +1380,11 @@ describe( "Parse Address:", function () {
 			zip: "85638-9263"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "6275 Little Jetty, Cincinnati, Kentucky, 41416-0597", function ( done ) {
+	it( "6275 Little Jetty, Cincinnati, Kentucky, 41416-0597", function () {
 
 		var addressString = "6275 Little Jetty, Cincinnati, Kentucky, 41416-0597";
 		var addressObject = {
@@ -1395,11 +1395,11 @@ describe( "Parse Address:", function () {
 			zip: "41416-0597"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "8680 Rustic Bank, Dukedom, Minnesota, 55783-5206", function ( done ) {
+	it( "8680 Rustic Bank, Dukedom, Minnesota, 55783-5206", function () {
 
 		var addressString = "8680 Rustic Bank, Dukedom, Minnesota, 55783-5206";
 		var addressObject = {
@@ -1410,11 +1410,11 @@ describe( "Parse Address:", function () {
 			zip: "55783-5206"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "3911 Emerald Berry Expressway, Littlelot, Nevada, 89397-5264", function ( done ) {
+	it( "3911 Emerald Berry Expressway, Littlelot, Nevada, 89397-5264", function () {
 
 		var addressString = "3911 Emerald Berry Expressway, Littlelot, Nevada, 89397-5264";
 		var addressObject = {
@@ -1426,11 +1426,11 @@ describe( "Parse Address:", function () {
 			zip: "89397-5264"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "2103 Stony Pine Glade, Dilly, North Dakota, 58244-6709", function ( done ) {
+	it( "2103 Stony Pine Glade, Dilly, North Dakota, 58244-6709", function () {
 
 		var addressString = "2103 Stony Pine Glade, Dilly, North Dakota, 58244-6709";
 		var addressObject = {
@@ -1441,11 +1441,11 @@ describe( "Parse Address:", function () {
 			zip: "58244-6709"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "5472 Sunny Dale Estates, Poysippi, Michigan, 49129-5457", function ( done ) {
+	it( "5472 Sunny Dale Estates, Poysippi, Michigan, 49129-5457", function () {
 
 		var addressString = "5472 Sunny Dale Estates, Poysippi, Michigan, 49129-5457";
 		var addressObject = {
@@ -1457,11 +1457,11 @@ describe( "Parse Address:", function () {
 			zip: "49129-5457"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "90 Lost Gate Woods, Pepperbox, Mississippi, 39261-3784", function ( done ) {
+	it( "90 Lost Gate Woods, Pepperbox, Mississippi, 39261-3784", function () {
 
 		var addressString = "90 Lost Gate Woods, Pepperbox, Mississippi, 39261-3784";
 		var addressObject = {
@@ -1472,11 +1472,11 @@ describe( "Parse Address:", function () {
 			zip: "39261-3784"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "1814 Quiet Wagon Impasse, Watercolor, Wisconsin, 53848-6026", function ( done ) {
+	it( "1814 Quiet Wagon Impasse, Watercolor, Wisconsin, 53848-6026", function () {
 
 		var addressString = "1814 Quiet Wagon Impasse, Watercolor, Wisconsin, 53848-6026";
 		var addressObject = {
@@ -1487,11 +1487,11 @@ describe( "Parse Address:", function () {
 			zip: "53848-6026"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "3044 Burning Pond Dale, Weeki Wachee, Massachusetts, 01427-4605", function ( done ) {
+	it( "3044 Burning Pond Dale, Weeki Wachee, Massachusetts, 01427-4605", function () {
 
 		var addressString = "3044 Burning Pond Dale, Weeki Wachee, Massachusetts, 01427-4605";
 		var addressObject = {
@@ -1503,11 +1503,11 @@ describe( "Parse Address:", function () {
 			zip: "01427-4605"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "9497 Middle Carrefour, Alert, Delaware, 19847-5857", function ( done ) {
+	it( "9497 Middle Carrefour, Alert, Delaware, 19847-5857", function () {
 
 		var addressString = "9497 Middle Carrefour, Alert, Delaware, 19847-5857";
 		var addressObject = {
@@ -1518,11 +1518,11 @@ describe( "Parse Address:", function () {
 			zip: "19847-5857"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "2981 Cinder Square, Hasty Corner, Alabama, 35979-0204", function ( done ) {
+	it( "2981 Cinder Square, Hasty Corner, Alabama, 35979-0204", function () {
 
 		var addressString = "2981 Cinder Square, Hasty Corner, Alabama, 35979-0204";
 		var addressObject = {
@@ -1534,11 +1534,11 @@ describe( "Parse Address:", function () {
 			zip: "35979-0204"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "6630 Merry Goose Bay, Parrot, Arizona, 85995-1228", function ( done ) {
+	it( "6630 Merry Goose Bay, Parrot, Arizona, 85995-1228", function () {
 
 		var addressString = "6630 Merry Goose Bay, Parrot, Arizona, 85995-1228";
 		var addressObject = {
@@ -1549,11 +1549,11 @@ describe( "Parse Address:", function () {
 			zip: "85995-1228"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "4600 Pleasant Row, Pejepscot, Delaware, 19702-9893", function ( done ) {
+	it( "4600 Pleasant Row, Pejepscot, Delaware, 19702-9893", function () {
 
 		var addressString = "4600 Pleasant Row, Pejepscot, Delaware, 19702-9893";
 		var addressObject = {
@@ -1565,11 +1565,11 @@ describe( "Parse Address:", function () {
 			zip: "19702-9893"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "1480 Velvet Robin Chase, Robinhood, Iowa, 50941-4823", function ( done ) {
+	it( "1480 Velvet Robin Chase, Robinhood, Iowa, 50941-4823", function () {
 
 		var addressString = "1480 Velvet Robin Chase, Robinhood, Iowa, 50941-4823";
 		var addressObject = {
@@ -1580,11 +1580,11 @@ describe( "Parse Address:", function () {
 			zip: "50941-4823"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "3653 Indian View Cove, Scientists Cliffs, Maryland, 21509-9340", function ( done ) {
+	it( "3653 Indian View Cove, Scientists Cliffs, Maryland, 21509-9340", function () {
 
 		var addressString = "3653 Indian View Cove, Scientists Cliffs, Maryland, 21509-9340";
 		var addressObject = {
@@ -1596,11 +1596,11 @@ describe( "Parse Address:", function () {
 			zip: "21509-9340"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "7036 Dewy Pathway, Swampscott, South Carolina, 29853-5350", function ( done ) {
+	it( "7036 Dewy Pathway, Swampscott, South Carolina, 29853-5350", function () {
 
 		var addressString = "7036 Dewy Pathway, Swampscott, South Carolina, 29853-5350";
 		var addressObject = {
@@ -1611,11 +1611,11 @@ describe( "Parse Address:", function () {
 			zip: "29853-5350"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "7085 Shady Manor, Payment, Kansas, 66773-3157", function ( done ) {
+	it( "7085 Shady Manor, Payment, Kansas, 66773-3157", function () {
 
 		var addressString = "7085 Shady Manor, Payment, Kansas, 66773-3157";
 		var addressObject = {
@@ -1627,11 +1627,11 @@ describe( "Parse Address:", function () {
 			zip: "66773-3157"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "1542 Fallen Vista, Flanders, Delaware, 19783-3763", function ( done ) {
+	it( "1542 Fallen Vista, Flanders, Delaware, 19783-3763", function () {
 
 		var addressString = "1542 Fallen Vista, Flanders, Delaware, 19783-3763";
 		var addressObject = {
@@ -1643,11 +1643,11 @@ describe( "Parse Address:", function () {
 			zip: "19783-3763"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "1096 Wishing Horse Trail, Bucklesberry, Alabama, 35271-3507", function ( done ) {
+	it( "1096 Wishing Horse Trail, Bucklesberry, Alabama, 35271-3507", function () {
 
 		var addressString = "1096 Wishing Horse Trail, Bucklesberry, Alabama, 35271-3507";
 		var addressObject = {
@@ -1659,11 +1659,11 @@ describe( "Parse Address:", function () {
 			zip: "35271-3507"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "570 Iron Gate, Hairtown, Ohio, 43605-8701", function ( done ) {
+	it( "570 Iron Gate, Hairtown, Ohio, 43605-8701", function () {
 
 		var addressString = "570 Iron Gate, Hairtown, Ohio, 43605-8701";
 		var addressObject = {
@@ -1674,11 +1674,11 @@ describe( "Parse Address:", function () {
 			zip: "43605-8701"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "6067 Thunder Willow Street, Pungo, Idaho, 83892-4506", function ( done ) {
+	it( "6067 Thunder Willow Street, Pungo, Idaho, 83892-4506", function () {
 
 		var addressString = "6067 Thunder Willow Street, Pungo, Idaho, 83892-4506";
 		var addressObject = {
@@ -1690,11 +1690,11 @@ describe( "Parse Address:", function () {
 			zip: "83892-4506"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "442 Crystal Field, Tick Ridge, Mississippi, 38635-3965", function ( done ) {
+	it( "442 Crystal Field, Tick Ridge, Mississippi, 38635-3965", function () {
 
 		var addressString = "442 Crystal Field, Tick Ridge, Mississippi, 38635-3965";
 		var addressObject = {
@@ -1706,11 +1706,11 @@ describe( "Parse Address:", function () {
 			zip: "38635-3965"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "4903 Cozy Pioneer Round, Puttstown, Illinois, 61502-4831", function ( done ) {
+	it( "4903 Cozy Pioneer Round, Puttstown, Illinois, 61502-4831", function () {
 
 		var addressString = "4903 Cozy Pioneer Round, Puttstown, Illinois, 61502-4831";
 		var addressObject = {
@@ -1721,11 +1721,11 @@ describe( "Parse Address:", function () {
 			zip: "61502-4831"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 	//	Address generated from User Info Gen
-	it( "2795 Golden Loop, Moosup Valley, Oklahoma, 74503-7553", function ( done ) {
+	it( "2795 Golden Loop, Moosup Valley, Oklahoma, 74503-7553", function () {
 
 		var addressString = "2795 Golden Loop, Moosup Valley, Oklahoma, 74503-7553";
 		var addressObject = {
@@ -1737,7 +1737,7 @@ describe( "Parse Address:", function () {
 			zip: "74503-7553"
 		};
 
-		verifyAddress( done, addressString, addressObject );
+		verifyAddress( addressString, addressObject );
 	} );
 
 } );

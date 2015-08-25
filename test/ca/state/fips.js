@@ -13,9 +13,9 @@ describe( "CA Possession FIPS:", function () {
 		postal = new Postal();
 	}
 
-	it( "Geo-StreetAddress-CA FIPS to Provinces/Territories", function ( done ) {
+	it( "Geo-StreetAddress-CA FIPS to Provinces/Territories", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var fips = {
@@ -47,9 +47,9 @@ describe( "CA Possession FIPS:", function () {
 		}
 	} );
 
-	it( "Geo-StreetAddress-CA Provinces/Territories to FIPS", function ( done ) {
+	it( "Geo-StreetAddress-CA Provinces/Territories to FIPS", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var fips = {

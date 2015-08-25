@@ -14,9 +14,9 @@ describe( "Address Match Similarity:", function () {
 		postal = new Postal();
 	}
 
-	it( "Same Strings - Basic", function ( done ) {
+	it( "Same Strings - Basic", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var address1String = "16729 Buckskin Way, Broomfield, CO 80023";
@@ -44,9 +44,9 @@ describe( "Address Match Similarity:", function () {
 		} );
 	} );
 
-	it( "String Object - Basic", function ( done ) {
+	it( "String Object - Basic", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var address1String = "16729 Buckskin Way, Broomfield, CO 80023";
@@ -78,9 +78,9 @@ describe( "Address Match Similarity:", function () {
 		} );
 	} );
 
-	it( "Two Strings - Basic", function ( done ) {
+	it( "Two Strings - Basic", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var address1String = "16729 Buckskin Way, Broomfield, CO 80023";
@@ -109,9 +109,9 @@ describe( "Address Match Similarity:", function () {
 		} );
 	} );
 
-	it( "Strings - Similar, No Unit", function ( done ) {
+	it( "Strings - Similar, No Unit", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var address1String = "16729 Buckskin Way #123, Broomfield, CO 80023";
@@ -142,9 +142,9 @@ describe( "Address Match Similarity:", function () {
 		} );
 	} );
 
-	it( "Strings - Similar, No ZIP", function ( done ) {
+	it( "Strings - Similar, No ZIP", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var address1String = "16729 Buckskin Way, Broomfield, CO";
@@ -174,9 +174,9 @@ describe( "Address Match Similarity:", function () {
 		} );
 	} );
 
-	it( "Strings - Similar, Different City", function ( done ) {
+	it( "Strings - Similar, Different City", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var address1String = "16729 Buckskin Way, Westminster, CO 80023";
@@ -206,9 +206,9 @@ describe( "Address Match Similarity:", function () {
 		} );
 	} );
 
-	it( "Strings - Similar, Different ZIP", function ( done ) {
+	it( "Strings - Similar, Different ZIP", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var address1String = "16729 Buckskin Way, Broomfield, CO 80021";

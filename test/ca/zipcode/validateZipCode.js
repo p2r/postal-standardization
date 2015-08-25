@@ -13,9 +13,9 @@ describe( "CA Zip Codes:", function () {
 		postal = new Postal();
 	}
 
-	it( "H3Z 2Y7", function ( done ) {
+	it( "H3Z 2Y7", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var zipTest = "H3Z 2Y7";

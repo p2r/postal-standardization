@@ -13,9 +13,9 @@ describe( "CA Possession Abbreviations:", function () {
 		postal = new Postal();
 	}
 
-	it( "AB", function ( done ) {
+	it( "AB", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -36,9 +36,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "BC", function ( done ) {
+	it( "BC", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -64,9 +64,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "MB", function ( done ) {
+	it( "MB", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -87,9 +87,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NB", function ( done ) {
+	it( "NB", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -113,9 +113,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NL", function ( done ) {
+	it( "NL", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -148,9 +148,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NS", function ( done ) {
+	it( "NS", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -177,9 +177,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NT", function ( done ) {
+	it( "NT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -212,9 +212,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NU", function ( done ) {
+	it( "NU", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -235,9 +235,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "ON", function ( done ) {
+	it( "ON", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -257,9 +257,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "PE", function ( done ) {
+	it( "PE", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -290,9 +290,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "QC", function ( done ) {
+	it( "QC", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -317,9 +317,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "SK", function ( done ) {
+	it( "SK", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -340,9 +340,9 @@ describe( "CA Possession Abbreviations:", function () {
 
 	} );
 
-	it( "YT", function ( done ) {
+	it( "YT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [

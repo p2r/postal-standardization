@@ -8,9 +8,9 @@ var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Validation Object:", function () {
 
-	it( "Constructor - No Config", function ( done ) {
+	it( "Constructor - No Config", function () {
 		if ( !Postal ) {
-			return done();
+			return;
 		}
 
 		var postal = new Postal();

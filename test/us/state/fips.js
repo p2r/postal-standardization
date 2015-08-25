@@ -13,9 +13,9 @@ describe( "State/Possession FIPS:", function () {
 		postal = new Postal();
 	}
 
-	it( "Geo-StreetAddress-US FIPS to State", function ( done ) {
+	it( "Geo-StreetAddress-US FIPS to State", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var fips = {
@@ -88,9 +88,9 @@ describe( "State/Possession FIPS:", function () {
 		}
 	} );
 
-it( "Geo-StreetAddress-US State to FIPS", function ( done ) {
+it( "Geo-StreetAddress-US State to FIPS", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var fips = {

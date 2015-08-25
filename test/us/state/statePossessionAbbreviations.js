@@ -13,9 +13,9 @@ describe( "State/Possession Abbreviations:", function () {
 		postal = new Postal();
 	}
 
-	it( "AL", function ( done ) {
+	it( "AL", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -40,9 +40,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "AK", function ( done ) {
+	it( "AK", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -67,9 +67,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "AS", function ( done ) {
+	it( "AS", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -98,9 +98,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "AZ", function ( done ) {
+	it( "AZ", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -126,9 +126,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "AR", function ( done ) {
+	it( "AR", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -154,9 +154,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "CA", function ( done ) {
+	it( "CA", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -187,9 +187,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "CO", function ( done ) {
+	it( "CO", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -217,9 +217,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "CT", function ( done ) {
+	it( "CT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -246,9 +246,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "DE", function ( done ) {
+	it( "DE", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -276,9 +276,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "DC", function ( done ) {
+	it( "DC", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -315,9 +315,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "FM", function ( done ) {
+	it( "FM", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -351,9 +351,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "FL", function ( done ) {
+	it( "FL", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -382,9 +382,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "GA", function ( done ) {
+	it( "GA", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -407,9 +407,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "GU", function ( done ) {
+	it( "GU", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -431,9 +431,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "HI", function ( done ) {
+	it( "HI", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -461,9 +461,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "ID", function ( done ) {
+	it( "ID", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -487,9 +487,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "IL", function ( done ) {
+	it( "IL", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -523,9 +523,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "IN", function ( done ) {
+	it( "IN", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -551,9 +551,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "IA", function ( done ) {
+	it( "IA", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -578,9 +578,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "KS", function ( done ) {
+	it( "KS", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -607,9 +607,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "KY", function ( done ) {
+	it( "KY", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -635,9 +635,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "LA", function ( done ) {
+	it( "LA", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -664,9 +664,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "ME", function ( done ) {
+	it( "ME", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -689,9 +689,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "MH", function ( done ) {
+	it( "MH", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -721,9 +721,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "MD", function ( done ) {
+	it( "MD", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -748,9 +748,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "MA", function ( done ) {
+	it( "MA", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -776,9 +776,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "MI", function ( done ) {
+	it( "MI", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -808,9 +808,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "MN", function ( done ) {
+	it( "MN", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -839,9 +839,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "MS", function ( done ) {
+	it( "MS", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -869,9 +869,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "MO", function ( done ) {
+	it( "MO", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -900,9 +900,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "MT", function ( done ) {
+	it( "MT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -927,9 +927,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NE", function ( done ) {
+	it( "NE", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -956,9 +956,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NV", function ( done ) {
+	it( "NV", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -986,9 +986,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NH", function ( done ) {
+	it( "NH", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1020,9 +1020,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NJ", function ( done ) {
+	it( "NJ", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1050,9 +1050,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NM", function ( done ) {
+	it( "NM", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1078,9 +1078,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NY", function ( done ) {
+	it( "NY", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1106,9 +1106,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "NC", function ( done ) {
+	it( "NC", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1138,9 +1138,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "ND", function ( done ) {
+	it( "ND", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1181,9 +1181,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "MP", function ( done ) {
+	it( "MP", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1240,9 +1240,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "OH", function ( done ) {
+	it( "OH", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1267,9 +1267,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "OK", function ( done ) {
+	it( "OK", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1292,9 +1292,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "OR", function ( done ) {
+	it( "OR", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1322,9 +1322,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "PW", function ( done ) {
+	it( "PW", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1344,9 +1344,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "PA", function ( done ) {
+	it( "PA", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1389,9 +1389,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "PR", function ( done ) {
+	it( "PR", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1416,9 +1416,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "RI", function ( done ) {
+	it( "RI", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1451,9 +1451,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "SC", function ( done ) {
+	it( "SC", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1502,9 +1502,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "SD", function ( done ) {
+	it( "SD", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1553,9 +1553,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "TN", function ( done ) {
+	it( "TN", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1591,9 +1591,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "TX", function ( done ) {
+	it( "TX", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1617,9 +1617,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "UT", function ( done ) {
+	it( "UT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1639,9 +1639,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "VT", function ( done ) {
+	it( "VT", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1666,9 +1666,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "VI", function ( done ) {
+	it( "VI", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1704,9 +1704,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "VA", function ( done ) {
+	it( "VA", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1738,9 +1738,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "WA", function ( done ) {
+	it( "WA", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1771,9 +1771,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "WV", function ( done ) {
+	it( "WV", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1840,9 +1840,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "WI", function ( done ) {
+	it( "WI", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1875,9 +1875,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "WY", function ( done ) {
+	it( "WY", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -1901,9 +1901,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "Geo-StreetAddress-US State Codes", function ( done ) {
+	it( "Geo-StreetAddress-US State Codes", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var stateCodes = {
@@ -1982,9 +1982,9 @@ describe( "State/Possession Abbreviations:", function () {
 		}
 	} );
 
-	it( "AE", function ( done ) {
+	it( "AE", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -2021,9 +2021,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "AP", function ( done ) {
+	it( "AP", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
@@ -2042,9 +2042,9 @@ describe( "State/Possession Abbreviations:", function () {
 
 	} );
 
-	it( "AA", function ( done ) {
+	it( "AA", function () {
 		if ( !postal ) {
-			return done();
+			return;
 		}
 
 		var names = [
