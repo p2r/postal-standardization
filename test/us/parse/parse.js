@@ -492,6 +492,21 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
+	it( "StreetNumberLetter & StreetNumberLetter, City City ST", function () {
+
+		var addressString = "400E & 200S, Salt Lake City UT";
+		var addressObject = {
+			street1: "400",
+			suffix1: "E",
+			street2: "200",
+			suffix2: "S",
+			city: "SALT LAKE CITY",
+			state: "UT"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
+
 	it( "Number Pre Street Type #Suite City City ST Zipcode", function () {
 
 		var addressString = "550 S 400 E #3206, Salt Lake City UT 84111";
