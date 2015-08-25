@@ -435,7 +435,7 @@ describe( "Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	// it( "Number Street. City City", function () {
+	// it( "Number Street. City State", function () {
 
 	// 	var addressString = "1600 Pennsylvania Ave. Washington DC";
 	// 	var addressObject = {
@@ -448,6 +448,20 @@ describe( "Parse Address:", function () {
 
 	// 	verifyAddress( addressString, addressObject );
 	// } );
+
+	it( "Number Street. City, State", function () {
+
+		var addressString = "1600 Pennsylvania Ave. Washington, DC";
+		var addressObject = {
+			number: "1600",
+			street: "PENNSYLVANIA",
+			type: "AVE",
+			city: "WASHINGTON",
+			state: "DC"
+		};
+
+		verifyAddress( addressString, addressObject );
+	} );
 
 	// it( "Number Street Type City City", function () {
 
@@ -463,20 +477,20 @@ describe( "Parse Address:", function () {
 	// 	verifyAddress( addressString, addressObject );
 	// } );
 
-	// it( "NumberLetter StreetNumberLetter, City City ST", function () {
+	it( "NumberLetter StreetNumberLetter, City City ST", function () {
 
-	// 	var addressString = "48S 400E, Salt Lake City UT";
-	// 	var addressObject = {
-	// 		number: "48",
-	// 		prefix: "S",
-	// 		street: "400",
-	// 		suffix: "E",
-	// 		city: "SALT LAKE CITY",
-	// 		state: "UT"
-	// 	};
+		var addressString = "48S 400E, Salt Lake City UT";
+		var addressObject = {
+			number: "48",
+			prefix: "S",
+			street: "400",
+			suffix: "E",
+			city: "SALT LAKE CITY",
+			state: "UT"
+		};
 
-	// 	verifyAddress( addressString, addressObject );
-	// } );
+		verifyAddress( addressString, addressObject );
+	} );
 
 	it( "Number Pre Street Type #Suite City City ST Zipcode", function () {
 
