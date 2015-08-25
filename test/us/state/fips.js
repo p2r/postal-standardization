@@ -8,9 +8,16 @@ var Postal = require( "../../../lib" ).USPostal;
 
 describe( "State/Possession FIPS:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "Geo-StreetAddress-US FIPS to State", function () {
+	it( "Geo-StreetAddress-US FIPS to State", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var fips = {
 			"01": "AL",
 			"02": "AK",
@@ -81,7 +88,11 @@ describe( "State/Possession FIPS:", function () {
 		}
 	} );
 
-it( "Geo-StreetAddress-US State to FIPS", function () {
+it( "Geo-StreetAddress-US State to FIPS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var fips = {
 			"AL": "01",
 			"AK": "02",

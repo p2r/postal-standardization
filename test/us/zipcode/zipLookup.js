@@ -8,9 +8,16 @@ var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Zip Lookup:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "80020", function () {
+	it( "80020", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var zipcode = "80020";
 		var expLocation = {
 			country: "US",
@@ -24,7 +31,11 @@ describe( "Zip Lookup:", function () {
 		location.city.should.equal( expLocation.city );
 	} );
 
-	it( "80027", function () {
+	it( "80027", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var zipcode = "80027";
 		var expLocation = {
 			country: "US",
@@ -42,9 +53,16 @@ describe( "Zip Lookup:", function () {
 
 describe( "Location Lookup:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "Broomfield, CO", function () {
+	it( "Broomfield, CO", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var expZipcode = "80020";
 		var zipcodes = postal.validation.zipLookup.getZipsForLocation( "Broomfield", "CO" );
 		should.exist( zipcodes );
@@ -52,7 +70,11 @@ describe( "Location Lookup:", function () {
 		zipcodes[ 0 ].should.equal( expZipcode );
 	} );
 
-	it( "Louisville, CO", function () {
+	it( "Louisville, CO", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var expZipcode = "80027";
 		var zipcodes = postal.validation.zipLookup.getZipsForLocation( "Louisville", "CO" );
 		should.exist( zipcodes );
@@ -64,9 +86,16 @@ describe( "Location Lookup:", function () {
 
 describe( "Cities Lookup:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "80021", function () {
+	it( "80021", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var zipcode = "80021";
 		var expCities = [
 			"BROOMFIELD",
@@ -82,7 +111,11 @@ describe( "Cities Lookup:", function () {
 		cities.should.eql( expCities );
 	} );
 
-	it( "80019", function () {
+	it( "80019", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var zipcode = "80019";
 		var expCities = [
 			"AURORA"

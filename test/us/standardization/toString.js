@@ -8,9 +8,16 @@ var Postal = require( "../../../lib" ).USPostal;
 
 describe( "To String:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "16729 Buckskin Way, Broomfield, CO 80023", function () {
+	it( "16729 Buckskin Way, Broomfield, CO 80023", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var addressObject = {
 			number: "16729",
 			street: "BUCKSKIN",

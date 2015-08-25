@@ -8,9 +8,16 @@ var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Street Suffixes:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "N", function () {
+	it( "N", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"NORTH",
 			"N"
@@ -26,7 +33,11 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "NE", function () {
+	it( "NE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"NORTHEAST",
 			"NORTH EAST",
@@ -45,7 +56,11 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "NW", function () {
+	it( "NW", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"NORTHWEST",
 			"NORTH WEST",
@@ -64,7 +79,11 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "S", function () {
+	it( "S", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SOUTH",
 			"S"
@@ -80,7 +99,11 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "SE", function () {
+	it( "SE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SOUTHEAST",
 			"SOUTH EAST",
@@ -99,7 +122,11 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "SW", function () {
+	it( "SW", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SOUTHWEST",
 			"SOUTH WEST",
@@ -118,7 +145,11 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "E", function () {
+	it( "E", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"EAST",
 			"E"
@@ -134,7 +165,11 @@ describe( "Street Suffixes:", function () {
 
 	} );
 
-	it( "W", function () {
+	it( "W", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"WEST",
 			"W"

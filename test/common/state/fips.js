@@ -4,7 +4,7 @@
 
 var should = require( "should" );
 
-var Postal = require( "../../../lib" ).USPostal;
+var Postal = require( "../../../lib/common" );
 
 describe( "State/Possession FIPS:", function () {
 

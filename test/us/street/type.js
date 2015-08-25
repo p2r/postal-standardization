@@ -8,9 +8,16 @@ var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Street Type:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "ALY", function () {
+	it( "ALY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ALLEE",
 			"ALLEY",
@@ -29,7 +36,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "ANX", function () {
+	it( "ANX", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ANEX",
 			"ANX",
@@ -48,7 +59,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "ARC", function () {
+	it( "ARC", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ARCADE",
 			"ARC"
@@ -64,7 +79,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "AVE", function () {
+	it( "AVE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"AV",
 			"AVE",
@@ -86,7 +105,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BYU", function () {
+	it( "BYU", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BAYOO",
 			"BAYOU",
@@ -103,7 +126,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BCH", function () {
+	it( "BCH", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BEACH",
 			"BCH"
@@ -119,7 +146,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BND", function () {
+	it( "BND", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BEND",
 			"BND"
@@ -135,7 +166,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BLF", function () {
+	it( "BLF", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BLUF",
 			"BLUFF",
@@ -152,7 +187,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BLFS", function () {
+	it( "BLFS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BLUFFS",
 			"BLUFS",
@@ -170,7 +209,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BTM", function () {
+	it( "BTM", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BOT",
 			"BOTM",
@@ -189,7 +232,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BLVD", function () {
+	it( "BLVD", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BOUL",
 			"BOULEVARD",
@@ -207,7 +254,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BR", function () {
+	it( "BR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BRNCH",
 			"BRCH",
@@ -225,7 +276,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BRG", function () {
+	it( "BRG", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BRDGE",
 			"BRIDGE",
@@ -243,7 +298,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BRK", function () {
+	it( "BRK", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BROOK",
 			"BRK"
@@ -259,7 +318,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BRKS", function () {
+	it( "BRKS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BROOKS",
 			"BRKS"
@@ -275,7 +338,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BG", function () {
+	it( "BG", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BURG",
 			"BG"
@@ -291,7 +358,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BGS", function () {
+	it( "BGS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BURGS",
 			"BGS"
@@ -307,7 +378,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "BYP", function () {
+	it( "BYP", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BYPA",
 			"BYPAS",
@@ -326,7 +401,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CP", function () {
+	it( "CP", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CAMP",
 			"CMP",
@@ -343,7 +422,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CYN", function () {
+	it( "CYN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CANYN",
 			"CANYON",
@@ -361,7 +444,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CPE", function () {
+	it( "CPE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CAPE",
 			"CPE"
@@ -377,7 +464,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CSWY", function () {
+	it( "CSWY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CAUSEWAY",
 			"CAUSWA",
@@ -395,7 +486,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CTR", function () {
+	it( "CTR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CEN",
 			"CENT",
@@ -417,7 +512,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CTRS", function () {
+	it( "CTRS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CENTERS",
 			"CTRS"
@@ -433,7 +532,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CIR", function () {
+	it( "CIR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CIRC",
 			"CIRCL",
@@ -453,7 +556,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CIRS", function () {
+	it( "CIRS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CIRCLES",
 			"CIRS"
@@ -469,7 +576,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CLF", function () {
+	it( "CLF", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CLIFF",
 			"CLF"
@@ -485,7 +596,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CLFS", function () {
+	it( "CLFS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CLIFFS",
 			"CLFS"
@@ -501,7 +616,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CLB", function () {
+	it( "CLB", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CLUB",
 			"CLB"
@@ -517,7 +636,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CMN", function () {
+	it( "CMN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"COMMON",
 			"CMN"
@@ -533,7 +656,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CMNS", function () {
+	it( "CMNS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"COMMONS",
 			"CMNS"
@@ -549,7 +676,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "COR", function () {
+	it( "COR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CORNER",
 			"COR"
@@ -565,7 +696,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CORS", function () {
+	it( "CORS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CORNERS",
 			"CORS"
@@ -581,7 +716,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CRSE", function () {
+	it( "CRSE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"COURSE",
 			"CRSE"
@@ -597,7 +736,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CT", function () {
+	it( "CT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"COURT",
 			"CRT",
@@ -614,7 +757,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CTS", function () {
+	it( "CTS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"COURTS",
 			"CRTS",
@@ -631,7 +778,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CV", function () {
+	it( "CV", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"COVE",
 			"CV"
@@ -647,7 +798,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CVS", function () {
+	it( "CVS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"COVES",
 			"CVS"
@@ -663,7 +818,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CRK", function () {
+	it( "CRK", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CREEK",
 			"CRK",
@@ -681,7 +840,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CRES", function () {
+	it( "CRES", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CRESCENT",
 			"CRESENT",
@@ -703,7 +866,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CRST", function () {
+	it( "CRST", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CREST",
 			"CRST"
@@ -719,7 +886,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "XING", function () {
+	it( "XING", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CROSSING",
 			"CRSSNG",
@@ -737,7 +908,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "XRD", function () {
+	it( "XRD", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CROSSROAD",
 			"XRD"
@@ -753,7 +928,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "XRDS", function () {
+	it( "XRDS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CROSSROADS",
 			"XRDS"
@@ -769,7 +948,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "CURV", function () {
+	it( "CURV", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"CURVE",
 			"CURV"
@@ -785,7 +968,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "DL", function () {
+	it( "DL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"DALE",
 			"DL"
@@ -801,7 +988,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "DM", function () {
+	it( "DM", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"DAM",
 			"DM"
@@ -817,7 +1008,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "DV", function () {
+	it( "DV", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"DIV",
 			"DIVIDE",
@@ -835,7 +1030,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "DR", function () {
+	it( "DR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"DRIV",
 			"DRIVE",
@@ -853,7 +1052,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "DRS", function () {
+	it( "DRS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"DRIVES",
 			"DRS"
@@ -869,7 +1072,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "EST", function () {
+	it( "EST", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ESTATE",
 			"EST"
@@ -885,7 +1092,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "ESTS", function () {
+	it( "ESTS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ESTATES",
 			"ESTS"
@@ -901,7 +1112,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "EXPY", function () {
+	it( "EXPY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"EXP",
 			"EXPR",
@@ -921,7 +1136,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "EXT", function () {
+	it( "EXT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"EXTENSION",
 			"EXTN",
@@ -939,7 +1158,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "EXTS", function () {
+	it( "EXTS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"EXTENSIONS",
 			"EXTS"
@@ -955,7 +1178,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FALL", function () {
+	it( "FALL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FLL",
 			"FALL"
@@ -971,7 +1198,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FLS", function () {
+	it( "FLS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FALLS",
 			"FLS"
@@ -987,7 +1218,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FRY", function () {
+	it( "FRY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FERRY",
 			"FRRY",
@@ -1004,7 +1239,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FLD", function () {
+	it( "FLD", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FIELD",
 			"FLD"
@@ -1020,7 +1259,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FLDS", function () {
+	it( "FLDS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FIELDS",
 			"FLDS"
@@ -1036,7 +1279,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FLT", function () {
+	it( "FLT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FLAT",
 			"FLT"
@@ -1052,7 +1299,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FLTS", function () {
+	it( "FLTS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FLATS",
 			"FLTS"
@@ -1068,7 +1319,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FRD", function () {
+	it( "FRD", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FORD",
 			"FRD"
@@ -1084,7 +1339,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FRDS", function () {
+	it( "FRDS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FORDS",
 			"FRDS"
@@ -1100,7 +1359,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FRST", function () {
+	it( "FRST", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FOREST",
 			"FORESTS",
@@ -1117,7 +1380,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FRG", function () {
+	it( "FRG", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FORG",
 			"FORGE",
@@ -1134,7 +1401,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FRGS", function () {
+	it( "FRGS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FORGES",
 			"FRGS"
@@ -1150,7 +1421,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FRK", function () {
+	it( "FRK", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FORK",
 			"FRK"
@@ -1166,7 +1441,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FRKS", function () {
+	it( "FRKS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FORKS",
 			"FRKS"
@@ -1182,7 +1461,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FT", function () {
+	it( "FT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FORT",
 			"FRT",
@@ -1199,7 +1482,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "FWY", function () {
+	it( "FWY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FREEWAY",
 			"FREEWY",
@@ -1218,7 +1505,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "GDN", function () {
+	it( "GDN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"GARDEN",
 			"GARDN",
@@ -1237,7 +1528,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "GDNS", function () {
+	it( "GDNS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"GARDENS",
 			"GRDNS",
@@ -1254,7 +1549,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "GTWY", function () {
+	it( "GTWY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"GATEWAY",
 			"GATEWY",
@@ -1273,7 +1572,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "GLN", function () {
+	it( "GLN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"GLEN",
 			"GLN"
@@ -1289,7 +1592,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "GLNS", function () {
+	it( "GLNS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"GLENS",
 			"GLNS"
@@ -1305,7 +1612,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "GRN", function () {
+	it( "GRN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"GREEN",
 			"GRN"
@@ -1321,7 +1632,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "GRNS", function () {
+	it( "GRNS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"GREENS",
 			"GRNS"
@@ -1337,7 +1652,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "GRV", function () {
+	it( "GRV", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"GROV",
 			"GROVE",
@@ -1354,7 +1673,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "GRVS", function () {
+	it( "GRVS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"GROVES",
 			"GRVS"
@@ -1370,7 +1693,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "HBR", function () {
+	it( "HBR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"HARB",
 			"HARBOR",
@@ -1389,7 +1716,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "HBRS", function () {
+	it( "HBRS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"HARBORS",
 			"HBRS"
@@ -1405,7 +1736,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "HVN", function () {
+	it( "HVN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"HAVEN",
 			"HAVN",
@@ -1422,7 +1757,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "HTS", function () {
+	it( "HTS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"HT",
 			"HEIGHT",
@@ -1441,7 +1780,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "HWY", function () {
+	it( "HWY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"HIGHWAY",
 			"HIGHWY",
@@ -1461,7 +1804,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "HL", function () {
+	it( "HL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"HILL",
 			"HL"
@@ -1477,7 +1824,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "HLS", function () {
+	it( "HLS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"HILLS",
 			"HLS"
@@ -1493,7 +1844,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "HOLW", function () {
+	it( "HOLW", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"HLLW",
 			"HOLLOW",
@@ -1512,7 +1867,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "INLT", function () {
+	it( "INLT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"INLET",
 			"INLT"
@@ -1528,7 +1887,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "IS", function () {
+	it( "IS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ISLAND",
 			"ISLND",
@@ -1545,7 +1908,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "ISS", function () {
+	it( "ISS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ISLANDS",
 			"ISLNDS",
@@ -1562,7 +1929,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "ISLE", function () {
+	it( "ISLE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ISLES",
 			"ISLE"
@@ -1578,7 +1949,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "JCT", function () {
+	it( "JCT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"JCTION",
 			"JCTN",
@@ -1598,7 +1973,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "JCTS", function () {
+	it( "JCTS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"JCTNS",
 			"JUNCTIONS",
@@ -1615,7 +1994,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "KY", function () {
+	it( "KY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"KEY",
 			"KY"
@@ -1631,7 +2014,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "KYS", function () {
+	it( "KYS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"KEYS",
 			"KYS"
@@ -1647,7 +2034,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "KNL", function () {
+	it( "KNL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"KNOL",
 			"KNOLL",
@@ -1664,7 +2055,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "KNLS", function () {
+	it( "KNLS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"KNOLLS",
 			"KNLS"
@@ -1680,7 +2075,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LK", function () {
+	it( "LK", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LAKE",
 			"LK"
@@ -1696,7 +2095,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LKS", function () {
+	it( "LKS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LAKES",
 			"LKS"
@@ -1712,7 +2115,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LAND", function () {
+	it( "LAND", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LAND"
 		];
@@ -1727,7 +2134,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LNDNG", function () {
+	it( "LNDNG", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LANDING",
 			"LNDNG",
@@ -1744,7 +2155,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LN", function () {
+	it( "LN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LANE",
 			"LANES",
@@ -1762,7 +2177,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LGT", function () {
+	it( "LGT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LIGHT",
 			"LGT"
@@ -1778,7 +2197,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LGTS", function () {
+	it( "LGTS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LIGHTS",
 			"LGTS"
@@ -1794,7 +2217,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LF", function () {
+	it( "LF", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LOAF",
 			"LF"
@@ -1810,7 +2237,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LCK", function () {
+	it( "LCK", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LOCK",
 			"LCK"
@@ -1826,7 +2257,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LCKS", function () {
+	it( "LCKS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LOCKS",
 			"LCKS"
@@ -1842,7 +2277,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LDG", function () {
+	it( "LDG", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LDGE",
 			"LODG",
@@ -1860,7 +2299,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "LP", function () {
+	it( "LP", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LP",
 			"LOOPS",
@@ -1877,7 +2320,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MALL", function () {
+	it( "MALL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MALL"
 		];
@@ -1892,7 +2339,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MNR", function () {
+	it( "MNR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MANOR",
 			"MNR"
@@ -1908,7 +2359,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MNRS", function () {
+	it( "MNRS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MANORS",
 			"MNRS"
@@ -1924,7 +2379,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MDW", function () {
+	it( "MDW", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MEADOW",
 			"MDW"
@@ -1940,7 +2399,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MDWS", function () {
+	it( "MDWS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MEADOWS",
 			"MEDOWS",
@@ -1957,7 +2420,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MEWS", function () {
+	it( "MEWS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MEWS"
 		];
@@ -1972,7 +2439,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "ML", function () {
+	it( "ML", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MILL",
 			"ML"
@@ -1988,7 +2459,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MLS", function () {
+	it( "MLS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MILLS",
 			"MLS"
@@ -2004,7 +2479,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MSN", function () {
+	it( "MSN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MISSION",
 			"MISSN",
@@ -2022,7 +2501,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MTWY", function () {
+	it( "MTWY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MOTORWAY",
 			"MOTORWY",
@@ -2040,7 +2523,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MT", function () {
+	it( "MT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MNT",
 			"MOUNT",
@@ -2057,7 +2544,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MTN", function () {
+	it( "MTN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MNTAIN",
 			"MNTN",
@@ -2077,7 +2568,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "MTNS", function () {
+	it( "MTNS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"MOUNTAINS",
 			"MNTNS",
@@ -2094,7 +2589,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "NCK", function () {
+	it( "NCK", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"NECK",
 			"NCK"
@@ -2110,7 +2609,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "ORCH", function () {
+	it( "ORCH", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ORCHARD",
 			"ORCHRD",
@@ -2127,7 +2630,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "OVL", function () {
+	it( "OVL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"OVL",
 			"OVAL"
@@ -2143,7 +2650,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "OPAS", function () {
+	it( "OPAS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"OVERPASS",
 			"OPAS"
@@ -2159,7 +2670,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PRK", function () {
+	it( "PRK", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PARK",
 			"PK",
@@ -2178,7 +2693,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PKWY", function () {
+	it( "PKWY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PARKWAY",
 			"PARKWY",
@@ -2202,7 +2721,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PASS", function () {
+	it( "PASS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PASS"
 		];
@@ -2217,7 +2740,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PSGE", function () {
+	it( "PSGE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PASSAGE",
 			"PSGE"
@@ -2233,7 +2760,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PATH", function () {
+	it( "PATH", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PATHS",
 			"PATH"
@@ -2249,7 +2780,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PIKE", function () {
+	it( "PIKE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PIKES",
 			"PIKE"
@@ -2265,7 +2800,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PNE", function () {
+	it( "PNE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PINE",
 			"PNE"
@@ -2281,7 +2820,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PNES", function () {
+	it( "PNES", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PINES",
 			"PNES"
@@ -2297,7 +2840,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PL", function () {
+	it( "PL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PLACE",
 			"PL"
@@ -2313,7 +2860,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PLN", function () {
+	it( "PLN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PLAIN",
 			"PLN"
@@ -2329,7 +2880,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PLNS", function () {
+	it( "PLNS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PLAINS",
 			"PLAINES",
@@ -2346,7 +2901,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PLZ", function () {
+	it( "PLZ", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PLAZA",
 			"PLZA",
@@ -2363,7 +2922,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PT", function () {
+	it( "PT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"POINT",
 			"PT"
@@ -2379,7 +2942,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PTS", function () {
+	it( "PTS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"POINTS",
 			"PTS"
@@ -2395,7 +2962,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PRT", function () {
+	it( "PRT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PORT",
 			"PRT"
@@ -2411,7 +2982,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PRTS", function () {
+	it( "PRTS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PORTS",
 			"PRTS"
@@ -2427,7 +3002,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "PR", function () {
+	it( "PR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PRAIRIE",
 			"PRARIE",
@@ -2445,7 +3024,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RADL", function () {
+	it( "RADL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"RAD",
 			"RADIAL",
@@ -2463,7 +3046,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RAMP", function () {
+	it( "RAMP", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"RAMP"
 		];
@@ -2478,7 +3065,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RNCH", function () {
+	it( "RNCH", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"RANCH",
 			"RANCHES",
@@ -2496,7 +3087,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RPD", function () {
+	it( "RPD", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"RAPID",
 			"RPD"
@@ -2512,7 +3107,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RPDS", function () {
+	it( "RPDS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"RAPIDS",
 			"RPDS"
@@ -2528,7 +3127,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RST", function () {
+	it( "RST", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"REST",
 			"RST"
@@ -2544,7 +3147,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RDG", function () {
+	it( "RDG", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"RDGE",
 			"RIDGE",
@@ -2561,7 +3168,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RDGS", function () {
+	it( "RDGS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"RIDGES",
 			"RDGS"
@@ -2577,7 +3188,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RIV", function () {
+	it( "RIV", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"RIVER",
 			"RVR",
@@ -2595,7 +3210,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RD", function () {
+	it( "RD", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ROAD",
 			"RD"
@@ -2611,7 +3230,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RDS", function () {
+	it( "RDS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ROADS",
 			"RDS"
@@ -2627,7 +3250,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RTE", function () {
+	it( "RTE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ROUTE",
 			"RTE"
@@ -2643,7 +3270,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "ROW", function () {
+	it( "ROW", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ROW"
 		];
@@ -2658,7 +3289,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RUE", function () {
+	it( "RUE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"RUE"
 		];
@@ -2673,7 +3308,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "RUN", function () {
+	it( "RUN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"RUN"
 		];
@@ -2688,7 +3327,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "SHL", function () {
+	it( "SHL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SHOAL",
 			"SHL"
@@ -2704,7 +3347,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "SHLS", function () {
+	it( "SHLS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SHOALS",
 			"SHLS"
@@ -2720,7 +3367,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "SHR", function () {
+	it( "SHR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SHOAR",
 			"SHORE",
@@ -2737,7 +3388,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "SHRS", function () {
+	it( "SHRS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SHORES",
 			"SHOARS",
@@ -2754,7 +3409,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "SKWY", function () {
+	it( "SKWY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SKYWAY",
 			"SKYWY",
@@ -2771,7 +3430,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "SPG", function () {
+	it( "SPG", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SPNG",
 			"SPRING",
@@ -2789,7 +3452,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "SPGS", function () {
+	it( "SPGS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SPNGS",
 			"SPRINGS",
@@ -2807,7 +3474,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "SPUR", function () {
+	it( "SPUR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SPR",
 			"SPRS",
@@ -2825,7 +3496,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "SQ", function () {
+	it( "SQ", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SQR",
 			"SQRE",
@@ -2844,7 +3519,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "SQS", function () {
+	it( "SQS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SQRS",
 			"SQUARES",
@@ -2861,7 +3540,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "STA", function () {
+	it( "STA", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"STATION",
 			"STATN",
@@ -2879,7 +3562,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "STRA", function () {
+	it( "STRA", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"STRAV",
 			"STRAVEN",
@@ -2901,7 +3588,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "STRM", function () {
+	it( "STRM", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"STREAM",
 			"STREME",
@@ -2918,7 +3609,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "ST", function () {
+	it( "ST", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"STREET",
 			"STRT",
@@ -2936,7 +3631,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "STS", function () {
+	it( "STS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"STREETS",
 			"STS"
@@ -2952,7 +3651,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "SMT", function () {
+	it( "SMT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SUMIT",
 			"SUMITT",
@@ -2970,7 +3673,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "TER", function () {
+	it( "TER", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"TERR",
 			"TERRACE",
@@ -2987,7 +3694,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "TRWY", function () {
+	it( "TRWY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"THROUGHWAY",
 			"TRWY"
@@ -3003,7 +3714,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "TRCE", function () {
+	it( "TRCE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"TRACE",
 			"TRACES",
@@ -3020,7 +3735,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "TRAK", function () {
+	it( "TRAK", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"TRACK",
 			"TRACKS",
@@ -3039,7 +3758,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "TRFY", function () {
+	it( "TRFY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"TRAFFICWAY",
 			"TRFY"
@@ -3055,7 +3778,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "TRL", function () {
+	it( "TRL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"TRAIL",
 			"TR",
@@ -3074,7 +3801,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "TRLR", function () {
+	it( "TRLR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"TRAILER",
 			"TRAILERS",
@@ -3092,7 +3823,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "TUNL", function () {
+	it( "TUNL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"TUNEL",
 			"TUNLS",
@@ -3112,7 +3847,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "TPKE", function () {
+	it( "TPKE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"TRNPK",
 			"TURNPIKE",
@@ -3132,7 +3871,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "UPAS", function () {
+	it( "UPAS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"UNDERPASS",
 			"UNDRPASS",
@@ -3153,7 +3896,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "UN", function () {
+	it( "UN", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"UNION",
 			"UN"
@@ -3169,7 +3916,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "UNS", function () {
+	it( "UNS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"UNIONS",
 			"UNS"
@@ -3185,7 +3936,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "VLY", function () {
+	it( "VLY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"VALLEY",
 			"VALLY",
@@ -3203,7 +3958,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "VLYS", function () {
+	it( "VLYS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"VALLEYS",
 			"VLYS"
@@ -3219,7 +3978,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "VIA", function () {
+	it( "VIA", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"VDCT",
 			"VIADCT",
@@ -3237,7 +4000,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "VW", function () {
+	it( "VW", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"VIEW",
 			"VW"
@@ -3253,7 +4020,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "VWS", function () {
+	it( "VWS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"VIEWS",
 			"VWS"
@@ -3269,7 +4040,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "VLG", function () {
+	it( "VLG", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"VILL",
 			"VILG",
@@ -3290,7 +4065,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "VLGS", function () {
+	it( "VLGS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"VILLAGES",
 			"VILLS",
@@ -3307,7 +4086,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "VL", function () {
+	it( "VL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"VILLE",
 			"VL"
@@ -3323,7 +4106,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "VIS", function () {
+	it( "VIS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"VIST",
 			"VISTA",
@@ -3342,7 +4129,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "WALK", function () {
+	it( "WALK", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"WALKS",
 			"WALK"
@@ -3358,7 +4149,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "WALL", function () {
+	it( "WALL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"WLL",
 			"WALL"
@@ -3374,7 +4169,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "WAY", function () {
+	it( "WAY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"WAY",
 			"WY"
@@ -3390,7 +4189,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "WAYS", function () {
+	it( "WAYS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"WAYS"
 		];
@@ -3405,7 +4208,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "WL", function () {
+	it( "WL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"WELL",
 			"WEL",
@@ -3422,7 +4229,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "WLS", function () {
+	it( "WLS", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"WELLS",
 			"WELS",
@@ -3439,7 +4250,11 @@ describe( "Street Type:", function () {
 
 	} );
 
-	it( "Geo-StreetAddress-US", function () {
+	it( "Geo-StreetAddress-US", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var streetTypes = {
 			allee: "aly",
 			alley: "aly",

@@ -8,9 +8,15 @@ var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Parse Secondary Address Units:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "#1", function () {
+	it( "#1", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "#1";
 		var expAddress = {
@@ -23,7 +29,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "# 1", function () {
+	it( "# 1", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "# 1";
 		var expAddress = {
@@ -36,7 +45,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( " #  1 ", function () {
+	it( " #  1 ", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = " #  1 ";
 		var expAddress = {
@@ -49,7 +61,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "# 12", function () {
+	it( "# 12", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "# 12";
 		var expAddress = {
@@ -62,7 +77,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "# 1A2B", function () {
+	it( "# 1A2B", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "# 1A2B";
 		var expAddress = {
@@ -75,7 +93,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "UNIT 23", function () {
+	it( "UNIT 23", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "UNIT 23";
 		var expAddress = {
@@ -88,7 +109,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "UNIT23", function () {
+	it( "UNIT23", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "UNIT23";
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
@@ -96,7 +120,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( " UNIT 23", function () {
+	it( " UNIT 23", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = " UNIT 23";
 		var expAddress = {
@@ -109,7 +136,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "UNIT 23 ", function () {
+	it( "UNIT 23 ", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "UNIT 23 ";
 		var expAddress = {
@@ -122,7 +152,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( " UNIT 23 ", function () {
+	it( " UNIT 23 ", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = " UNIT 23 ";
 		var expAddress = {
@@ -135,7 +168,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( " UNIT  23 ", function () {
+	it( " UNIT  23 ", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = " UNIT  23 ";
 		var expAddress = {
@@ -148,7 +184,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "UNIT", function () {
+	it( "UNIT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "UNIT";
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
@@ -156,7 +195,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "XYZ", function () {
+	it( "XYZ", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "XYZ";
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
@@ -164,7 +206,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "XYZ 123", function () {
+	it( "XYZ 123", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "XYZ 123";
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
@@ -172,7 +217,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "#", function () {
+	it( "#", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "#";
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );
@@ -180,7 +228,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "UNIT #23", function () {
+	it( "UNIT #23", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "UNIT #23";
 		var expAddress = {
@@ -193,7 +244,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "UNIT#23", function () {
+	it( "UNIT#23", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "UNIT#23";
 		var expAddress = {
@@ -206,7 +260,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "LOBBY 2", function () {
+	it( "LOBBY 2", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "LOBBY 2";
 		var expAddress = {
@@ -219,7 +276,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "LOBBY", function () {
+	it( "LOBBY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "LOBBY";
 		var expAddress = {
@@ -231,7 +291,10 @@ describe( "Parse Secondary Address Units:", function () {
 
 	} );
 
-	it( "PHILADELPHIA", function () {
+	it( "PHILADELPHIA", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
 
 		var unitAddress = "PHILADELPHIA";
 		var secondaryAddress = postal.standardization.unitType.parse( unitAddress );

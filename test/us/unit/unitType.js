@@ -8,9 +8,16 @@ var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Unit Type:", function () {
 
-	var postal = new Postal();
+	var postal;
+	if ( Postal ) {
+		postal = new Postal();
+	}
 
-	it( "APT", function () {
+	it( "APT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"APARTMENT",
 			"APT"
@@ -26,7 +33,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "BSMT", function () {
+	it( "BSMT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BASEMENT",
 			"BSMT"
@@ -42,7 +53,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "BLDG", function () {
+	it( "BLDG", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"BUILDING",
 			"BLDG",
@@ -60,7 +75,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "FL", function () {
+	it( "FL", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FLOOR",
 			"FLOR",
@@ -78,7 +97,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "FRNT", function () {
+	it( "FRNT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"FRONT",
 			"FRNT"
@@ -94,7 +117,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "KEY", function () {
+	it( "KEY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"KEY"
 		];
@@ -109,7 +136,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "LBBY", function () {
+	it( "LBBY", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LOBBY",
 			"LBBY"
@@ -125,7 +156,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "LOT", function () {
+	it( "LOT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LOT"
 		];
@@ -140,7 +175,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "LOWR", function () {
+	it( "LOWR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"LOWER",
 			"LOWR"
@@ -156,7 +195,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "OFC", function () {
+	it( "OFC", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"OFFICE",
 			"OFC"
@@ -172,7 +215,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "PH", function () {
+	it( "PH", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PENTHOUSE",
 			"PH"
@@ -188,7 +235,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "PIER", function () {
+	it( "PIER", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"PEIR",
 			"PIER"
@@ -204,7 +255,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "REAR", function () {
+	it( "REAR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"REAR"
 		];
@@ -219,7 +274,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "SIDE", function () {
+	it( "SIDE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SIDE"
 		];
@@ -234,7 +293,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "SLIP", function () {
+	it( "SLIP", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SLIP",
 			"SLP"
@@ -250,7 +313,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "SPC", function () {
+	it( "SPC", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SPACE",
 			"SPC"
@@ -266,7 +333,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "STOP", function () {
+	it( "STOP", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"STP",
 			"STOP"
@@ -282,7 +353,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "STE", function () {
+	it( "STE", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			 "SUITE",
 			 "SUIT",
@@ -300,7 +375,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "SPC", function () {
+	it( "SPC", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"SPACE",
 			"SPC"
@@ -316,7 +395,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "TRLR", function () {
+	it( "TRLR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"TRAILER",
 			"TRLR"
@@ -332,7 +415,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "UNIT", function () {
+	it( "UNIT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"UNIT",
 			"UNT"
@@ -348,7 +435,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "RM", function () {
+	it( "RM", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"ROOM",
 			"RM"
@@ -364,7 +455,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "DEPT", function () {
+	it( "DEPT", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"DEPARTMENT",
 			"DEPT",
@@ -381,7 +476,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "NUM", function () {
+	it( "NUM", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"NUMBER",
 			"NMBR",
@@ -399,7 +498,11 @@ describe( "Unit Type:", function () {
 
 	} );
 
-	it( "UPPR", function () {
+	it( "UPPR", function ( done ) {
+		if ( !postal ) {
+			return done();
+		}
+
 		var names = [
 			"UPPER",
 			"UPER",

@@ -15,14 +15,13 @@ describe( "CA Parse Address:", function () {
 	}
 
 	function verifyAddress( done, addressString, addressObject, debugLogging ) {
-		if ( debugLogging ) {
-			logStatus( true );
-		}
-
 		if ( !postal ) {
 			return done();
 		}
 
+		if ( debugLogging ) {
+			logStatus( true );
+		}
 		postal.standardization.parseAddress( addressString, function ( err, result ) {
 			if ( debugLogging ) {
 				logStatus( false );

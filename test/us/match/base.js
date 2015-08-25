@@ -8,7 +8,11 @@ var Postal = require( "../../../lib" ).USPostal;
 
 describe( "Match Object:", function () {
 
-	it( "Constructor - No Config", function () {
+	it( "Constructor - No Config", function ( done ) {
+		if ( !Postal ) {
+			return done();
+		}
+
 		var postal = new Postal();
 		var match = postal.match;
 

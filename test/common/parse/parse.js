@@ -5,7 +5,7 @@
 var should = require( "should" );
 
 var logStatus = require( "../../../lib/common/logStatus" );
-var Postal = require( "../../../lib" ).USPostal;
+var Postal = require( "../../../lib/common" );
 
 describe( "Parse Address:", function () {
 
