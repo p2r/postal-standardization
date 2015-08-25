@@ -8,7 +8,7 @@ var logStatus = require( "../../../lib/common/logStatus" );
 
 var Postal = require( "../../../lib" ).USPostal;
 
-describe( "To Address String:", function () {
+describe( "US To Address String:", function () {
 
 	var postal;
 	if ( Postal ) {

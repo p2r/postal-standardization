@@ -6,7 +6,7 @@ var should = require( "should" );
 
 var Postal = require( "../../../lib" ).USPostal;
 
-describe( "Validation Object:", function () {
+describe( "US Validation Object:", function () {
 
 	it( "Constructor - No Config", function () {
 		if ( !Postal ) {

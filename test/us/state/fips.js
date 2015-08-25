@@ -6,7 +6,7 @@ var should = require( "should" );
 
 var Postal = require( "../../../lib" ).USPostal;
 
-describe( "State/Possession FIPS:", function () {
+describe( "US State/Possession FIPS:", function () {
 
 	var postal;
 	if ( Postal ) {

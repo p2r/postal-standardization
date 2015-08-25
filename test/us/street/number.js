@@ -6,7 +6,7 @@ var should = require( "should" );
 
 var Postal = require( "../../../lib" ).USPostal;
 
-describe( "Street Numbers:", function () {
+describe( "US Street Numbers:", function () {
 
 	var postal;
 	if ( Postal ) {

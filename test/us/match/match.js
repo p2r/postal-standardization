@@ -7,7 +7,7 @@ var should = require( "should" );
 // var logStatus = require( "../../../lib/common/logStatus" );
 var Postal = require( "../../../lib" ).USPostal;
 
-describe( "Address Match Similarity:", function () {
+describe( "US Address Match Similarity:", function () {
 
 	var postal;
 	if ( Postal ) {

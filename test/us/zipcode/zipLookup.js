@@ -6,7 +6,7 @@ var should = require( "should" );
 
 var Postal = require( "../../../lib" ).USPostal;
 
-describe( "Zip Lookup:", function () {
+describe( "US Zip Lookup:", function () {
 
 	var postal;
 	if ( Postal ) {
@@ -51,7 +51,7 @@ describe( "Zip Lookup:", function () {
 
 } );
 
-describe( "Location Lookup:", function () {
+describe( "US Location Lookup:", function () {
 
 	var postal;
 	if ( Postal ) {
@@ -84,7 +84,7 @@ describe( "Location Lookup:", function () {
 
 } );
 
-describe( "Cities Lookup:", function () {
+describe( "US Cities Lookup:", function () {
 
 	var postal;
 	if ( Postal ) {

@@ -6,7 +6,7 @@ var should = require( "should" );
 
 var Postal = require( "../../lib" ).USPostal;
 
-describe( "Postal Object:", function () {
+describe( "US Postal Object:", function () {
 
 	it( "Constructor - No Config", function () {
 		if ( !Postal ) {
