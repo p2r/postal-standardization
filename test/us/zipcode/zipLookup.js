@@ -17,7 +17,7 @@ describe( "Zip Lookup:", function () {
 			state: "CO",
 			city: "BROOMFIELD"
 		};
-		var location = postal.standardization.zipLookup.getLocationForZip( zipcode );
+		var location = postal.validation.zipLookup.getLocationForZip( zipcode );
 		should.exist( location );
 		location.country.should.equal( expLocation.country );
 		location.state.should.equal( expLocation.state );
@@ -31,7 +31,7 @@ describe( "Zip Lookup:", function () {
 			state: "CO",
 			city: "LOUISVILLE"
 		};
-		var location = postal.standardization.zipLookup.getLocationForZip( zipcode );
+		var location = postal.validation.zipLookup.getLocationForZip( zipcode );
 		should.exist( location );
 		location.country.should.equal( expLocation.country );
 		location.state.should.equal( expLocation.state );
@@ -46,7 +46,7 @@ describe( "Location Lookup:", function () {
 
 	it( "Broomfield, CO", function () {
 		var expZipcode = "80020";
-		var zipcodes = postal.standardization.zipLookup.getZipsForLocation( "Broomfield", "CO" );
+		var zipcodes = postal.validation.zipLookup.getZipsForLocation( "Broomfield", "CO" );
 		should.exist( zipcodes );
 		should.exist( zipcodes[ 0 ] );
 		zipcodes[ 0 ].should.equal( expZipcode );
@@ -54,7 +54,7 @@ describe( "Location Lookup:", function () {
 
 	it( "Louisville, CO", function () {
 		var expZipcode = "80027";
-		var zipcodes = postal.standardization.zipLookup.getZipsForLocation( "Louisville", "CO" );
+		var zipcodes = postal.validation.zipLookup.getZipsForLocation( "Louisville", "CO" );
 		should.exist( zipcodes );
 		should.exist( zipcodes[ 0 ] );
 		zipcodes[ 0 ].should.equal( expZipcode );
@@ -72,8 +72,8 @@ describe( "Cities Lookup:", function () {
 			"BROOMFIELD",
 			"WESTMINSTER"
 		];
-		var location = postal.standardization.zipLookup.getLocationForZip( zipcode );
-		var cities = postal.standardization.zipLookup.getCitiesForZip( zipcode );
+		var location = postal.validation.zipLookup.getLocationForZip( zipcode );
+		var cities = postal.validation.zipLookup.getCitiesForZip( zipcode );
 		should.exist( cities );
 		should.exist( location );
 		should.exist( location.city );
@@ -87,7 +87,7 @@ describe( "Cities Lookup:", function () {
 		var expCities = [
 			"AURORA"
 		];
-		var cities = postal.standardization.zipLookup.getCitiesForZip( zipcode );
+		var cities = postal.validation.zipLookup.getCitiesForZip( zipcode );
 		should.exist( cities );
 		should.exist( cities[ 0 ] );
 		cities.should.eql( expCities );

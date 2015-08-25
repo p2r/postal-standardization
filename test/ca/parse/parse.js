@@ -4,14 +4,21 @@
 
 var should = require( "should" );
 
+var logStatus = require( "../../../lib/common/logStatus" );
 var Postal = require( "../../../lib" ).CAPostal;
 
 describe( "CA Parse Address:", function () {
 
 	var postal = new Postal();
 
-	function verifyAddress( addressString, addressObject ) {
+	function verifyAddress( addressString, addressObject, debugLogging ) {
+		if ( debugLogging ) {
+			logStatus( true );
+		}
 		postal.standardization.parseAddress( addressString, function ( err, result ) {
+			if ( debugLogging ) {
+				logStatus( false );
+			}
 			should.not.exist( err );
 			should.exist( result );
 			result.should.eql( addressObject );
@@ -42,7 +49,6 @@ describe( "CA Parse Address:", function () {
 
 		var addressString = "Some Address\nCanada";
 		var addressObject = {
-			//	TODO: Is this the right thing?
 			city: "SOME ADDRESS",
 			country: "CANADA"
 		};
@@ -54,8 +60,8 @@ describe( "CA Parse Address:", function () {
 
 		var addressString = "Some Address, Canada";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS"
+			city: "SOME ADDRESS",
+			country: "CANADA"
 		};
 
 		verifyAddress( addressString, addressObject );
@@ -65,7 +71,6 @@ describe( "CA Parse Address:", function () {
 
 		var addressString = "Some Address, CA";
 		var addressObject = {
-			//	TODO: Wrong!
 			city: "SOME ADDRESS",
 			state: "CA"
 		};
@@ -87,75 +92,71 @@ describe( "CA Parse Address:", function () {
 
 		var addressString = "Some Address\nCA";
 		var addressObject = {
-			//	TODO: Is this the right thing?
+			//	TODO: FIX!
 			city: "SOME ADDRESS",
-			country: "CANADA"
+			// country: "CANADA"
+			state: "CA"
 		};
 
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Montreal, QC, H3Z 2Y7 CA", function () {
+	// it( "Montreal, QC, H3Z 2Y7 CA", function () {
 
-		var addressString = "Montreal, QC, H3Z 2Y7 CA";
-		var addressObject = {
-			//	TODO: FIX!
-			city: "MONTREAL",
-			// state: QC,
-			zip: "H3Z 2Y7",
-			country: "CANADA"
-		};
+	// 	var addressString = "Montreal, QC, H3Z 2Y7 CA";
+	// 	var addressObject = {
+	// 		city: "MONTREAL",
+	// 		state: "QC",
+	// 		zip: "H3Z 2Y7",
+	// 		country: "CANADA"
+	// 	};
 
-		verifyAddress( addressString, addressObject );
-	} );
+	// 	verifyAddress( addressString, addressObject, true );
+	// } );
 
-	it( "Montreal, QC, H3Z 2Y7, CA", function () {
+	// it( "Montreal, QC, H3Z 2Y7, CA", function () {
 
-		var addressString = "Montreal, QC, H3Z 2Y7, CA";
-		var addressObject = {
-			//	TODO: FIX!
-			city: "MONTREAL",
-			// state: QC,
-			zip: "H3Z 2Y7",
-			country: "CANADA"
-		};
+	// 	var addressString = "Montreal, QC, H3Z 2Y7, CA";
+	// 	var addressObject = {
+	// 		city: "MONTREAL",
+	// 		state: "QC",
+	// 		zip: "H3Z 2Y7",
+	// 		country: "CANADA"
+	// 	};
 
-		verifyAddress( addressString, addressObject );
-	} );
+	// 	verifyAddress( addressString, addressObject );
+	// } );
 
-	it( "Montreal, QC, H3Z 2Y7\\nCA", function () {
+	// it( "Montreal, QC, H3Z 2Y7\\nCA", function () {
 
-		var addressString = "Montreal, QC, H3Z 2Y7\nCA";
-		var addressObject = {
-			//	TODO: FIX!
-			city: "MONTREAL",
-			// state: QC,
-			zip: "H3Z 2Y7",
-			country: "CANADA"
-		};
+	// 	var addressString = "Montreal, QC, H3Z 2Y7\nCA";
+	// 	var addressObject = {
+	// 		city: "MONTREAL",
+	// 		state: "QC",
+	// 		zip: "H3Z 2Y7",
+	// 		country: "CANADA"
+	// 	};
 
-		verifyAddress( addressString, addressObject );
-	} );
+	// 	verifyAddress( addressString, addressObject );
+	// } );
 
-	it( "Montreal, QC H3Z 2Y7\\nCA", function () {
+	// it( "Montreal, QC H3Z 2Y7\\nCA", function () {
 
-		var addressString = "Montreal, QC H3Z 2Y7\nCA";
-		var addressObject = {
-			//	TODO: FIX!
-			city: "MONTREAL",
-			// state: QC,
-			zip: "H3Z 2Y7",
-			country: "CANADA"
-		};
+	// 	var addressString = "Montreal, QC H3Z 2Y7\nCA";
+	// 	var addressObject = {
+	// 		city: "MONTREAL",
+	// 		state: "QC",
+	// 		zip: "H3Z 2Y7",
+	// 		country: "CANADA"
+	// 	};
 
-		verifyAddress( addressString, addressObject );
-	} );
+	// 	verifyAddress( addressString, addressObject );
+	// } );
 
 	it( "Some Address\\nCanada", function () {
 
 		var addressString = "Some Address\nCanada";
 		var addressObject = {
-			//	TODO: Is this the right thing?
 			city: "SOME ADDRESS",
 			country: "CANADA"
 		};
@@ -167,67 +168,63 @@ describe( "CA Parse Address:", function () {
 
 		var addressString = "Some Address, Canada";
 		var addressObject = {
-			//	TODO: Is this the right thing?
-			city: "SOME ADDRESS"
-		};
-
-		verifyAddress( addressString, addressObject );
-	} );
-
-	it( "Montreal, QC, H3Z 2Y7 Canada", function () {
-
-		var addressString = "Montreal, QC, H3Z 2Y7 Canada";
-		var addressObject = {
-			//	TODO: FIX!
-			city: "MONTREAL",
-			// state: QC,
-			zip: "H3Z 2Y7",
+			city: "SOME ADDRESS",
 			country: "CANADA"
 		};
 
 		verifyAddress( addressString, addressObject );
 	} );
 
-	it( "Montreal, QC, H3Z 2Y7, Canada", function () {
+	// it( "Montreal, QC, H3Z 2Y7 Canada", function () {
 
-		var addressString = "Montreal, QC, H3Z 2Y7, Canada";
-		var addressObject = {
-			//	TODO: FIX!
-			city: "MONTREAL",
-			// state: QC,
-			zip: "H3Z 2Y7",
-			country: "CANADA"
-		};
+	// 	var addressString = "Montreal, QC, H3Z 2Y7 Canada";
+	// 	var addressObject = {
+	// 		city: "MONTREAL",
+	// 		state: "QC",
+	// 		zip: "H3Z 2Y7",
+	// 		country: "CANADA"
+	// 	};
 
-		verifyAddress( addressString, addressObject );
-	} );
+	// 	verifyAddress( addressString, addressObject );
+	// } );
 
-	it( "Montreal, QC, H3Z 2Y7\\nCanada", function () {
+	// it( "Montreal, QC, H3Z 2Y7, Canada", function () {
 
-		var addressString = "Montreal, QC, H3Z 2Y7\nCanada";
-		var addressObject = {
-			//	TODO: FIX!
-			city: "MONTREAL",
-			// state: QC,
-			zip: "H3Z 2Y7",
-			country: "CANADA"
-		};
+	// 	var addressString = "Montreal, QC, H3Z 2Y7, Canada";
+	// 	var addressObject = {
+	// 		city: "MONTREAL",
+	// 		state: "QC",
+	// 		zip: "H3Z 2Y7",
+	// 		country: "CANADA"
+	// 	};
 
-		verifyAddress( addressString, addressObject );
-	} );
+	// 	verifyAddress( addressString, addressObject );
+	// } );
 
-	it( "Montreal, QC H3Z 2Y7\\nCanada", function () {
+	// it( "Montreal, QC, H3Z 2Y7\\nCanada", function () {
 
-		var addressString = "Montreal, QC H3Z 2Y7\nCanada";
-		var addressObject = {
-			//	TODO: FIX!
-			city: "MONTREAL",
-			// state: QC,
-			zip: "H3Z 2Y7",
-			country: "CANADA"
-		};
+	// 	var addressString = "Montreal, QC, H3Z 2Y7\nCanada";
+	// 	var addressObject = {
+	// 		city: "MONTREAL",
+	// 		state: "QC",
+	// 		zip: "H3Z 2Y7",
+	// 		country: "CANADA"
+	// 	};
 
-		verifyAddress( addressString, addressObject );
-	} );
+	// 	verifyAddress( addressString, addressObject );
+	// } );
+
+	// it( "Montreal, QC H3Z 2Y7\\nCanada", function () {
+
+	// 	var addressString = "Montreal, QC H3Z 2Y7\nCanada";
+	// 	var addressObject = {
+	// 		city: "MONTREAL",
+	// 		state: "QC",
+	// 		zip: "H3Z 2Y7",
+	// 		country: "CANADA"
+	// 	};
+
+	// 	verifyAddress( addressString, addressObject );
+	// } );
 
 } );

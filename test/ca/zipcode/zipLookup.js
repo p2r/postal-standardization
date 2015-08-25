@@ -17,7 +17,7 @@ describe( "CA Zip Lookup:", function () {
 			state: "NL",
 			country: "CA"
 		};
-		var location = postal.standardization.zipLookup.getLocationForZip( zipcode );
+		var location = postal.validation.zipLookup.getLocationForZip( zipcode );
 		should.exist( location );
 		location.country.should.equal( expLocation.country );
 		location.state.should.equal( expLocation.state );
@@ -31,7 +31,7 @@ describe( "CA Zip Lookup:", function () {
 			state: "ON",
 			country: "CA"
 		};
-		var location = postal.standardization.zipLookup.getLocationForZip( zipcode );
+		var location = postal.validation.zipLookup.getLocationForZip( zipcode );
 		should.exist( location );
 		location.country.should.equal( expLocation.country );
 		location.state.should.equal( expLocation.state );
@@ -46,7 +46,7 @@ describe( "CA Location Lookup:", function () {
 
 	it( "York, ON", function () {
 		var expZipcode = "L4A-1L9";
-		var zipcodes = postal.standardization.zipLookup.getZipsForLocation( "York", "ON" );
+		var zipcodes = postal.validation.zipLookup.getZipsForLocation( "York", "ON" );
 		should.exist( zipcodes );
 		should.exist( zipcodes[ 0 ] );
 		zipcodes[ 0 ].should.equal( expZipcode );
@@ -54,7 +54,7 @@ describe( "CA Location Lookup:", function () {
 
 	it( "Murray Harbour, PE", function () {
 		var expZipcode = "C0A-1V0";
-		var zipcodes = postal.standardization.zipLookup.getZipsForLocation( "Murray Harbour", "PE" );
+		var zipcodes = postal.validation.zipLookup.getZipsForLocation( "Murray Harbour", "PE" );
 		should.exist( zipcodes );
 		should.exist( zipcodes[ 0 ] );
 		zipcodes[ 0 ].should.equal( expZipcode );
@@ -71,8 +71,8 @@ describe( "CA Cities Lookup:", function () {
 		var expCities = [
 			"RICHMOND HILL"
 		];
-		var location = postal.standardization.zipLookup.getLocationForZip( zipcode );
-		var cities = postal.standardization.zipLookup.getCitiesForZip( zipcode );
+		var location = postal.validation.zipLookup.getLocationForZip( zipcode );
+		var cities = postal.validation.zipLookup.getCitiesForZip( zipcode );
 		should.exist( cities );
 		should.exist( location );
 		should.exist( location.city );
@@ -86,7 +86,7 @@ describe( "CA Cities Lookup:", function () {
 		var expCities = [
 			"MURRAY HARBOUR"
 		];
-		var cities = postal.standardization.zipLookup.getCitiesForZip( zipcode );
+		var cities = postal.validation.zipLookup.getCitiesForZip( zipcode );
 		should.exist( cities );
 		should.exist( cities[ 0 ] );
 		cities.should.eql( expCities );
