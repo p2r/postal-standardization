@@ -1,6 +1,6 @@
 "use strict";
 
-/* global describe, it */
+/* global describe, it, afterEach */
 
 var should = require( "should" );
 
@@ -13,6 +13,10 @@ describe( "US Parse Address:", function () {
 	if ( Postal ) {
 		postal = new Postal();
 	}
+
+	afterEach( function() {
+		logStatus( false );
+	} );
 
 	function verifyAddress( addressString, addressObject, debugLogging ) {
 		if ( debugLogging ) {
@@ -435,21 +439,23 @@ describe( "US Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	// it( "Number Street. City State", function () {
+	it( "Number Street. City State", function () {
+		//	nxtxS
 
-	// 	var addressString = "1600 Pennsylvania Ave. Washington DC";
-	// 	var addressObject = {
-	// 		number: "1600",
-	// 		street: "PENNSYLVANIA",
-	// 		type: "AVE",
-	// 		city: "WASHINGTON",
-	// 		state: "DC"
-	// 	};
+		var addressString = "1600 Pennsylvania Ave. Washington DC";
+		var addressObject = {
+			number: "1600",
+			street: "PENNSYLVANIA",
+			type: "AVE",
+			city: "WASHINGTON",
+			state: "DC"
+		};
 
-	// 	verifyAddress( addressString, addressObject );
-	// } );
+		verifyAddress( addressString, addressObject );
+	} );
 
 	it( "Number Street. City, State", function () {
+		//	nxtx,S
 
 		var addressString = "1600 Pennsylvania Ave. Washington, DC";
 		var addressObject = {
@@ -463,19 +469,19 @@ describe( "US Parse Address:", function () {
 		verifyAddress( addressString, addressObject );
 	} );
 
-	// it( "Number Street Type City City", function () {
+	it( "Number Street Type City City", function () {
 
-	// 	var addressString = "1600 Pennsylvania Avenue Washington DC";
-	// 	var addressObject = {
-	// 		number: "1600",
-	// 		street: "PENNSYLVANIA",
-	// 		type: "AVE",
-	// 		city: "WASHINGTON",
-	// 		state: "DC"
-	// 	};
+		var addressString = "1600 Pennsylvania Avenue Washington DC";
+		var addressObject = {
+			number: "1600",
+			street: "PENNSYLVANIA",
+			type: "AVE",
+			city: "WASHINGTON",
+			state: "DC"
+		};
 
-	// 	verifyAddress( addressString, addressObject );
-	// } );
+		verifyAddress( addressString, addressObject );
+	} );
 
 	it( "NumberLetter StreetNumberLetter, City City ST", function () {
 
