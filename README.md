@@ -8,6 +8,8 @@
 Given an address in general string format, the tool will break down the parts of the address and attempt to identify
 the street number, street, street type, unit, city, state, zip, etc. for the address.
 
+Additionally, given an address object, the tool will generate a properly formatted address string.
+
 Standardization does _not_ validate the address.
 
 ## Validation
