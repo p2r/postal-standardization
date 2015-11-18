@@ -1,4 +1,4 @@
-# Address Standardization, Matching, and Verification Tool [![Build Status](https://travis-ci.org/mpelikan/postal-standardization.png?branch=master)](https://travis-ci.org/mpelikan/postal-standardization)
+# Address Standardization, Matching, and Verification Tool [![Build Status](https://travis-ci.org/p2r/postal-standardization.png?branch=master)](https://travis-ci.org/p2r/postal-standardization)
 
 ## Warning
 **This project is very much a work in progress and cannot be used to standardize or validate postal addresses.**
